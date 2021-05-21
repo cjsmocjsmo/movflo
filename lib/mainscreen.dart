@@ -9,35 +9,35 @@ class MainScreen extends StatelessWidget {
     
         child: Scaffold(
           appBar: AppBar(
-              title: Text("Playlists"),
+              title: Text("Movies TVShows"),
               backgroundColor: Colors.lightGreen[900],
               
               bottom: TabBar(
                 tabs: [
                   Tab(icon: Icon(Icons.directions_car)),
                   Tab(icon: Icon(Icons.directions_transit)),
-                  Tab(icon: Icon(Icons.directions_bike)),
+                  // Tab(icon: Icon(Icons.directions_bike)),
                 ],
               ),
               actions: <Widget>[
                 IconButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/Songs');
+                      Navigator.pushNamed(context, '/Movies');
                     },
                     icon: Icon(Icons.album_sharp),
-                    tooltip: "Go to Songs Page"),
+                    tooltip: "Go to Movies Page"),
                 IconButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/Playlists');
+                      Navigator.pushNamed(context, '/TVShows');
                     },
                     icon: Icon(Icons.add_rounded),
-                    tooltip: "Go To Playlist Page"),
-                IconButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/');
-                    },
-                    icon: Icon(Icons.exit_to_app_sharp),
-                    tooltip: "Exit App"),
+                    tooltip: "Go To TVShows Page"),
+                // IconButton(
+                //     onPressed: () {
+                //       Navigator.pushNamed(context, '/');
+                //     },
+                //     icon: Icon(Icons.exit_to_app_sharp),
+                //     tooltip: "Exit App"),
                 IconButton(
                   icon: const Icon(Icons.add_alert),
                   tooltip: 'Show Snackbar',

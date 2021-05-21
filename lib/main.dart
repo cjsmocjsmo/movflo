@@ -12,8 +12,8 @@ class MovFlo extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(title: _title, initialRoute: '/', routes: {
       '/': (context) => MainScreen(),
-      '/Home': (context) => MoviesScreen(),
-      '/Playlists': (context) => TvShowsScreen(),
+      '/Movies': (context) => MovieScreen(),
+      // '/Playlists': (context) => TvShowsScreen(),
     });
   }
 }
