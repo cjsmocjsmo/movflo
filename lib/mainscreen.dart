@@ -4,7 +4,7 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 2,
 
     
         child: Scaffold(
@@ -53,7 +53,9 @@ class MainScreen extends StatelessWidget {
           children: [
             Icon(Icons.directions_car),
             Icon(Icons.directions_transit),
-            Icon(Icons.directions_bike),
+            // Icon(Icons.directions_car),
+            // Icon(Icons.directions_transit),
+            // Icon(Icons.directions_bike),
           ],
         ),
         
