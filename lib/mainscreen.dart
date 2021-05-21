@@ -127,20 +127,36 @@ Widget moviesListView = ListView.builder(
           '${movies[index]}',
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            fontSize: 18.0,
+            fontSize: 22.0,
       ))),
     );
   }
 );
 
+
+
+
 Widget tvShowsListView = ListView.builder(
   padding: const EdgeInsets.all(10.0),
-  itemCount: tvShows.length,
+  itemCount: movies.length,
   itemBuilder: (BuildContext context, int index) {
     return Container(
       height: 50,
       color: Colors.amber[400],
-      child: Center(child: Text('${tvShows[index]}')),
+      child: Center(
+        child: Text(
+          '${tvShows[index]}',
+          onTap: () {
+            Navigator.pushNamed(
+              context,
+              '/Movie',
+                : {}
+            );
+          },
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 22.0,
+      ))),
     );
   }
 );
