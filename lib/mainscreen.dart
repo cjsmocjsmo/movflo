@@ -29,15 +29,29 @@ class MainScreen extends StatelessWidget {
       length: 2,
         child: Scaffold(
           appBar: AppBar(
-              title: Text("Movies TVShows"),
-              backgroundColor: Colors.lightGreen[900],
-              bottom: TabBar(
-                tabs: [
-                  Tab(icon: Icon(Icons.movie_creation_sharp)),
-                  Tab(icon: Icon(Icons.tv_sharp)),
-                ],
-              ),
+            title: Text("Movies TVShows"),
+            backgroundColor: Colors.lightGreen[900],
+            bottom: TabBar(
+              tabs: [
+                Tab(icon: Icon(Icons.movie_creation_sharp)),
+                Tab(icon: Icon(Icons.tv_sharp)),
+              ],
             ),
+          ),
+          bottomNavigationBar: BottomAppBar(
+            child: Row(
+              children: [
+                IconButton(icon: Icon(Icons.menu), onPressed: () {}),
+                Spacer(),
+                IconButton(icon: Icon(Icons.search), onPressed: () {}),
+                IconButton(icon: Icon(Icons.more_vert), onPressed: () {}),
+              ],
+            ),
+          ),
+          floatingActionButton:
+            FloatingActionButton(child: Icon(Icons.add), onPressed: () {}),
+          floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        ),
         body: Container(
           decoration: BoxDecoration(
             color: Colors.lightGreenAccent.shade400,
