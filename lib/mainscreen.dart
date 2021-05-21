@@ -52,6 +52,8 @@ class MainScreen extends StatelessWidget {
             ),
         body: TabBarView(
           children: [
+            moviesListView,
+
             Icon(Icons.directions_car),
             Icon(Icons.directions_transit),
             // Icon(Icons.directions_car),
@@ -87,3 +89,46 @@ class MainScreen extends StatelessWidget {
     );
   }
 }
+
+final List<String> movies = <String>[
+  'Action', 'Bruce Willis', 'Cartoons', 'Comedy', 'Drama', 'Documentary',
+  'Fantasy', 'Godzilla', 'Harry Potter', 'Indiana Jones', 'Jurassic Park',
+  'John Wick', 'John Wayne', 'Kings Men', 'Men In Black', 'Misc',
+  'Pirates', 'Riddick', 'Star Wars', 'Star Trek', 'Super Heros',
+  'SciFi', 'Tom Cruize', 'Tremors', 'The Rock', 'X-Men',
+]
+
+final List<String> tvShows = <String>[
+  'Altered Carbon', 'Alien Worlds',
+  'Discovery', 'Enterprise', 'For All Man Kind', 'Last Ship', 'Lost In Space',
+  'Lower Decks', 'Mandalorian', 'Next Generation', 'Orville', 'Picard',
+  'Raised By Wolves', 'Sean Carroll', 'SpaceTime', 'Star Trek',
+  'Falcon Winter Soldier', 'Voyager', 'WandaVision', 'Invincible',
+  'The Bad Batch',
+ 
+]
+
+
+Widget moviesListView = ListView.builder(
+  padding: const EdgeInsets.all(10.0),
+  itemCount: movies.length,
+  itemBuilder: (BuildContext context, int index) {
+    return Container(
+      height: 50,
+      color: Colors.amber[400],
+      child: Center(child: Text('${movies[index]}')),
+    );
+  }
+);
+
+Widget tvShowsListView = ListView.builder(
+  padding: const EdgeInsets.all(10.0),
+  itemCount: tvShows.length,
+  itemBuilder: (BuildContext context, int index) {
+    return Container(
+      height: 50,
+      color: Colors.amber[400],
+      child: Center(child: Text('${tvShows[index]}')),
+    );
+  }
+);
