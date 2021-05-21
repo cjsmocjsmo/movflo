@@ -126,8 +126,8 @@ Widget moviesListView = ListView.builder(
         child: Text(
           '${movies[index]}',
           style: TextStyle(
-          fontWeight: FontWeight.bold,
-          DefaultTextStyle.of(context).style.apply(fontSizeFactor: 2.5),
+            fontWeight: FontWeight.bold,
+            fontSize: 18.0,
       ))),
     );
   }
