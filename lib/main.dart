@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'mainscreen.dart';
 import 'moviescreen.dart';
-import 'tvshowsscreen.dart'
+import 'tvshowsscreen.dart';
 
 void main() => runApp(MovFlo());
 

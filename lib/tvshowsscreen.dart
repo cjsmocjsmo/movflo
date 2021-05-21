@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class PlayListsScreen extends StatelessWidget {
+class TvShowsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
