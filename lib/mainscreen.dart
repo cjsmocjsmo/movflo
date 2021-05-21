@@ -50,17 +50,22 @@ class MainScreen extends StatelessWidget {
               //   ),
               // ]
             ),
-        body: TabBarView(
-          children: [
-            moviesListView,
-            tvShowsListView,
+        body: Container(
+          decoration: BoxDecoration(
+            color: Colors.lightGreenAccent.shade400,
+          ),
+          child: TabBarView(
+            children: [
+              moviesListView,
+              tvShowsListView,
 
-            // Icon(Icons.directions_car),
-            // Icon(Icons.directions_transit),
-            // Icon(Icons.directions_car),
-            // Icon(Icons.directions_transit),
-            // Icon(Icons.directions_bike),
-          ],
+              // Icon(Icons.directions_car),
+              // Icon(Icons.directions_transit),
+              // Icon(Icons.directions_car),
+              // Icon(Icons.directions_transit),
+              // Icon(Icons.directions_bike),
+            ],
+          ),
         ),
         
         // Container(
@@ -117,7 +122,12 @@ Widget moviesListView = ListView.builder(
     return Container(
       height: 50,
       color: Colors.amber[400],
-      child: Center(child: Text('${movies[index]}')),
+      child: Center(
+        child: Text(
+          '${movies[index]}',
+          fontWeight: FontWeight.bold,
+          style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 2.5),
+          )),
     );
   }
 );
