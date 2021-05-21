@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'package:flutter/material.dart';
+import 'mainscreen.dart'
+import 'moviescreen.dart';
 
 void main() => runApp(MovFlo());
 
