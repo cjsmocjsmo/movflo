@@ -8,64 +8,18 @@ class MovieScreen extends StatelessWidget {
         title: Text(
           "Movflo",
           style: TextStyle(color: Colors.white),
+          backgroundColor: Colors.lightGreen[900],
         ),
-        
-        actions: <Widget>[
-            IconButton(
-              onPressed: () {
-                Navigator.pushNamed(
-                  context,
-                  '/Songs'
-                );
-              },
-              icon: Icon(Icons.album_sharp),
-              tooltip: "Go to Songs Page"
-            ),
-            IconButton(
-              onPressed: () {
-                Navigator.pushNamed(
-                  context,
-                  '/Playlists'
-                );
-              },
-              icon: Icon(Icons.add_rounded),
-              tooltip: "Go To Playlist Page"
-            ),
-            IconButton(
-              onPressed: () {
-                Navigator.pushNamed(
-                  context,
-                  '/'
-                );
-              },
-              icon: Icon(Icons.exit_to_app_sharp),
-              tooltip: "Exit App"
-            ),
-            IconButton(
-              icon: const Icon(Icons.add_alert),
-              tooltip: 'Show Snackbar',
-              onPressed: () {
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  content: Text('ZZ Top \n Fandango \n Mexican Black Bird'),
-                  backgroundColor: Colors.purple,
-                ));
-              },
-            ),
-          ]
+      ),
+      body: Container(
+        decoration: BoxDecoration(
+          color: Colors.lightGreenAccent.shade400,
         ),
-        body: Container(
-          decoration: BoxDecoration(
-            color: Colors.lightGreenAccent.shade400,
-          ),
-          // child: Center(
-            // child:listViewHomeZ,
-          child: testGridView,
-          // ),
-        )
+        child: testGridView,
+      )
     );
   }
 }
-
 
 Widget testGridView = GridView.builder(
   gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
@@ -80,11 +34,12 @@ Widget testGridView = GridView.builder(
           padding: const EdgeInsets.all(8),
           child: GestureDetector(
             onTap: () {
-              Navigator.pushNamed(
-                context,
-                '/Playlists',
-                arguments: {}
-              );
+              Navigator.pop(context),
+              // Navigator.pushNamed(
+              //   context,
+              //   '/Playlists',
+              //   arguments: {}
+              // );
             },
               child: Image.asset(
                 'images/two.jpg', 

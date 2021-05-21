@@ -1,4 +1,26 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+
+
+
+final List<String> movies = <String>[
+  'Action', 'Bruce Willis', 'Cartoons', 'Comedy', 'Drama', 'Documentary',
+  'Fantasy', 'Godzilla', 'Harry Potter', 'Indiana Jones', 'Jurassic Park',
+  'John Wick', 'John Wayne', 'Kings Men', 'Men In Black', 'Misc',
+  'Pirates', 'Riddick', 'Star Wars', 'Star Trek', 'Super Heros',
+  'SciFi', 'Tom Cruize', 'Tremors', 'The Rock', 'X-Men',
+];
+
+final List<String> tvShows = <String>[
+  'Altered Carbon', 'Alien Worlds',
+  'Discovery', 'Enterprise', 'For All Man Kind', 'Last Ship', 'Lost In Space',
+  'Lower Decks', 'Mandalorian', 'Next Generation', 'Orville', 'Picard',
+  'Raised By Wolves', 'Sean Carroll', 'SpaceTime', 'Star Trek',
+  'Falcon Winter Soldier', 'Voyager', 'WandaVision', 'Invincible',
+  'The Bad Batch',
+];
 
 class MainScreen extends StatelessWidget {
   @override
@@ -9,11 +31,10 @@ class MainScreen extends StatelessWidget {
           appBar: AppBar(
               title: Text("Movies TVShows"),
               backgroundColor: Colors.lightGreen[900],
-              
               bottom: TabBar(
                 tabs: [
-                  Tab(icon: Icon(Icons.directions_car)),
-                  Tab(icon: Icon(Icons.directions_transit)),
+                  Tab(icon: Icon(Icons.movie_creation_sharp)),
+                  Tab(icon: Icon(Icons.tv_sharp)),
                 ],
               ),
             ),
@@ -32,23 +53,6 @@ class MainScreen extends StatelessWidget {
     );
   }
 }
-
-final List<String> movies = <String>[
-  'Action', 'Bruce Willis', 'Cartoons', 'Comedy', 'Drama', 'Documentary',
-  'Fantasy', 'Godzilla', 'Harry Potter', 'Indiana Jones', 'Jurassic Park',
-  'John Wick', 'John Wayne', 'Kings Men', 'Men In Black', 'Misc',
-  'Pirates', 'Riddick', 'Star Wars', 'Star Trek', 'Super Heros',
-  'SciFi', 'Tom Cruize', 'Tremors', 'The Rock', 'X-Men',
-];
-
-final List<String> tvShows = <String>[
-  'Altered Carbon', 'Alien Worlds',
-  'Discovery', 'Enterprise', 'For All Man Kind', 'Last Ship', 'Lost In Space',
-  'Lower Decks', 'Mandalorian', 'Next Generation', 'Orville', 'Picard',
-  'Raised By Wolves', 'Sean Carroll', 'SpaceTime', 'Star Trek',
-  'Falcon Winter Soldier', 'Voyager', 'WandaVision', 'Invincible',
-  'The Bad Batch',
-];
 
 Widget moviesListView = ListView.builder(
   padding: const EdgeInsets.all(10.0),
