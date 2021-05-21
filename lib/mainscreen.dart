@@ -53,9 +53,10 @@ class MainScreen extends StatelessWidget {
         body: TabBarView(
           children: [
             moviesListView,
+            tvShowsListView,
 
-            Icon(Icons.directions_car),
-            Icon(Icons.directions_transit),
+            // Icon(Icons.directions_car),
+            // Icon(Icons.directions_transit),
             // Icon(Icons.directions_car),
             // Icon(Icons.directions_transit),
             // Icon(Icons.directions_bike),
