@@ -5,8 +5,6 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 2,
-
-    
         child: Scaffold(
           appBar: AppBar(
               title: Text("Movies TVShows"),
@@ -16,39 +14,8 @@ class MainScreen extends StatelessWidget {
                 tabs: [
                   Tab(icon: Icon(Icons.directions_car)),
                   Tab(icon: Icon(Icons.directions_transit)),
-                  // Tab(icon: Icon(Icons.directions_bike)),
                 ],
               ),
-              // actions: <Widget>[
-              //   IconButton(
-              //       onPressed: () {
-              //         Navigator.pushNamed(context, '/Movies');
-              //       },
-              //       icon: Icon(Icons.album_sharp),
-              //       tooltip: "Go to Movies Page"),
-              //   IconButton(
-              //       onPressed: () {
-              //         Navigator.pushNamed(context, '/TVShows');
-              //       },
-              //       icon: Icon(Icons.add_rounded),
-              //       tooltip: "Go To TVShows Page"),
-              //   // IconButton(
-              //   //     onPressed: () {
-              //   //       Navigator.pushNamed(context, '/');
-              //   //     },
-              //   //     icon: Icon(Icons.exit_to_app_sharp),
-              //   //     tooltip: "Exit App"),
-              //   IconButton(
-              //     icon: const Icon(Icons.add_alert),
-              //     tooltip: 'Show Snackbar',
-              //     onPressed: () {
-              //       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-              //         content: Text('ZZ Top \n Fandango \n Mexican Black Bird'),
-              //         backgroundColor: Colors.purple,
-              //       ));
-              //     },
-              //   ),
-              // ]
             ),
         body: Container(
           decoration: BoxDecoration(
@@ -58,39 +25,9 @@ class MainScreen extends StatelessWidget {
             children: [
               moviesListView,
               tvShowsListView,
-
-              // Icon(Icons.directions_car),
-              // Icon(Icons.directions_transit),
-              // Icon(Icons.directions_car),
-              // Icon(Icons.directions_transit),
-              // Icon(Icons.directions_bike),
             ],
           ),
         ),
-        
-        // Container(
-        //   decoration: BoxDecoration(
-        //     color: Colors.lightGreenAccent.shade400,
-        //   ),
-        //   child: Center(
-        //     child: Column(
-        //       mainAxisAlignment: MainAxisAlignment.center,
-        //       children: [
-        //         Text('Viewing playlist page'),
-        //         ElevatedButton(
-        //           style: ButtonStyle(
-        //             backgroundColor:
-        //                 MaterialStateProperty.all<Color>(Colors.lightGreen),
-        //           ),
-        //           child: Text('Pop!'),
-        //           onPressed: () {
-        //             Navigator.pop(context);
-        //           },
-        //         ),
-        //       ],
-        //     ),
-        //   ),
-        // )
       )
     );
   }
@@ -111,9 +48,7 @@ final List<String> tvShows = <String>[
   'Raised By Wolves', 'Sean Carroll', 'SpaceTime', 'Star Trek',
   'Falcon Winter Soldier', 'Voyager', 'WandaVision', 'Invincible',
   'The Bad Batch',
- 
 ];
-
 
 Widget moviesListView = ListView.builder(
   padding: const EdgeInsets.all(10.0),
@@ -132,23 +67,20 @@ Widget moviesListView = ListView.builder(
             )
           )
         ),
-      );
-    ),
-    onTap: () {
-      Navigator.pushNamed(
-        context,
-        '/Movies',
-      );
-    },
+      ),
+      onTap: () {
+        Navigator.pushNamed(
+          context,
+          '/Movies',
+        );
+      },
+    );
   }
 );
 
-
-
-
 Widget tvShowsListView = ListView.builder(
   padding: const EdgeInsets.all(10.0),
-  itemCount: movies.length,
+  itemCount: tvShows.length,
   itemBuilder: (BuildContext context, int index) {
     return InkWell(
       child: Container(
@@ -157,21 +89,19 @@ Widget tvShowsListView = ListView.builder(
         child: Center(
           child: Text(
             '${tvShows[index]}',
-            
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 22.0,
             )
           )
         ),
-      );
-    )
-    onTap: () {
-      Navigator.pushNamed(
-        context,
-        '/TVShows',
-      );
-    },
-    
+      ),
+      onTap: () {
+        Navigator.pushNamed(
+          context,
+          '/TVShows',
+        );
+      },
+    );
   }
 );
