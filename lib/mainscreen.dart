@@ -119,17 +119,27 @@ Widget moviesListView = ListView.builder(
   padding: const EdgeInsets.all(10.0),
   itemCount: movies.length,
   itemBuilder: (BuildContext context, int index) {
-    return Container(
-      height: 50,
-      color: Colors.amber[400],
-      child: Center(
-        child: Text(
-          '${movies[index]}',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 22.0,
-      ))),
-    );
+    return InkWell(
+      child: Container(
+        height: 50,
+        color: Colors.amber[400],
+        child: Center(
+          child: Text(
+            '${movies[index]}',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 22.0,
+            )
+          )
+        ),
+      );
+    ),
+    onTap: () {
+      Navigator.pushNamed(
+        context,
+        '/Movies',
+      );
+    },
   }
 );
 
@@ -140,23 +150,28 @@ Widget tvShowsListView = ListView.builder(
   padding: const EdgeInsets.all(10.0),
   itemCount: movies.length,
   itemBuilder: (BuildContext context, int index) {
-    return Container(
-      height: 50,
-      color: Colors.amber[400],
-      child: Center(
-        child: Text(
-          '${tvShows[index]}',
-          onTap: () {
-            Navigator.pushNamed(
-              context,
-              '/Movie',
-                : {}
-            );
-          },
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 22.0,
-      ))),
-    );
+    return InkWell(
+      child: Container(
+        height: 50,
+        color: Colors.amber[400],
+        child: Center(
+          child: Text(
+            '${tvShows[index]}',
+            
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 22.0,
+            )
+          )
+        ),
+      );
+    )
+    onTap: () {
+      Navigator.pushNamed(
+        context,
+        '/TVShows',
+      );
+    },
+    
   }
 );

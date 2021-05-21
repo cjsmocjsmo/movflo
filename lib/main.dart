@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'mainscreen.dart';
 import 'moviescreen.dart';
+import 'tvshowsscreen.dart'
 
 void main() => runApp(MovFlo());
 
@@ -13,7 +14,7 @@ class MovFlo extends StatelessWidget {
     return MaterialApp(title: _title, initialRoute: '/', routes: {
       '/': (context) => MainScreen(),
       '/Movies': (context) => MovieScreen(),
-      // '/Playlists': (context) => TvShowsScreen(),
+      '/TVShows': (context) => TvShowsScreen(),
     });
   }
 }
