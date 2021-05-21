@@ -102,7 +102,7 @@ final List<String> movies = <String>[
   'John Wick', 'John Wayne', 'Kings Men', 'Men In Black', 'Misc',
   'Pirates', 'Riddick', 'Star Wars', 'Star Trek', 'Super Heros',
   'SciFi', 'Tom Cruize', 'Tremors', 'The Rock', 'X-Men',
-]
+];
 
 final List<String> tvShows = <String>[
   'Altered Carbon', 'Alien Worlds',
@@ -112,7 +112,7 @@ final List<String> tvShows = <String>[
   'Falcon Winter Soldier', 'Voyager', 'WandaVision', 'Invincible',
   'The Bad Batch',
  
-]
+];
 
 
 Widget moviesListView = ListView.builder(
@@ -125,9 +125,10 @@ Widget moviesListView = ListView.builder(
       child: Center(
         child: Text(
           '${movies[index]}',
+          style: TextStyle(
           fontWeight: FontWeight.bold,
-          style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 2.5),
-          )),
+          DefaultTextStyle.of(context).style.apply(fontSizeFactor: 2.5),
+      ))),
     );
   }
 );
