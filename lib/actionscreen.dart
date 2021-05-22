@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+// import 'package:http/http.dart' as http;
 
-import 'dart:convert';
-import 'dart:async';
+// import 'dart:convert';
+// import 'dart:async';
 
 // Action page
 
-Future<Movies> fetchMovies() async {
-  final response =
-      await http.get(Uri.parse('http://192.168.0.42:8888/intAction'));
+// Future<Movies> fetchMovies() async {
+//   final response =
+//       await http.get(Uri.parse('http://192.168.0.42:8888/intAction'));
 
-  if (response.statusCode == 200) {
-    // If the server did return a 200 OK response,
-    // then parse the JSON.
-    return Movies.fromJson(jsonDecode(response.body));
-  } else {
-    // If the server did not return a 200 OK response,
-    // then throw an exception.
-    throw Exception('Failed to load Movies');
-  }
-}
+//   if (response.statusCode == 200) {
+//     // If the server did return a 200 OK response,
+//     // then parse the JSON.
+//     return Movies.fromJson(jsonDecode(response.body));
+//   } else {
+//     // If the server did not return a 200 OK response,
+//     // then throw an exception.
+//     throw Exception('Failed to load Movies');
+//   }
+// }
 
 class Movies {
   final String carosthumbpath;
@@ -31,7 +31,7 @@ class Movies {
   final String movfspath;
   final String movname;
   final String movyear;
-  final String thumbpath
+  final String thumbpath;
 
   // final int userId;
   // final int id;
@@ -72,14 +72,9 @@ class Movies {
 
 
 
-class _ActionState extends State<MovFlo> {
-  late Future<Movies> futureMovies;
+class ActionScreen extends StatelessWidget {
+  
 
-  @override 
-  void initState() {
-    super.initState();
-    futureMovies = fetchMovies();
-  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
