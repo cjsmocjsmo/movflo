@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-// import 'dart:async';
-// import 'dart:convert';
-// import 'package:http/http.dart' as http;
+import 'dart:async';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 
 final List<String> movies = <String>[
   'Action',
@@ -60,91 +60,98 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-        length: 2,
-        child: Scaffold(
-          appBar: AppBar(
-            title: Text("Movies TVShows"),
-            backgroundColor: Colors.lightGreen[900],
-            bottom: TabBar(
-              tabs: [
-                Tab(icon: Icon(Icons.movie_creation_sharp)),
-                Tab(icon: Icon(Icons.tv_sharp)),
-              ],
-            ),
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("Movies TVShows"),
+          backgroundColor: Colors.lightGreen[900],
+          bottom: TabBar(
+            tabs: [
+              Tab(icon: Icon(Icons.movie_creation_sharp)),
+              Tab(icon: Icon(Icons.tv_sharp)),
+            ],
           ),
-          bottomNavigationBar: BottomAppBar(
-            child: Row(
-              children: [
-                // IconButton(icon: Icon(Icons.menu), onPressed: () {}),
-                // // Spacer(),
-                // IconButton(icon: Icon(Icons.search), onPressed: () {}),
-                // IconButton(icon: Icon(Icons.more_vert), onPressed: () {}),
-              ],
-            ),
+        ),
+        bottomNavigationBar: BottomAppBar(
+          child: Row(
+            children: [
+              // IconButton(icon: Icon(Icons.menu), onPressed: () {}),
+              // // Spacer(),
+              // IconButton(icon: Icon(Icons.search), onPressed: () {}),
+              // IconButton(icon: Icon(Icons.more_vert), onPressed: () {}),
+            ],
           ),
-          floatingActionButton:
-              FloatingActionButton(child: Icon(Icons.close_sharp), onPressed: () {}),
-          floatingActionButtonLocation:
-              FloatingActionButtonLocation.endDocked,
-          body: Container(
-            decoration: BoxDecoration(
-              color: Colors.lightGreenAccent.shade400,
-            ),
-            child: TabBarView(
-              children: [
-                moviesListView,
-                tvShowsListView,
-              ],
-            ),
+        ),
+        floatingActionButton:
+            FloatingActionButton(child: Icon(Icons.close_sharp), onPressed: () {}),
+        floatingActionButtonLocation:
+            FloatingActionButtonLocation.endDocked,
+        body: Container(
+          decoration: BoxDecoration(
+            color: Colors.lightGreenAccent.shade400,
           ),
-        ));
+          child: TabBarView(
+            children: [
+              moviesListView,
+              tvShowsListView,
+            ],
+          ),
+        ),
+      )
+    );
   }
 }
 
 Widget moviesListView = ListView.builder(
-    padding: const EdgeInsets.all(10.0),
-    itemCount: movies.length,
-    itemBuilder: (BuildContext context, int index) {
-      return InkWell(
-        child: Container(
-          height: 50,
-          color: Colors.amber[400],
-          child: Center(
-              child: Text('${movies[index]}',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 22.0,
-                  ))),
+  padding: const EdgeInsets.all(10.0),
+  itemCount: movies.length,
+  itemBuilder: (BuildContext context, int index) {
+    return InkWell(
+      child: Container(
+        height: 50,
+        color: Colors.amber[400],
+        child: Center(
+            child: Text('${movies[index]}',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 22.0,
+            )
+          )
         ),
-        onTap: () {
-          Navigator.pushNamed(
-            context,
-            '/Movies',
-          );
-        },
-      );
-    });
+      ),
+      onTap: () {
+        Navigator.pushNamed(
+          context,
+          '/Movies',
+        );
+      },
+    );
+  }
+);
 
 Widget tvShowsListView = ListView.builder(
-    padding: const EdgeInsets.all(10.0),
-    itemCount: tvShows.length,
-    itemBuilder: (BuildContext context, int index) {
-      return InkWell(
-        child: Container(
-          height: 50,
-          color: Colors.amber[400],
-          child: Center(
-              child: Text('${tvShows[index]}',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 22.0,
-                  ))),
+  padding: const EdgeInsets.all(10.0),
+  itemCount: tvShows.length,
+  itemBuilder: (BuildContext context, int index) {
+    return InkWell(
+      child: Container(
+        height: 50,
+        color: Colors.amber[400],
+        child: Center(
+            child: Text('${tvShows[index]}',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 22.0,
+            )
+          )
         ),
-        onTap: () {
-          Navigator.pushNamed(
-            context,
-            '/TVShows',
-          );
-        },
-      );
-    });
+      ),
+      onTap: () {
+        Navigator.pushNamed(
+          context,
+          '/TVShows',
+        );
+      },
+    );
+  }
+);
