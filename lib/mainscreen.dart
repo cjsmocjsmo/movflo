@@ -122,7 +122,7 @@ Widget moviesListView = ListView.builder(
       onTap: () {
         Navigator.pushNamed(
           context,
-          '/Movies',
+          '/${movies[index]}',
         );
       },
     );
