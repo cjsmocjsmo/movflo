@@ -17,7 +17,7 @@ class IndianaJonesScreen extends StatelessWidget{
     return mov['httpthumbpath'];
   }
 
-@override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
