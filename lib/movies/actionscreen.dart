@@ -34,7 +34,7 @@ class ActionScreen extends StatelessWidget{
           future: fetchMovies(),
           builder: (BuildContext context, AsyncSnapshot snapshot) {
             if(snapshot.hasData){
-              print(snapshot.data);
+              // print(snapshot.data);
               return GridView.builder(
                 gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                   maxCrossAxisExtent: 200,
@@ -49,6 +49,10 @@ class ActionScreen extends StatelessWidget{
                     child: GestureDetector(
                       onTap: () {
                         Navigator.pop(context);
+
+                        // Need to add play movie code here
+
+
                       },
                       child: Image.network(
                         _thumb(snapshot.data[index]),

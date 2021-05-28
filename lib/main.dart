@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'mainscreen.dart';
 import 'movies/actionscreen.dart';
 import 'movies/indianajonesscreen.dart';
-import 'tvshowsscreen.dart';
+import 'tvshows/tvshowsscreen.dart';
 
 void main() => runApp(MovFlo());
 
