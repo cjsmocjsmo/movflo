@@ -46,7 +46,6 @@ class TremorsScreen extends StatelessWidget{
           future: fetchMovies(),
           builder: (BuildContext context, AsyncSnapshot snapshot) {
             if(snapshot.hasData){
-              print(snapshot.data);
               return GridView.builder(
                 gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                   maxCrossAxisExtent: 200,
