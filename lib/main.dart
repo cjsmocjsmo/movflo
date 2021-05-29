@@ -16,6 +16,8 @@ import 'movies/johnwaynescreen.dart';
 import 'movies/kingsmenscreen.dart';
 import 'movies/meninblackscreen.dart';
 import 'movies/miscscreen.dart';
+import 'movies/piratesscreen.dart';
+import 'movies/riddickscreen.dart';
 
 
 
@@ -47,7 +49,10 @@ class MovFlo extends StatelessWidget {
       '/Kings Men': (context) => KingsmenScreen(),
       '/Men In Black': (context) => MenInBlackScreen(),
       '/Misc': (context) => MiscScreen(),
-      
+      '/Pirates': (context) => PiratesScreen(),
+      '/Riddick': (context) => RiddickScreen(),
+
+
       '/TVShows': (context) => TvShowsScreen(),
     });
   }
