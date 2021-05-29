@@ -19,6 +19,8 @@ import 'movies/miscscreen.dart';
 import 'movies/piratesscreen.dart';
 import 'movies/riddickscreen.dart';
 import 'movies/starwarsscreen.dart';
+import 'movies/startrekscreen.dart';
+import 'movies/superherosscreen.dart';
 
 
 
@@ -53,6 +55,8 @@ class MovFlo extends StatelessWidget {
       '/Pirates': (context) => PiratesScreen(),
       '/Riddick': (context) => RiddickScreen(),
       '/Star Wars': (context) => StarWarsScreen(),
+      '/Star Trek': (context) => StarTrekScreen(),
+      '/Super Heros': (context) => SuperHerosScreen(),
 
 
       '/TVShows': (context) => TvShowsScreen(),
