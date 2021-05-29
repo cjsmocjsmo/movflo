@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-class PiratesScreen extends StatelessWidget{
+class StarWarsScreen extends StatelessWidget{
 
-  final String apiUrl = "http://192.168.0.42:8888/intPirates";
+  final String apiUrl = "http://192.168.0.42:8888/intStarWars";
 
   Future<List<dynamic>> fetchMovies() async {
 
@@ -34,7 +34,7 @@ class PiratesScreen extends StatelessWidget{
       appBar: AppBar(
         backgroundColor: Colors.lightGreen[900],
         title: Text(
-          "Pirates",
+          "Star Wars",
           style: TextStyle(color: Colors.white),
         ),
       ),
