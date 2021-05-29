@@ -8,6 +8,7 @@ import 'movies/dramascreen.dart';
 import 'movies/documentaryscreen.dart';
 import 'movies/fantasyscreen.dart';
 import 'movies/godzillascreen.dart';
+import 'movies/harrypotterscreen.dart';
 import 'movies/indianajonesscreen.dart';
 import 'tvshows/tvshowsscreen.dart';
 
@@ -29,6 +30,7 @@ class MovFlo extends StatelessWidget {
       '/Documentary': (context) => DocumentaryScreen(),
       '/Fantasy': (context) => FantasyScreen(),
       '/Godzilla': (context) => GodzillaScreen(),
+      '/Harry Potter': (context) => HarryPotterScreen(),
       '/Indiana Jones': (context) => IndianaJonesScreen(),
       '/TVShows': (context) => TvShowsScreen(),
     });
