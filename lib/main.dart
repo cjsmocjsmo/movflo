@@ -22,8 +22,10 @@ import 'movies/starwarsscreen.dart';
 import 'movies/startrekscreen.dart';
 import 'movies/superherosscreen.dart';
 import 'movies/scifiscreen.dart';
-
-
+import 'movies/tomcruizescreen.dart';
+import 'movies/tremorsscreen.dart';
+import 'movies/therockscreen.dart';
+import 'movies/xmenscreen.dart';
 
 import 'tvshows/tvshowsscreen.dart';
 
@@ -59,7 +61,10 @@ class MovFlo extends StatelessWidget {
       '/Star Trek': (context) => StarTrekScreen(),
       '/Super Heros': (context) => SuperHerosScreen(),
       '/SciFi': (context) => SciFiScreen(),
-
+      '/Tom Cruize': (context) => TomCruizeScreen(),
+      '/Tremors': (context) => TremorsScreen(),
+      '/The Rock': (context) => TheRockScreen(),
+      '/X-Men': (context) => XMenScreen(),
 
       '/TVShows': (context) => TvShowsScreen(),
     });
