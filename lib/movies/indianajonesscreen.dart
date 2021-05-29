@@ -4,7 +4,7 @@ import 'dart:convert';
 
 class IndianaJonesScreen extends StatelessWidget{
 
-  final String apiUrl = "http://192.168.0.91:9999/intIndianaJones";
+  final String apiUrl = "http://192.168.0.42:8888/intIndianaJones";
 
   Future<List<dynamic>> fetchMovies() async {
 
@@ -46,7 +46,7 @@ class IndianaJonesScreen extends StatelessWidget{
           future: fetchMovies(),
           builder: (BuildContext context, AsyncSnapshot snapshot) {
             if(snapshot.hasData){
-              // print(snapshot.data);
+              print(snapshot.data);
               return GridView.builder(
                 gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                   maxCrossAxisExtent: 200,

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 final List<String> movies = <String>[
   'Action',
@@ -54,6 +56,14 @@ final List<String> tvShows = <String>[
 ];
 
 class MainScreen extends StatelessWidget {
+
+  Future<void> stopMov(stopURL) async {
+    
+    var resultStop = await http.get(Uri.parse(stopURL));
+    return json.decode(resultStop.body);
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -80,7 +90,13 @@ class MainScreen extends StatelessWidget {
           ),
         ),
         floatingActionButton:
-            FloatingActionButton(child: Icon(Icons.close_sharp), onPressed: () {}),
+            FloatingActionButton(
+              child: Icon(Icons.close_sharp), 
+              onPressed: () { 
+                final String apiStop = "http://192.168.0.42:8181/Stop";
+                stop(apiStop); 
+              }
+            ),
         floatingActionButtonLocation:
             FloatingActionButtonLocation.endDocked,
         body: Container(
@@ -96,6 +112,10 @@ class MainScreen extends StatelessWidget {
         ),
       )
     );
+  }
+  void stop(apath) async{
+    final stop = await stopMov(apath);
+    return stop;
   }
 }
 
