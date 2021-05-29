@@ -5,6 +5,7 @@ import 'movies/brucewillisscreen.dart';
 import 'movies/cartoonsscreen.dart';
 import 'movies/comedyscreen.dart';
 import 'movies/dramascreen.dart';
+import 'movies/documentaryscreen.dart';
 import 'movies/indianajonesscreen.dart';
 import 'tvshows/tvshowsscreen.dart';
 
@@ -23,6 +24,7 @@ class MovFlo extends StatelessWidget {
       '/Cartoons': (context) => CartoonsScreen(),
       '/Comedy': (context) => ComedyScreen(),
       '/Drama': (context) => DramaScreen(),
+      '/Documentary': (context) => DocumentaryScreen(),
       '/Indiana Jones': (context) => IndianaJonesScreen(),
       '/TVShows': (context) => TvShowsScreen(),
     });
