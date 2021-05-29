@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'mainscreen.dart';
 import 'movies/actionscreen.dart';
 import 'movies/brucewillisscreen.dart';
+import 'movies/cartoonsscreen.dart';
 import 'movies/dramascreen.dart';
 import 'movies/indianajonesscreen.dart';
 import 'tvshows/tvshowsscreen.dart';
@@ -18,6 +19,7 @@ class MovFlo extends StatelessWidget {
       '/': (context) => MainScreen(),
       '/Action': (context) => ActionScreen(),
       '/Bruce Willis': (context) => BruceWillisScreen(),
+      '/Cartoons': (context) => CartoonsScreen(),
       '/Drama': (context) => DramaScreen(),
       '/Indiana Jones': (context) => IndianaJonesScreen(),
       '/TVShows': (context) => TvShowsScreen(),
