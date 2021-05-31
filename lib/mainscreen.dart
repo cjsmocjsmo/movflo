@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
+import 'tvshows/startrektvcard.dart';
+import 'tvshows/lowerdeckscard.dart';
+
 final List<String> movies = <String>[
   'Action',
   'Bruce Willis',
@@ -107,7 +110,10 @@ class MainScreen extends StatelessWidget {
           child: TabBarView(
             children: [
               moviesListView,
+              // tvShowsListView(),
               tvShowsListView(context),
+              // lowerDecksListView(context),
+
             ],
           ),
         ),
@@ -147,117 +153,125 @@ Widget moviesListView = ListView.builder(
   }
 );
 
-void starTrekNav(context) {
-  Navigator.pushNamed(context, '/Star Trek TV');
-}
+// void starTrekNav(context) {
+//   Navigator.pushNamed(context, '/Star Trek TV');
+// }
 
 Widget tvShowsListView(BuildContext context) {
   return ListView(
   shrinkWrap: true,
   padding: const EdgeInsets.all(10.0),
   children: <Widget>[
-    Center(
-      child: Card(
-        color: Colors.purple[900],
-        child: InkWell(
-          splashColor: Colors.red.withAlpha(15),
-          onTap: () {
-            print('Card tapped.');
-          },
-          child: SizedBox(
-          width: 775.0,
-          height: 290.0,
-          child: Row(
-            children: <Widget>[
-              Image.asset(
-                'images/sttv.jpg',
-                fit: BoxFit.contain,
-                  height: 355.5,
-                  width: 200.0,
-              ),
-              Expanded(
-                child: Column(
-                children: <Widget>[
-                  TextButton(
-                    child: const Text('Season 1'),
-                    style: TextButton.styleFrom(
-                      textStyle: TextStyle(fontSize: 32, color: Colors.white)
-                    ),
-                    onPressed: () {
-                      starTrekNav(context);
-                    },
-                  ),
-                  const SizedBox(width: 12),
-                  TextButton(
-                    child: const Text('Season 2'),
-                    style: TextButton.styleFrom(
-                      textStyle: TextStyle(fontSize: 32)
-                    ),
-                    onPressed: () {
-                      starTrekNav(context);
-                    },
-                  ),
-                  const SizedBox(width: 12),
-                  TextButton(
-                    child: const Text('Season 3'),
-                    style: TextButton.styleFrom(
-                      textStyle: TextStyle(fontSize: 32)
-                    ),
-                    onPressed: () {
-                      starTrekNav(context);
-                    },
-                  ),
-                  const SizedBox(width: 12),
-                  TextButton(
-                    child: const Text('Season 4'),
-                    style: TextButton.styleFrom(
-                      textStyle: TextStyle(fontSize: 32)
-                    ),
-                    onPressed: () {
-                      starTrekNav(context);
-                    },
-                  ),
-                  const SizedBox(width: 12),
-                  TextButton(
-                    child: const Text('Season 5'),
-                    style: TextButton.styleFrom(
-                      textStyle: TextStyle(fontSize: 32)
-                    ),
-                    onPressed: () {
-                      starTrekNav(context);
-                    },
-                  ),
-                  const SizedBox(width: 12),
-                  TextButton(
-                    child: const Text('Season 6'),
-                    style: TextButton.styleFrom(
-                      textStyle: TextStyle(fontSize: 32)
-                    ),
-                    onPressed: () {
-                      starTrekNav(context);
-                    },
-                  ),
-                  const SizedBox(width: 12),
-                  TextButton(
-                    child: const Text('Season 7'),
-                    style: TextButton.styleFrom(
-                      textStyle: TextStyle(fontSize: 32)
-                    ),
-                    onPressed: () {
-                      starTrekNav(context);
-                    },
-                  ),
-                  const SizedBox(width: 12),
+    StarTrekTVCard(),
+    LowerDecksCard(),
+    
+    // Center(
+    //   child: Card(
+    //     color: Colors.purple[900],
+    //     child: InkWell(
+    //       splashColor: Colors.red.withAlpha(15),
+    //       onTap: () {
+    //         print('Card tapped.');
+    //       },
+    //       child: SizedBox(
+    //         width: 775.0,
+    //         height: 290.0,
+    //         child: Row(
+    //           children: <Widget>[
+    //             Image.asset(
+    //               'images/lowerdecks.jpg',
+    //               fit: BoxFit.contain,
+    //                 height: 355.5,
+    //                 width: 200.0,
+    //             ),
+    //             Expanded(
+    //               child: Column(
+    //               children: <Widget>[
+    //                 TextButton(
+    //                   child: const Text('Season 1'),
+    //                   style: TextButton.styleFrom(
+    //                     textStyle: TextStyle(fontSize: 32, color: Colors.white)
+    //                   ),
+    //                   onPressed: () {
+    //                     starTrekNav(context);
+    //                   },
+    //                 ),
+    //                 const SizedBox(width: 12),
+    //                 TextButton(
+    //                   child: const Text('Season 2'),
+    //                   style: TextButton.styleFrom(
+    //                     textStyle: TextStyle(fontSize: 32)
+    //                   ),
+    //                   onPressed: () {
+    //                     starTrekNav(context);
+    //                   },
+    //                 ),
+    //                 const SizedBox(width: 12),
+    //                 TextButton(
+    //                   child: const Text('Season 3'),
+    //                   style: TextButton.styleFrom(
+    //                     textStyle: TextStyle(fontSize: 32)
+    //                   ),
+    //                   onPressed: () {
+    //                     starTrekNav(context);
+    //                   },
+    //                 ),
+    //                 const SizedBox(width: 12),
+    //                 TextButton(
+    //                   child: const Text('Season 4'),
+    //                   style: TextButton.styleFrom(
+    //                     textStyle: TextStyle(fontSize: 32)
+    //                   ),
+    //                   onPressed: () {
+    //                     starTrekNav(context);
+    //                   },
+    //                 ),
+    //                 const SizedBox(width: 12),
+    //                 TextButton(
+    //                   child: const Text('Season 5'),
+    //                   style: TextButton.styleFrom(
+    //                     textStyle: TextStyle(fontSize: 32)
+    //                   ),
+    //                   onPressed: () {
+    //                     starTrekNav(context);
+    //                   },
+    //                 ),
+    //                 const SizedBox(width: 12),
+    //                 TextButton(
+    //                   child: const Text('Season 6'),
+    //                   style: TextButton.styleFrom(
+    //                     textStyle: TextStyle(fontSize: 32)
+    //                   ),
+    //                   onPressed: () {
+    //                     starTrekNav(context);
+    //                   },
+    //                 ),
+    //                 const SizedBox(width: 12),
+    //                 TextButton(
+    //                   child: const Text('Season 7'),
+    //                   style: TextButton.styleFrom(
+    //                     textStyle: TextStyle(fontSize: 32)
+    //                   ),
+    //                   onPressed: () {
+    //                     starTrekNav(context);
+    //                   },
+    //                 ),
+    //                 const SizedBox(width: 12),
 
-                ]
-              )),
-            ]),
-          )
-        ),
-      )
-    ),
+    //               ]
+    //             )),
+    //           ]),
+    //         )
+    //     ),
+    //   )
+    // ),
+
+
+
+
   ]);
 }
+
 
 
 

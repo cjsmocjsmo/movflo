@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class StarTrekTVScreen extends StatelessWidget {
+class JunkScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
