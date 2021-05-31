@@ -29,6 +29,7 @@ final List<String> movies = <String>[
   'Tremors',
   'The Rock',
   'X-Men',
+  'MyStatefulWidget'
 ];
 
 final List<String> tvShows = <String>[
@@ -47,7 +48,7 @@ final List<String> tvShows = <String>[
   'Raised By Wolves',
   'Sean Carroll',
   'SpaceTime',
-  'Star Trek',
+  'Star Trek TV',
   'Falcon Winter Soldier',
   'Voyager',
   'WandaVision',
@@ -90,13 +91,13 @@ class MainScreen extends StatelessWidget {
           ),
         ),
         floatingActionButton:
-            FloatingActionButton(
-              child: Icon(Icons.close_sharp), 
-              onPressed: () { 
-                final String apiStop = "http://192.168.0.42:8181/Stop";
-                stop(apiStop); 
-              }
-            ),
+          FloatingActionButton(
+          child: Icon(Icons.close_sharp), 
+          onPressed: () { 
+            final String apiStop = "http://192.168.0.42:8181/Stop";
+            stop(apiStop); 
+          }
+        ),
         floatingActionButtonLocation:
             FloatingActionButtonLocation.endDocked,
         body: Container(
@@ -106,7 +107,7 @@ class MainScreen extends StatelessWidget {
           child: TabBarView(
             children: [
               moviesListView,
-              tvShowsListView,
+              tvShowsListView(context),
             ],
           ),
         ),
@@ -146,29 +147,161 @@ Widget moviesListView = ListView.builder(
   }
 );
 
-Widget tvShowsListView = ListView.builder(
+void starTrekNav(context) {
+  Navigator.pushNamed(context, '/Star Trek TV');
+}
+
+Widget tvShowsListView(BuildContext context) {
+  return ListView(
+  shrinkWrap: true,
   padding: const EdgeInsets.all(10.0),
-  itemCount: tvShows.length,
-  itemBuilder: (BuildContext context, int index) {
-    return InkWell(
-      child: Container(
-        height: 50,
-        color: Colors.amber[400],
-        child: Center(
-            child: Text('${tvShows[index]}',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 22.0,
-            )
+  children: <Widget>[
+    Center(
+      child: Card(
+        color: Colors.purple[900],
+        child: InkWell(
+          splashColor: Colors.red.withAlpha(15),
+          onTap: () {
+            print('Card tapped.');
+          },
+          child: SizedBox(
+          width: 775.0,
+          height: 290.0,
+          child: Row(
+            children: <Widget>[
+              Image.asset(
+                'images/sttv.jpg',
+                fit: BoxFit.contain,
+                  height: 355.5,
+                  width: 200.0,
+              ),
+              Expanded(
+                child: Column(
+                children: <Widget>[
+                  TextButton(
+                    child: const Text('Season 1'),
+                    style: TextButton.styleFrom(
+                      textStyle: TextStyle(fontSize: 32, color: Colors.white)
+                    ),
+                    onPressed: () {
+                      starTrekNav(context);
+                    },
+                  ),
+                  const SizedBox(width: 12),
+                  TextButton(
+                    child: const Text('Season 2'),
+                    style: TextButton.styleFrom(
+                      textStyle: TextStyle(fontSize: 32)
+                    ),
+                    onPressed: () {
+                      starTrekNav(context);
+                    },
+                  ),
+                  const SizedBox(width: 12),
+                  TextButton(
+                    child: const Text('Season 3'),
+                    style: TextButton.styleFrom(
+                      textStyle: TextStyle(fontSize: 32)
+                    ),
+                    onPressed: () {
+                      starTrekNav(context);
+                    },
+                  ),
+                  const SizedBox(width: 12),
+                  TextButton(
+                    child: const Text('Season 4'),
+                    style: TextButton.styleFrom(
+                      textStyle: TextStyle(fontSize: 32)
+                    ),
+                    onPressed: () {
+                      starTrekNav(context);
+                    },
+                  ),
+                  const SizedBox(width: 12),
+                  TextButton(
+                    child: const Text('Season 5'),
+                    style: TextButton.styleFrom(
+                      textStyle: TextStyle(fontSize: 32)
+                    ),
+                    onPressed: () {
+                      starTrekNav(context);
+                    },
+                  ),
+                  const SizedBox(width: 12),
+                  TextButton(
+                    child: const Text('Season 6'),
+                    style: TextButton.styleFrom(
+                      textStyle: TextStyle(fontSize: 32)
+                    ),
+                    onPressed: () {
+                      starTrekNav(context);
+                    },
+                  ),
+                  const SizedBox(width: 12),
+                  TextButton(
+                    child: const Text('Season 7'),
+                    style: TextButton.styleFrom(
+                      textStyle: TextStyle(fontSize: 32)
+                    ),
+                    onPressed: () {
+                      starTrekNav(context);
+                    },
+                  ),
+                  const SizedBox(width: 12),
+
+                ]
+              )),
+            ]),
           )
         ),
-      ),
-      onTap: () {
-        Navigator.pushNamed(
-          context,
-          '/TVShows',
-        );
-      },
-    );
-  }
-);
+      )
+    ),
+  ]);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// This works DONT DELETE
+// Widget tvShowsListView = ListView.builder(
+//   padding: const EdgeInsets.all(10.0),
+//   itemCount: tvShows.length,
+//   itemBuilder: (BuildContext context, int index) {
+//     return InkWell(
+//       child: Container(
+//         height: 50,
+//         color: Colors.amber[400],
+//         child: Center(
+//             child: Text('${tvShows[index]}',
+//             style: TextStyle(
+//               fontWeight: FontWeight.bold,
+//               fontSize: 22.0,
+//             )
+//           )
+//         ),
+//       ),
+//       onTap: () {
+//         Navigator.pushNamed(
+//           context,
+//           '/${tvShows[index]}',
+//         );
+//       },
+//     );
+//   }
+// );
+
+
+
+

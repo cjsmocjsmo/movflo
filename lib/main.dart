@@ -27,7 +27,10 @@ import 'movies/tremorsscreen.dart';
 import 'movies/therockscreen.dart';
 import 'movies/xmenscreen.dart';
 
-import 'tvshows/tvshowsscreen.dart';
+import 'tvshows/startrektvscreen.dart';
+
+import 'tvshows/mystatelesswidget.dart';
+
 
 void main() => runApp(MovFlo());
 
@@ -58,15 +61,16 @@ class MovFlo extends StatelessWidget {
       '/Pirates': (context) => PiratesScreen(),
       '/Riddick': (context) => RiddickScreen(),
       '/Star Wars': (context) => StarWarsScreen(),
-      '/Star Trek': (context) => StarTrekScreen(),
+      '/Star Trek TV': (context) => StarTrekTVScreen(),
       '/Super Heros': (context) => SuperHerosScreen(),
       '/SciFi': (context) => SciFiScreen(),
       '/Tom Cruize': (context) => TomCruizeScreen(),
       '/Tremors': (context) => TremorsScreen(),
       '/The Rock': (context) => TheRockScreen(),
       '/X-Men': (context) => XMenScreen(),
+      '/MyStatefulWidget': (context) => MyStatefulWidget(),
 
-      '/TVShows': (context) => TvShowsScreen(),
+      '/Star Trek TV': (BuildContext context) => StarTrekTVScreen(),
     });
   }
 }

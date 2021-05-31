@@ -37,6 +37,7 @@ class BruceWillisScreen extends StatelessWidget{
           "BruceWillis",
           style: TextStyle(color: Colors.white),
         ),
+        
       ),
       body: Container(
         decoration: BoxDecoration(
