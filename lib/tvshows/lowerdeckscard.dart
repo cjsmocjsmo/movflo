@@ -6,7 +6,7 @@ void lowerDecksNav(context) {
 
 class LowerDecksCard extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
+    Widget build(BuildContext context) {
     return Center(
       child: Card(
         color: Colors.purple[900],
@@ -27,6 +27,9 @@ class LowerDecksCard extends StatelessWidget {
                     width: 200.0,
                 ),
                 Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0.0, 100.0, 0.0, 0.0),
+
                   child: Column(
                   children: <Widget>[
                     TextButton(
@@ -49,63 +52,64 @@ class LowerDecksCard extends StatelessWidget {
                       },
                     ),
                     const SizedBox(width: 12),
-                    TextButton(
-                      child: const Text('Season 3'),
-                      style: TextButton.styleFrom(
-                        textStyle: TextStyle(fontSize: 32)
-                      ),
-                      onPressed: () {
-                        lowerDecksNav(context);
-                      },
-                    ),
-                    const SizedBox(width: 12),
-                    TextButton(
-                      child: const Text('Season 4'),
-                      style: TextButton.styleFrom(
-                        textStyle: TextStyle(fontSize: 32)
-                      ),
-                      onPressed: () {
-                        lowerDecksNav(context);
-                      },
-                    ),
-                    const SizedBox(width: 12),
-                    TextButton(
-                      child: const Text('Season 5'),
-                      style: TextButton.styleFrom(
-                        textStyle: TextStyle(fontSize: 32)
-                      ),
-                      onPressed: () {
-                        lowerDecksNav(context);
-                      },
-                    ),
-                    const SizedBox(width: 12),
-                    TextButton(
-                      child: const Text('Season 6'),
-                      style: TextButton.styleFrom(
-                        textStyle: TextStyle(fontSize: 32)
-                      ),
-                      onPressed: () {
-                        lowerDecksNav(context);
-                      },
-                    ),
-                    const SizedBox(width: 12),
-                    TextButton(
-                      child: const Text('Season 7'),
-                      style: TextButton.styleFrom(
-                        textStyle: TextStyle(fontSize: 32)
-                      ),
-                      onPressed: () {
-                        lowerDecksNav(context);
-                      },
-                    ),
-                    const SizedBox(width: 12),
+                    // TextButton(
+                    //   child: const Text('Season 3'),
+                    //   style: TextButton.styleFrom(
+                    //     textStyle: TextStyle(fontSize: 32)
+                    //   ),
+                    //   onPressed: () {
+                    //     starTrekNav(context);
+                    //   },
+                    // ),
+                    // const SizedBox(width: 12),
+                    // TextButton(
+                    //   child: const Text('Season 4'),
+                    //   style: TextButton.styleFrom(
+                    //     textStyle: TextStyle(fontSize: 32)
+                    //   ),
+                    //   onPressed: () {
+                    //     starTrekNav(context);
+                    //   },
+                    // ),
+                    // const SizedBox(width: 12),
+                    // TextButton(
+                    //   child: const Text('Season 5'),
+                    //   style: TextButton.styleFrom(
+                    //     textStyle: TextStyle(fontSize: 32)
+                    //   ),
+                    //   onPressed: () {
+                    //     starTrekNav(context);
+                    //   },
+                    // ),
+                    // const SizedBox(width: 12),
+                    // TextButton(
+                    //   child: const Text('Season 6'),
+                    //   style: TextButton.styleFrom(
+                    //     textStyle: TextStyle(fontSize: 32)
+                    //   ),
+                    //   onPressed: () {
+                    //     starTrekNav(context);
+                    //   },
+                    // ),
+                    // const SizedBox(width: 12),
+                    // TextButton(
+                    //   child: const Text('Season 7'),
+                    //   style: TextButton.styleFrom(
+                    //     textStyle: TextStyle(fontSize: 32)
+                    //   ),
+                    //   onPressed: () {
+                    //     starTrekNav(context);
+                    //   },
+                    // ),
+                    // const SizedBox(width: 12),
 
                   ]
-                )),
+                ))),
               ]),
             )
         ),
       )
     );
+
   }
 }

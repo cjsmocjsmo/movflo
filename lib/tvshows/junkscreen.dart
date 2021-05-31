@@ -5,7 +5,7 @@ class JunkScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Star Trek"),
+        title: Text("Junk"),
         backgroundColor: Colors.lightGreen[900],
         actions: [
 
@@ -35,94 +35,15 @@ class JunkScreen extends StatelessWidget {
         ),
         child: Center(
           child: Image.network(
-                // _thumb(snapshot.data[index]),
-                "images/four.jpg",
-                fit: BoxFit.cover,
-                  // height: 300.0,
-                  // width: 175.0,
-              ),
+            // _thumb(snapshot.data[index]),
+            "images/four.jpg",
+            fit: BoxFit.cover,
+              // height: 300.0,
+              // width: 175.0,
+          ),
         ),
-          ),      
-        );
-      
-
-        
-      // bottomNavigationBar: BottomAppBar(
-      //   child: ButtonBar(
-      //     overflowDirection: VerticalDirection.down,
-      //     children: [
-      //       // IconButton(icon: Icon(Icons.menu), onPressed: () {}),
-      //       // // Spacer(),
-      //       // IconButton(icon: Icon(Icons.search), onPressed: () {}),
-      //       // IconButton(icon: Icon(Icons.more_vert), onPressed: () {}),
-      //       OutlinedButton.icon(
-      //         onPressed: () {
-      //             // Respond to button press
-      //         },
-      //         icon: Icon(Icons.add, size: 18),
-      //         label: Text(
-      //           "S1",
-      //           style: TextStyle(
-      //                     fontSize: 20,
-      //                     fontStyle: FontStyle.italic,
-      //                     //fontFamily: "alex",
-      //                   ),
-      //           ),
-      //         style: ElevatedButton.styleFrom(
-      //                   onPrimary: Colors.white,
-      //                   primary: Colors.purple,
-      //                   elevation: 10,
-      //                   minimumSize: Size(120,50),
-      //                   shadowColor: Colors.black,
-      //                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30),
-      //                 )),
-      //       ),
-      //       ElevatedButton.icon(
-      //         onPressed: () {
-      //             // Respond to button press
-      //         },
-      //         icon: Icon(Icons.add, size: 18),
-      //         label: Text("S2"),
-      //       ),
-      //       ElevatedButton.icon(
-      //         onPressed: () {
-      //             // Respond to button press
-      //         },
-      //         icon: Icon(Icons.add, size: 18),
-      //         label: Text("S3"),
-      //       ),
-      //       ElevatedButton.icon(
-      //         onPressed: () {
-      //             // Respond to button press
-      //         },
-      //         icon: Icon(Icons.add, size: 18),
-      //         label: Text("S4"),
-      //       ),
-      //       ElevatedButton.icon(
-      //         onPressed: () {
-      //             // Respond to button press
-      //         },
-      //         icon: Icon(Icons.add, size: 18),
-      //         label: Text("S5"),
-      //       ),
-      //       ElevatedButton.icon(
-      //         onPressed: () {
-      //             // Respond to button press
-      //         },
-      //         icon: Icon(Icons.add, size: 18),
-      //         label: Text("S6"),
-      //       ),
-      //       ElevatedButton.icon(
-      //         onPressed: () {
-      //             // Respond to button press
-      //         },
-      //         icon: Icon(Icons.add, size: 18),
-      //         label: Text("S7"),
-      //       ),
-      //     ],
-      //   ),
-      // ));
-
+      ),      
+    );
   }
 }
 

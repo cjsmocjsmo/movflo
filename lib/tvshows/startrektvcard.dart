@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 void starTrekNav(context) {
-  Navigator.pushNamed(context, '/MyStatefulWidget');
+  // Navigator.pushNamed(context, '/MyStatefulWidget');
+  Navigator.pushNamed(context, '/Junk');
 }
 
 class StarTrekTVCard extends StatelessWidget {
@@ -27,6 +28,9 @@ class StarTrekTVCard extends StatelessWidget {
                     width: 200.0,
                 ),
                 Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0.0, 80.0, 0.0, 0.0),
+
                   child: Column(
                   children: <Widget>[
                     TextButton(
@@ -59,54 +63,12 @@ class StarTrekTVCard extends StatelessWidget {
                       },
                     ),
                     const SizedBox(width: 12),
-                    TextButton(
-                      child: const Text('Season 4'),
-                      style: TextButton.styleFrom(
-                        textStyle: TextStyle(fontSize: 32)
-                      ),
-                      onPressed: () {
-                        starTrekNav(context);
-                      },
-                    ),
-                    const SizedBox(width: 12),
-                    TextButton(
-                      child: const Text('Season 5'),
-                      style: TextButton.styleFrom(
-                        textStyle: TextStyle(fontSize: 32)
-                      ),
-                      onPressed: () {
-                        starTrekNav(context);
-                      },
-                    ),
-                    const SizedBox(width: 12),
-                    TextButton(
-                      child: const Text('Season 6'),
-                      style: TextButton.styleFrom(
-                        textStyle: TextStyle(fontSize: 32)
-                      ),
-                      onPressed: () {
-                        starTrekNav(context);
-                      },
-                    ),
-                    const SizedBox(width: 12),
-                    TextButton(
-                      child: const Text('Season 7'),
-                      style: TextButton.styleFrom(
-                        textStyle: TextStyle(fontSize: 32)
-                      ),
-                      onPressed: () {
-                        starTrekNav(context);
-                      },
-                    ),
-                    const SizedBox(width: 12),
-
                   ]
-                )),
+                ))),
               ]),
             )
         ),
       )
     );
-
   }
 }
