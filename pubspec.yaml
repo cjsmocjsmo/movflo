@@ -54,8 +54,17 @@ flutter:
     - images/two.jpg
     - images/three.jpg
     - images/four.jpg
-    - images/sttv.jpg
+    - images/alienworlds.jpg
+    - images/alteredcarbon.jpg
+    - images/discovery.jpg
+    - images/enterprise.jpg
+    - images/falconwintersoldier.jpg
     - images/lowerdecks.jpg
+    - images/sttv.jpg
+    
+    
+    
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
