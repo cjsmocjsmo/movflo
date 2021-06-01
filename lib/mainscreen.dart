@@ -8,6 +8,7 @@ import 'tvshows/alienworldscard.dart';
 import 'tvshows/alteredcarboncard.dart';
 import 'tvshows/discoverycard.dart';
 import 'tvshows/falconwintersoldiercard.dart';
+import 'tvshows/forallmankindcard.dart';
 import 'tvshows/lowerdeckscard.dart';
 import 'tvshows/startrektvcard.dart';
 
@@ -169,8 +170,10 @@ Widget tvShowsListView(BuildContext context) {
     AlteredCarbonCard(),
     DiscoveryCard(),
     FalconWinterSoldierCard(),
+    ForAllManKindCard(),
     LowerDecksCard(),
     StarTrekTVCard(),
+    
     
     
     
