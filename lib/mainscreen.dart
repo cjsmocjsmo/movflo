@@ -12,6 +12,7 @@ import 'tvshows/forallmankindcard.dart';
 import 'tvshows/lostinspacecard.dart';
 import 'tvshows/lowerdeckscard.dart';
 import 'tvshows/mandaloriancard.dart';
+import 'tvshows/nextgencard.dart';
 import 'tvshows/startrektvcard.dart';
 
 
@@ -176,6 +177,7 @@ Widget tvShowsListView(BuildContext context) {
     LostInSpaceCard(),
     LowerDecksCard(),
     MandalorianCard(),
+    NextGenCard(),
     StarTrekTVCard(),
     
     
