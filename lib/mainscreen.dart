@@ -6,6 +6,7 @@ import 'dart:convert';
 
 import 'tvshows/alienworldscard.dart';
 import 'tvshows/alteredcarboncard.dart';
+import 'tvshows/badbatchcard.dart';
 import 'tvshows/discoverycard.dart';
 import 'tvshows/falconwintersoldiercard.dart';
 import 'tvshows/forallmankindcard.dart';
@@ -18,6 +19,7 @@ import 'tvshows/picardcard.dart';
 import 'tvshows/raisedbywolvescard.dart';
 import 'tvshows/voyagercard.dart';
 import 'tvshows/startrektvcard.dart';
+import 'tvshows/wandavisioncard.dart';
 
 
 final List<String> movies = <String>[
@@ -175,6 +177,7 @@ Widget tvShowsListView(BuildContext context) {
   children: <Widget>[
     AlienWorldsCard(),
     AlteredCarbonCard(),
+    BadBatchCard(),
     DiscoveryCard(),
     FalconWinterSoldierCard(),
     ForAllManKindCard(),
@@ -187,6 +190,7 @@ Widget tvShowsListView(BuildContext context) {
     RaisedByWolvesCard(),
     StarTrekTVCard(),
     VoyagerCard(),
+    WandaVisionCard(),
     
     
     

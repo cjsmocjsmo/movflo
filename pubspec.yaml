@@ -56,6 +56,7 @@ flutter:
     - images/four.jpg
     - images/alienworlds.jpg
     - images/alteredcarbon.jpg
+    - images/badbatch.jpg
     - images/discovery.jpg
     - images/enterprise.jpg
     - images/falconwintersoldier.jpg
@@ -69,6 +70,7 @@ flutter:
     - images/raisedbywolves.jpg
     - images/sttv.jpg
     - images/voyager.jpg
+    - images/wandavision.jpg
     
     
     
