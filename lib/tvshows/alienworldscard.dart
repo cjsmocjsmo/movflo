@@ -1,10 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 void alienWorldsNav(context) {
   Navigator.pushNamed(context, '/Junk');
 }
 
 class AlienWorldsCard extends StatelessWidget {
+
+  final String apiUrl = "http://192.168.0.42:8888/intAlienWorlds?season=01";
+
+  Future<List<dynamic>> fetchEpisodes() async {
+
+    var result = await http.get(Uri.parse(apiUrl));
+    return json.decode(result.body);
+
+  }
+
+  Future<void> playEpisode(playURL) async {
+
+    var resultPlay = await http.get(Uri.parse(playURL));
+    return json.decode(resultPlay.body);
+
+  }
+
   @override
     Widget build(BuildContext context) {
     return Center(
@@ -45,13 +64,50 @@ class AlienWorldsCard extends StatelessWidget {
                                 title: Text("Alien Worlds"),
                                 backgroundColor: Colors.lightGreen[900],
                               ),
-                              body: const Center(
-                                child: Text(
-                                  'This is alien worlds episode list',
-                                  style: TextStyle(fontSize: 24),
+                              body: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.lightGreenAccent.shade400,
                                 ),
-                              ),
-                            );
+                                
+                                child: Center(
+                                  child: FutureBuilder<List<dynamic>>(
+                                    future: fetchEpisodes(),
+                                    builder: (BuildContext context, AsyncSnapshot snapshot) {
+                                      if(snapshot.hasData){
+                                        print(snapshot.data[0]);
+                                        return ListView.builder(
+                                          padding: const EdgeInsets.all(8),
+                                          itemCount: snapshot.data.length,
+                                          itemBuilder: (BuildContext context, int index) {
+                                            return GestureDetector(
+                                              onTap: () {
+                                                String dirp = "/media/pi/PiTB/media/TVShows";
+                                                String ap = dirp + snapshot.data[index]["tvfspath"];
+                                                final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=${ap}";
+                                                playEpisode(apiPU);
+                                                Navigator.pop(context);
+                                              },
+                                              child: Container(
+                                                height: 50,
+                                                color: Colors.amber[600],
+                                                child: 
+                                                  Center(
+                                                    child: Text(
+                                                      '${snapshot.data[index]['title']}',
+                                                      style: TextStyle(fontSize: 32, color: Colors.black),
+                                                      ),
+                                                    ),
+                                              )
+                                            );
+                                          }
+                                        );
+                                      } else {
+                                      return Text("No episodes found");
+                                    }
+                                    } 
+                                  
+                                  ),
+                            )));
                           }
                         ));
                       },
