@@ -16,6 +16,7 @@ import 'tvshows/nextgencard.dart';
 import 'tvshows/orvillecard.dart';
 import 'tvshows/picardcard.dart';
 import 'tvshows/raisedbywolvescard.dart';
+import 'tvshows/voyagercard.dart';
 import 'tvshows/startrektvcard.dart';
 
 
@@ -185,6 +186,7 @@ Widget tvShowsListView(BuildContext context) {
     PicardCard(),
     RaisedByWolvesCard(),
     StarTrekTVCard(),
+    VoyagerCard(),
     
     
     
