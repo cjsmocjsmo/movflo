@@ -49,7 +49,6 @@ final List<String> movies = <String>[
   'Tremors',
   'The Rock',
   'X-Men',
-  'MyStatefulWidget'
 ];
 
 final List<String> tvShows = <String>[

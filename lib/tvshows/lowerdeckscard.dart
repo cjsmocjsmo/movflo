@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void lowerDecksNav(context) {
-  Navigator.pushNamed(context, '/MyStatefulWidget');
+  Navigator.pushNamed(context, '/Junk');
 }
 
 class LowerDecksCard extends StatelessWidget {

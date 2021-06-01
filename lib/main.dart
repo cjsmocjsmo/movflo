@@ -61,6 +61,7 @@ class MovFlo extends StatelessWidget {
       '/Pirates': (context) => PiratesScreen(),
       '/Riddick': (context) => RiddickScreen(),
       '/Star Wars': (context) => StarWarsScreen(),
+      '/Star Trek': (context) => StarTrekScreen(),
       '/Star Trek TV': (context) => StarTrekTVCard(),
       '/Super Heros': (context) => SuperHerosScreen(),
       '/SciFi': (context) => SciFiScreen(),
@@ -68,10 +69,10 @@ class MovFlo extends StatelessWidget {
       '/Tremors': (context) => TremorsScreen(),
       '/The Rock': (context) => TheRockScreen(),
       '/X-Men': (context) => XMenScreen(),
-      '/MyStatefulWidget': (context) => MyStatefulWidget(),
+      
       '/Junk': (context) => JunkScreen(),
 
-      // '/Star Trek TV': (BuildContext context) => StarTrekTVCard(),
+      
     });
   }
 }
