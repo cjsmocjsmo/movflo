@@ -39,7 +39,22 @@ class VoyagerCard extends StatelessWidget {
                         textStyle: TextStyle(fontSize: 32, color: Colors.white)
                       ),
                       onPressed: () {
-                        voyagerNav(context);
+                        Navigator.push(context,
+                          MaterialPageRoute<void>(builder: (BuildContext context) {
+                            return Scaffold(
+                              appBar: AppBar(
+                                title: Text("Voyager"),
+                                backgroundColor: Colors.lightGreen[900],
+                              ),
+                              body: const Center(
+                                child: Text(
+                                  'This is Voyager episode list',
+                                  style: TextStyle(fontSize: 24),
+                                ),
+                              ),
+                            );
+                          }
+                        ));
                       },
                     ),
                     const SizedBox(width: 12),
@@ -49,7 +64,22 @@ class VoyagerCard extends StatelessWidget {
                         textStyle: TextStyle(fontSize: 32)
                       ),
                       onPressed: () {
-                        voyagerNav(context);
+                        Navigator.push(context,
+                          MaterialPageRoute<void>(builder: (BuildContext context) {
+                            return Scaffold(
+                              appBar: AppBar(
+                                title: Text("Voyager"),
+                                backgroundColor: Colors.lightGreen[900],
+                              ),
+                              body: const Center(
+                                child: Text(
+                                  'This is Voyager episode list',
+                                  style: TextStyle(fontSize: 24),
+                                ),
+                              ),
+                            );
+                          }
+                        ));
                       },
                     ),
                     const SizedBox(width: 12),
@@ -59,7 +89,22 @@ class VoyagerCard extends StatelessWidget {
                         textStyle: TextStyle(fontSize: 32)
                       ),
                       onPressed: () {
-                        voyagerNav(context);
+                        Navigator.push(context,
+                          MaterialPageRoute<void>(builder: (BuildContext context) {
+                            return Scaffold(
+                              appBar: AppBar(
+                                title: Text("Voyager"),
+                                backgroundColor: Colors.lightGreen[900],
+                              ),
+                              body: const Center(
+                                child: Text(
+                                  'This is Voyager episode list',
+                                  style: TextStyle(fontSize: 24),
+                                ),
+                              ),
+                            );
+                          }
+                        ));
                       },
                     ),
                     const SizedBox(width: 12),
@@ -69,7 +114,22 @@ class VoyagerCard extends StatelessWidget {
                         textStyle: TextStyle(fontSize: 32, color: Colors.white)
                       ),
                       onPressed: () {
-                        voyagerNav(context);
+                        Navigator.push(context,
+                          MaterialPageRoute<void>(builder: (BuildContext context) {
+                            return Scaffold(
+                              appBar: AppBar(
+                                title: Text("Voyager"),
+                                backgroundColor: Colors.lightGreen[900],
+                              ),
+                              body: const Center(
+                                child: Text(
+                                  'This is Voyager episode list',
+                                  style: TextStyle(fontSize: 24),
+                                ),
+                              ),
+                            );
+                          }
+                        ));
                       },
                     ),
                     const SizedBox(width: 12),
@@ -79,7 +139,6 @@ class VoyagerCard extends StatelessWidget {
                         textStyle: TextStyle(fontSize: 32)
                       ),
                       onPressed: () {
-                        voyagerNav(context);
                       },
                     ),
                     const SizedBox(width: 12),
@@ -89,7 +148,22 @@ class VoyagerCard extends StatelessWidget {
                         textStyle: TextStyle(fontSize: 32)
                       ),
                       onPressed: () {
-                        voyagerNav(context);
+                        Navigator.push(context,
+                          MaterialPageRoute<void>(builder: (BuildContext context) {
+                            return Scaffold(
+                              appBar: AppBar(
+                                title: Text("Voyager"),
+                                backgroundColor: Colors.lightGreen[900],
+                              ),
+                              body: const Center(
+                                child: Text(
+                                  'This is Voyager episode list',
+                                  style: TextStyle(fontSize: 24),
+                                ),
+                              ),
+                            );
+                          }
+                        ));
                       },
                     ),
                     const SizedBox(width: 12),
@@ -99,7 +173,22 @@ class VoyagerCard extends StatelessWidget {
                         textStyle: TextStyle(fontSize: 32)
                       ),
                       onPressed: () {
-                        voyagerNav(context);
+                        Navigator.push(context,
+                          MaterialPageRoute<void>(builder: (BuildContext context) {
+                            return Scaffold(
+                              appBar: AppBar(
+                                title: Text("Voyager"),
+                                backgroundColor: Colors.lightGreen[900],
+                              ),
+                              body: const Center(
+                                child: Text(
+                                  'This is Voyager episode list',
+                                  style: TextStyle(fontSize: 24),
+                                ),
+                              ),
+                            );
+                          }
+                        ));
                       },
                     ),
                     const SizedBox(width: 12),

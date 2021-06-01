@@ -38,7 +38,22 @@ class AlteredCarbonCard extends StatelessWidget {
                         textStyle: TextStyle(fontSize: 32, color: Colors.white)
                       ),
                       onPressed: () {
-                        alteredCarbonNav(context);
+                        Navigator.push(context,
+                          MaterialPageRoute<void>(builder: (BuildContext context) {
+                            return Scaffold(
+                              appBar: AppBar(
+                                title: Text("Altered Carbon"),
+                                backgroundColor: Colors.lightGreen[900],
+                              ),
+                              body: const Center(
+                                child: Text(
+                                  'This is Altered Carbon episode list',
+                                  style: TextStyle(fontSize: 24),
+                                ),
+                              ),
+                            );
+                          }
+                        ));
                       },
                     ),
                     const SizedBox(width: 12),
@@ -48,7 +63,22 @@ class AlteredCarbonCard extends StatelessWidget {
                         textStyle: TextStyle(fontSize: 32)
                       ),
                       onPressed: () {
-                        alteredCarbonNav(context);
+                        Navigator.push(context,
+                          MaterialPageRoute<void>(builder: (BuildContext context) {
+                            return Scaffold(
+                              appBar: AppBar(
+                                title: Text("Altered Carbon"),
+                                backgroundColor: Colors.lightGreen[900],
+                              ),
+                              body: const Center(
+                                child: Text(
+                                  'This is Altered Carbon episode list',
+                                  style: TextStyle(fontSize: 24),
+                                ),
+                              ),
+                            );
+                          }
+                        ));
                       },
                     ),
                     const SizedBox(width: 12),

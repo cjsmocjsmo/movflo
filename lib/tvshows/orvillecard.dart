@@ -39,7 +39,22 @@ class OrvilleCard extends StatelessWidget {
                         textStyle: TextStyle(fontSize: 32, color: Colors.white)
                       ),
                       onPressed: () {
-                        orvilleNav(context);
+                        Navigator.push(context,
+                          MaterialPageRoute<void>(builder: (BuildContext context) {
+                            return Scaffold(
+                              appBar: AppBar(
+                                title: Text("The Orville"),
+                                backgroundColor: Colors.lightGreen[900],
+                              ),
+                              body: const Center(
+                                child: Text(
+                                  'This is The Orville episode list',
+                                  style: TextStyle(fontSize: 24),
+                                ),
+                              ),
+                            );
+                          }
+                        ));
                       },
                     ),
                     const SizedBox(width: 12),
@@ -49,7 +64,22 @@ class OrvilleCard extends StatelessWidget {
                         textStyle: TextStyle(fontSize: 32)
                       ),
                       onPressed: () {
-                        orvilleNav(context);
+                        Navigator.push(context,
+                          MaterialPageRoute<void>(builder: (BuildContext context) {
+                            return Scaffold(
+                              appBar: AppBar(
+                                title: Text("The Orville"),
+                                backgroundColor: Colors.lightGreen[900],
+                              ),
+                              body: const Center(
+                                child: Text(
+                                  'This is The Orville episode list',
+                                  style: TextStyle(fontSize: 24),
+                                ),
+                              ),
+                            );
+                          }
+                        ));
                       },
                     ),
                     const SizedBox(width: 12),
@@ -59,7 +89,22 @@ class OrvilleCard extends StatelessWidget {
                         textStyle: TextStyle(fontSize: 32)
                       ),
                       onPressed: () {
-                        orvilleNav(context);
+                        Navigator.push(context,
+                          MaterialPageRoute<void>(builder: (BuildContext context) {
+                            return Scaffold(
+                              appBar: AppBar(
+                                title: Text("The Orville"),
+                                backgroundColor: Colors.lightGreen[900],
+                              ),
+                              body: const Center(
+                                child: Text(
+                                  'This is The Orville episode list',
+                                  style: TextStyle(fontSize: 24),
+                                ),
+                              ),
+                            );
+                          }
+                        ));
                       },
                     ),
                     const SizedBox(width: 12),

@@ -39,7 +39,22 @@ class StarTrekTVCard extends StatelessWidget {
                         textStyle: TextStyle(fontSize: 32, color: Colors.white)
                       ),
                       onPressed: () {
-                        starTrekNav(context);
+                        Navigator.push(context,
+                          MaterialPageRoute<void>(builder: (BuildContext context) {
+                            return Scaffold(
+                              appBar: AppBar(
+                                title: Text("Star Trek TV"),
+                                backgroundColor: Colors.lightGreen[900],
+                              ),
+                              body: const Center(
+                                child: Text(
+                                  'This is Star Trek TV episode list',
+                                  style: TextStyle(fontSize: 24),
+                                ),
+                              ),
+                            );
+                          }
+                        ));
                       },
                     ),
                     const SizedBox(width: 12),
@@ -49,7 +64,22 @@ class StarTrekTVCard extends StatelessWidget {
                         textStyle: TextStyle(fontSize: 32)
                       ),
                       onPressed: () {
-                        starTrekNav(context);
+                        Navigator.push(context,
+                          MaterialPageRoute<void>(builder: (BuildContext context) {
+                            return Scaffold(
+                              appBar: AppBar(
+                                title: Text("Star Trek TV"),
+                                backgroundColor: Colors.lightGreen[900],
+                              ),
+                              body: const Center(
+                                child: Text(
+                                  'This is Star Trek TV episode list',
+                                  style: TextStyle(fontSize: 24),
+                                ),
+                              ),
+                            );
+                          }
+                        ));
                       },
                     ),
                     const SizedBox(width: 12),
@@ -59,7 +89,22 @@ class StarTrekTVCard extends StatelessWidget {
                         textStyle: TextStyle(fontSize: 32)
                       ),
                       onPressed: () {
-                        starTrekNav(context);
+                        Navigator.push(context,
+                          MaterialPageRoute<void>(builder: (BuildContext context) {
+                            return Scaffold(
+                              appBar: AppBar(
+                                title: Text("Star Trek TV"),
+                                backgroundColor: Colors.lightGreen[900],
+                              ),
+                              body: const Center(
+                                child: Text(
+                                  'This is Star Trek TV episode list',
+                                  style: TextStyle(fontSize: 24),
+                                ),
+                              ),
+                            );
+                          }
+                        ));
                       },
                     ),
                     const SizedBox(width: 12),

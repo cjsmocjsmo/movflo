@@ -28,7 +28,7 @@ class BadBatchCard extends StatelessWidget {
                 ),
                 Expanded(
                   child: Padding(
-                    padding: EdgeInsets.fromLTRB(0.0, 100.0, 0.0, 0.0),
+                    padding: EdgeInsets.fromLTRB(0.0, 120.0, 0.0, 0.0),
 
                   child: Column(
                   children: <Widget>[
@@ -38,7 +38,22 @@ class BadBatchCard extends StatelessWidget {
                         textStyle: TextStyle(fontSize: 32, color: Colors.white)
                       ),
                       onPressed: () {
-                        badbatchNav(context);
+                        Navigator.push(context,
+                          MaterialPageRoute<void>(builder: (BuildContext context) {
+                            return Scaffold(
+                              appBar: AppBar(
+                                title: Text("The Bad Batch"),
+                                backgroundColor: Colors.lightGreen[900],
+                              ),
+                              body: const Center(
+                                child: Text(
+                                  'This is the bad batch episode list',
+                                  style: TextStyle(fontSize: 24),
+                                ),
+                              ),
+                            );
+                          }
+                        ));
                       },
                     ),
                     const SizedBox(width: 12),

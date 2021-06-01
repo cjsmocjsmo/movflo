@@ -38,7 +38,22 @@ class LowerDecksCard extends StatelessWidget {
                         textStyle: TextStyle(fontSize: 32, color: Colors.white)
                       ),
                       onPressed: () {
-                        lowerDecksNav(context);
+                        Navigator.push(context,
+                          MaterialPageRoute<void>(builder: (BuildContext context) {
+                            return Scaffold(
+                              appBar: AppBar(
+                                title: Text("Lower Decks"),
+                                backgroundColor: Colors.lightGreen[900],
+                              ),
+                              body: const Center(
+                                child: Text(
+                                  'This is Lower Decks episode list',
+                                  style: TextStyle(fontSize: 24),
+                                ),
+                              ),
+                            );
+                          }
+                        ));
                       },
                     ),
                     const SizedBox(width: 12),
@@ -48,7 +63,22 @@ class LowerDecksCard extends StatelessWidget {
                         textStyle: TextStyle(fontSize: 32)
                       ),
                       onPressed: () {
-                        lowerDecksNav(context);
+                        Navigator.push(context,
+                          MaterialPageRoute<void>(builder: (BuildContext context) {
+                            return Scaffold(
+                              appBar: AppBar(
+                                title: Text("Lower Decks"),
+                                backgroundColor: Colors.lightGreen[900],
+                              ),
+                              body: const Center(
+                                child: Text(
+                                  'This is Lower Decks episode list',
+                                  style: TextStyle(fontSize: 24),
+                                ),
+                              ),
+                            );
+                          }
+                        ));
                       },
                     ),
                     const SizedBox(width: 12),
@@ -61,47 +91,7 @@ class LowerDecksCard extends StatelessWidget {
                     //     starTrekNav(context);
                     //   },
                     // ),
-                    // const SizedBox(width: 12),
-                    // TextButton(
-                    //   child: const Text('Season 4'),
-                    //   style: TextButton.styleFrom(
-                    //     textStyle: TextStyle(fontSize: 32)
-                    //   ),
-                    //   onPressed: () {
-                    //     starTrekNav(context);
-                    //   },
-                    // ),
-                    // const SizedBox(width: 12),
-                    // TextButton(
-                    //   child: const Text('Season 5'),
-                    //   style: TextButton.styleFrom(
-                    //     textStyle: TextStyle(fontSize: 32)
-                    //   ),
-                    //   onPressed: () {
-                    //     starTrekNav(context);
-                    //   },
-                    // ),
-                    // const SizedBox(width: 12),
-                    // TextButton(
-                    //   child: const Text('Season 6'),
-                    //   style: TextButton.styleFrom(
-                    //     textStyle: TextStyle(fontSize: 32)
-                    //   ),
-                    //   onPressed: () {
-                    //     starTrekNav(context);
-                    //   },
-                    // ),
-                    // const SizedBox(width: 12),
-                    // TextButton(
-                    //   child: const Text('Season 7'),
-                    //   style: TextButton.styleFrom(
-                    //     textStyle: TextStyle(fontSize: 32)
-                    //   ),
-                    //   onPressed: () {
-                    //     starTrekNav(context);
-                    //   },
-                    // ),
-                    // const SizedBox(width: 12),
+                    
 
                   ]
                 ))),
