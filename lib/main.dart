@@ -31,6 +31,7 @@ import 'tvshows/startrektvcard.dart';
 import 'tvshows/junkscreen.dart';
 // import 'tvshows/mystatelesswidget.dart';
 
+// import 'tvshows/alienworldsview.dart';
 
 void main() => runApp(MovFlo());
 
@@ -48,6 +49,7 @@ class MovFlo extends StatelessWidget {
       '/Comedy': (context) => ComedyScreen(),
       '/Drama': (context) => DramaScreen(),
       '/Documentary': (context) => DocumentaryScreen(),
+      // '/Enterprise': (context) => EnterpriseCard(),
       '/Fantasy': (context) => FantasyScreen(),
       '/Godzilla': (context) => GodzillaScreen(),
       '/Harry Potter': (context) => HarryPotterScreen(),
@@ -71,6 +73,7 @@ class MovFlo extends StatelessWidget {
       '/X-Men': (context) => XMenScreen(),
       
       '/Junk': (context) => JunkScreen(),
+      // '/Alien Worlds View': (contest) => AlienWorldsView(),
 
       
     });

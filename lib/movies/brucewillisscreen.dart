@@ -62,7 +62,7 @@ class BruceWillisScreen extends StatelessWidget{
                       onTap: () {
                         
                         final String ap = _movfspath(snapshot.data[index]);
-                        final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=${ap}";
+                        final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=" + ap;
                         print(apiPU);
                         final String apiPlayUrl = apiPU;
                         

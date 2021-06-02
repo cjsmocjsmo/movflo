@@ -74,6 +74,5 @@ class WandaVisionCard extends StatelessWidget {
         ),
       )
     );
-
   }
 }

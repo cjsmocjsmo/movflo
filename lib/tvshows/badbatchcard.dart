@@ -1,10 +1,32 @@
 import 'package:flutter/material.dart';
-
-void badbatchNav(context) {
-  Navigator.pushNamed(context, '/Junk');
-}
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 class BadBatchCard extends StatelessWidget {
+
+  final String apiUrl = "http://192.168.0.42:8888/intTheBadBatch?season=01";
+
+  Future<List<dynamic>> fetchEpisodes() async {
+    var result;
+    try {
+      var result = await http.get(Uri.parse(apiUrl));
+      return json.decode(result.body);
+    } catch (e) {
+      print("OOOOOh Fuck");
+    }
+    return result;
+  }
+
+  Future<void> playEpi(playURL) async {
+    var resultPlay;
+    try {
+      var resultPlay = await http.get(Uri.parse(playURL));
+      return json.decode(resultPlay.body);
+    } catch (e) {
+      print("OOOOOH FUUUUCK 2");
+    }
+    return resultPlay;
+  }
   @override
     Widget build(BuildContext context) {
     return Center(
@@ -38,35 +60,75 @@ class BadBatchCard extends StatelessWidget {
                         textStyle: TextStyle(fontSize: 32, color: Colors.white)
                       ),
                       onPressed: () {
-                        Navigator.push(context,
-                          MaterialPageRoute<void>(builder: (BuildContext context) {
+                        Navigator.push(context, MaterialPageRoute<void>(
+                            builder: (BuildContext context) {
                             return Scaffold(
                               appBar: AppBar(
                                 title: Text("The Bad Batch"),
-                                backgroundColor: Colors.lightGreen[900],
+                                backgroundColor:
+                                    Colors.lightGreen[900],
                               ),
-                              body: const Center(
-                                child: Text(
-                                  'This is the bad batch episode list',
-                                  style: TextStyle(fontSize: 24),
+                              body: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors
+                                      .lightGreenAccent.shade400,
                                 ),
-                              ),
-                            );
-                          }
-                        ));
+                                child: Center(
+                                  child:
+                                    FutureBuilder<List<dynamic>>(
+                                      future: fetchEpisodes(),
+                                      builder: (BuildContext context,AsyncSnapshot snapshot) {
+                                        if (snapshot.hasData) {
+                                          print(snapshot.data[0]);
+                                          return ListView.builder(
+                                            padding: const EdgeInsets.all(8),
+                                            itemCount: snapshot.data.length,
+                                            itemBuilder: (BuildContext context, int index) {
+                                              return GestureDetector(
+                                                onTap: () {
+                                                  String dirp = "/media/pi/PiTB/media/TVShows";
+                                                  String ap = dirp + snapshot.data[index]["tvfspath"];
+                                                  final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=" + ap;
+                                                  playEpi(apiPU);
+                                                  Navigator.pop(context);
+                                                },
+                                                child: Container(
+                                                  height: 50,
+                                                  color: Colors.amber[600],
+                                                  child:Center(
+                                                    child: Text(
+                                                      '${snapshot.data[index]['title']}',
+                                                      style: TextStyle(fontSize: 32, color: Colors.black),
+                                                    ),
+                                                  ),
+                                                ));
+                                            });
+                                        } else {
+                                          return Text(
+                                              "No episodes found");
+                                        }
+                                      }),
+                                )));
+                          }));
+                        // Navigator.push(context,
+                        //   MaterialPageRoute<void>(builder: (BuildContext context) {
+                        //     return Scaffold(
+                        //       appBar: AppBar(
+                        //         title: Text("The Bad Batch"),
+                        //         backgroundColor: Colors.lightGreen[900],
+                        //       ),
+                        //       body: const Center(
+                        //         child: Text(
+                        //           'This is the bad batch episode list',
+                        //           style: TextStyle(fontSize: 24),
+                        //         ),
+                        //       ),
+                        //     );
+                        //   }
+                        // ));
                       },
                     ),
                     const SizedBox(width: 12),
-                    // TextButton(
-                    //   child: const Text('Season 2'),
-                    //   style: TextButton.styleFrom(
-                    //     textStyle: TextStyle(fontSize: 32)
-                    //   ),
-                    //   onPressed: () {
-                    //     badbatchNav(context);
-                    //   },
-                    // ),
-                    // const SizedBox(width: 12),
                   ]
                 ))),
               ]),
