@@ -92,7 +92,6 @@ class EnterpriseCard extends StatelessWidget {
                                   future: fetchEnterpriseSeason1(),
                                   builder: (BuildContext context, AsyncSnapshot snapshot) {
                                     if(snapshot.hasData){
-                                      print(snapshot.data[0]['tvfspath']);
                                       return ListView.builder(
                                         padding: const EdgeInsets.all(8),
                                         itemCount: snapshot.data.length,
@@ -102,7 +101,6 @@ class EnterpriseCard extends StatelessWidget {
                                               print(snapshot.data[index]);
                                               String dirp = "/media/pi/PiTB/media/TVShows";
                                               String ap = dirp + snapshot.data[index]['tvfspath'];
-                                              print(ap);
                                               final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=${ap}";
                                               playEpi(apiPU);
                                               Navigator.pop(context);
@@ -156,7 +154,6 @@ class EnterpriseCard extends StatelessWidget {
                                   future: fetchEnterpriseSeason2(),
                                   builder: (BuildContext context, AsyncSnapshot snapshot) {
                                     if(snapshot.hasData){
-                                      print(snapshot.data[0]['tvfspath']);
                                       return ListView.builder(
                                         padding: const EdgeInsets.all(8),
                                         itemCount: snapshot.data.length,
@@ -165,9 +162,7 @@ class EnterpriseCard extends StatelessWidget {
                                             onTap: () {
                                               String dirp = "/media/pi/PiTB/media/TVShows";
                                               String ap = dirp + snapshot.data[index]['tvfspath'];
-                                              print(ap);
                                               final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=${ap}";
-                                              print(apiPU);
                                               playEpi(apiPU);
                                               Navigator.pop(context);
                                             },
@@ -219,7 +214,6 @@ class EnterpriseCard extends StatelessWidget {
                                   future: fetchEnterpriseSeason2(),
                                   builder: (BuildContext context, AsyncSnapshot snapshot) {
                                     if(snapshot.hasData){
-                                      print(snapshot.data[0]['tvfspath']);
                                       return ListView.builder(
                                         padding: const EdgeInsets.all(8),
                                         itemCount: snapshot.data.length,
@@ -228,9 +222,7 @@ class EnterpriseCard extends StatelessWidget {
                                             onTap: () {
                                               String dirp = "/media/pi/PiTB/media/TVShows";
                                               String ap = dirp + snapshot.data[index]['tvfspath'];
-                                              print(ap);
                                               final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=${ap}";
-                                              print(apiPU);
                                               playEpi(apiPU);
                                               Navigator.pop(context);
                                             },
@@ -257,18 +249,8 @@ class EnterpriseCard extends StatelessWidget {
 
                           );
                     }));
-                    })
-
-
-
-
-
-
-
-
-
-
-                    
+                    }),
+                    const SizedBox(width: 12),
                   ]
                 ))),
               ]),

@@ -79,7 +79,6 @@ class FalconWinterSoldierCard extends StatelessWidget {
                                       future: fetchEpisodes(),
                                       builder: (BuildContext context,AsyncSnapshot snapshot) {
                                         if (snapshot.hasData) {
-                                          print(snapshot.data[0]);
                                           return ListView.builder(
                                             padding: const EdgeInsets.all(8),
                                             itemCount: snapshot.data.length,
@@ -110,7 +109,8 @@ class FalconWinterSoldierCard extends StatelessWidget {
                                       }),
                                 )));
                           }));
-                        })
+                        }),
+                        const SizedBox(width: 12),
                   ]
                 ))),
               ]),

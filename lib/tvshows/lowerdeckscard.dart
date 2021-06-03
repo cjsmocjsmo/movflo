@@ -56,10 +56,9 @@ class LowerDecksCard extends StatelessWidget {
                 Expanded(
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(0.0, 100.0, 0.0, 0.0),
-
                   child: Column(
                   children: <Widget>[
-                                        TextButton(
+                    TextButton(
                       child: const Text('Season 1'),
                       style: TextButton.styleFrom(
                         textStyle: TextStyle(fontSize: 32, color: Colors.white)
@@ -76,25 +75,20 @@ class LowerDecksCard extends StatelessWidget {
                               decoration: BoxDecoration(
                                 color: Colors.lightGreenAccent.shade400,
                               ),
-                              
                               child: Center(
                                 child: FutureBuilder<List<dynamic>>(
                                   future: fetchLowerDecksSeason1(),
                                   builder: (BuildContext context, AsyncSnapshot snapshot) {
                                     if(snapshot.hasData){
-                                      print(snapshot.data[0]['tvfspath']);
                                       return ListView.builder(
                                         padding: const EdgeInsets.all(8),
                                         itemCount: snapshot.data.length,
                                         itemBuilder: (BuildContext context, int index) {
                                           return GestureDetector(
                                             onTap: () {
-                                              print(snapshot.data[index]);
                                               String dirp = "/media/pi/PiTB/media/TVShows";
                                               String ap = dirp + snapshot.data[index]['tvfspath'];
-                                              print(ap);
                                               final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=${ap}";
-                                              playEpi(apiPU);
                                               Navigator.pop(context);
                                             },
                                             child: Container(
@@ -146,7 +140,6 @@ class LowerDecksCard extends StatelessWidget {
                                   future: fetchLowerDecksSeason2(),
                                   builder: (BuildContext context, AsyncSnapshot snapshot) {
                                     if(snapshot.hasData){
-                                      print(snapshot.data[0]['tvfspath']);
                                       return ListView.builder(
                                         padding: const EdgeInsets.all(8),
                                         itemCount: snapshot.data.length,
@@ -155,9 +148,7 @@ class LowerDecksCard extends StatelessWidget {
                                             onTap: () {
                                               String dirp = "/media/pi/PiTB/media/TVShows";
                                               String ap = dirp + snapshot.data[index]['tvfspath'];
-                                              print(ap);
                                               final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=${ap}";
-                                              print(apiPU);
                                               playEpi(apiPU);
                                               Navigator.pop(context);
                                             },
@@ -184,60 +175,8 @@ class LowerDecksCard extends StatelessWidget {
 
                           );
                     }));
-                    })
-                    // TextButton(
-                    //   child: const Text('Season 1'),
-                    //   style: TextButton.styleFrom(
-                    //     textStyle: TextStyle(fontSize: 32, color: Colors.white)
-                    //   ),
-                    //   onPressed: () {
-                    //     Navigator.push(context,
-                    //       MaterialPageRoute<void>(builder: (BuildContext context) {
-                    //         return Scaffold(
-                    //           appBar: AppBar(
-                    //             title: Text("Lower Decks"),
-                    //             backgroundColor: Colors.lightGreen[900],
-                    //           ),
-                    //           body: const Center(
-                    //             child: Text(
-                    //               'This is Lower Decks episode list',
-                    //               style: TextStyle(fontSize: 24),
-                    //             ),
-                    //           ),
-                    //         );
-                    //       }
-                    //     ));
-                    //   },
-                    // ),
-                    // const SizedBox(width: 12),
-                    // TextButton(
-                    //   child: const Text('Season 2'),
-                    //   style: TextButton.styleFrom(
-                    //     textStyle: TextStyle(fontSize: 32)
-                    //   ),
-                    //   onPressed: () {
-                    //     Navigator.push(context,
-                    //       MaterialPageRoute<void>(builder: (BuildContext context) {
-                    //         return Scaffold(
-                    //           appBar: AppBar(
-                    //             title: Text("Lower Decks"),
-                    //             backgroundColor: Colors.lightGreen[900],
-                    //           ),
-                    //           body: const Center(
-                    //             child: Text(
-                    //               'This is Lower Decks episode list',
-                    //               style: TextStyle(fontSize: 24),
-                    //             ),
-                    //           ),
-                    //         );
-                    //       }
-                    //     ));
-                    //   },
-                    // ),
-                    // const SizedBox(width: 12),
-                    
-                    
-
+                    }),
+                    const SizedBox(width: 12),
                   ]
                 ))),
               ]),

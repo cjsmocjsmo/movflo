@@ -76,23 +76,19 @@ class AlteredCarbonCard extends StatelessWidget {
                               decoration: BoxDecoration(
                                 color: Colors.lightGreenAccent.shade400,
                               ),
-                              
                               child: Center(
                                 child: FutureBuilder<List<dynamic>>(
                                   future: fetchAlteredCarbonSeason1(),
                                   builder: (BuildContext context, AsyncSnapshot snapshot) {
                                     if(snapshot.hasData){
-                                      print(snapshot.data[0]['tvfspath']);
                                       return ListView.builder(
                                         padding: const EdgeInsets.all(8),
                                         itemCount: snapshot.data.length,
                                         itemBuilder: (BuildContext context, int index) {
                                           return GestureDetector(
                                             onTap: () {
-                                              print(snapshot.data[index]);
                                               String dirp = "/media/pi/PiTB/media/TVShows";
                                               String ap = dirp + snapshot.data[index]['tvfspath'];
-                                              print(ap);
                                               final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=${ap}";
                                               playEpi(apiPU);
                                               Navigator.pop(context);
@@ -146,7 +142,6 @@ class AlteredCarbonCard extends StatelessWidget {
                                   future: fetchAlteredCarbonSeason2(),
                                   builder: (BuildContext context, AsyncSnapshot snapshot) {
                                     if(snapshot.hasData){
-                                      print(snapshot.data[0]['tvfspath']);
                                       return ListView.builder(
                                         padding: const EdgeInsets.all(8),
                                         itemCount: snapshot.data.length,
@@ -155,7 +150,6 @@ class AlteredCarbonCard extends StatelessWidget {
                                             onTap: () {
                                               String dirp = "/media/pi/PiTB/media/TVShows";
                                               String ap = dirp + snapshot.data[index]['tvfspath'];
-                                              print(ap);
                                               final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=${ap}";
                                               print(apiPU);
                                               playEpi(apiPU);
@@ -184,7 +178,8 @@ class AlteredCarbonCard extends StatelessWidget {
 
                           );
                     }));
-                    })
+                    }),
+                    const SizedBox(width: 12),
                     ]
                   )
                 )

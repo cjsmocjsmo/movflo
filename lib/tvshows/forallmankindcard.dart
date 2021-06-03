@@ -5,7 +5,6 @@ import 'dart:convert';
 class ForAllManKindCard extends StatelessWidget {
 
    final String api1Url = "http://192.168.0.42:8888/intForAllManKind?season=01";
-  
 
   Future<List<dynamic>> fetchForAllManKindSeason1() async {
     
@@ -70,46 +69,11 @@ class ForAllManKindCard extends StatelessWidget {
 
                   child: Column(
                   children: <Widget>[
-
-
-
-
-                    // TextButton(
-                    //   child: const Text('Season 1'),
-                    //   style: TextButton.styleFrom(
-                    //     textStyle: TextStyle(fontSize: 32, color: Colors.white)
-                    //   ),
-                    //   onPressed: () {
-                    //     Navigator.push(context,
-                    //       MaterialPageRoute<void>(builder: (BuildContext context) {
-                    //         return Scaffold(
-                    //           appBar: AppBar(
-                    //             title: Text("For All Man Kind"),
-                    //             backgroundColor: Colors.lightGreen[900],
-                    //           ),
-                    //           body: const Center(
-                    //             child: Text(
-                    //               'This is For All Man Kind episode list',
-                    //               style: TextStyle(fontSize: 24),
-                    //             ),
-                    //           ),
-                    //         );
-                    //       }
-                    //     ));
-                    //   },
-                    // ),
-                    // const SizedBox(width: 12),
                     TextButton(
                       child: const Text('Season 1'),
                       style: TextButton.styleFrom(
                         textStyle: TextStyle(fontSize: 32)
                       ),
-                      // onPressed: () {
-                      //   TextButton(
-                      // child: const Text('Season 1'),
-                      // style: TextButton.styleFrom(
-                      //   textStyle: TextStyle(fontSize: 32, color: Colors.white)
-                      // ),
                       onPressed: () {
                         Navigator.push(context,
                           MaterialPageRoute<void>(builder: (BuildContext context) {
@@ -122,23 +86,19 @@ class ForAllManKindCard extends StatelessWidget {
                               decoration: BoxDecoration(
                                 color: Colors.lightGreenAccent.shade400,
                               ),
-                              
                               child: Center(
                                 child: FutureBuilder<List<dynamic>>(
                                   future: fetchForAllManKindSeason1(),
                                   builder: (BuildContext context, AsyncSnapshot snapshot) {
                                     if(snapshot.hasData){
-                                      print(snapshot.data[0]['tvfspath']);
                                       return ListView.builder(
                                         padding: const EdgeInsets.all(8),
                                         itemCount: snapshot.data.length,
                                         itemBuilder: (BuildContext context, int index) {
                                           return GestureDetector(
                                             onTap: () {
-                                              print(snapshot.data[index]);
                                               String dirp = "/media/pi/PiTB/media/TVShows";
                                               String ap = dirp + snapshot.data[index]['tvfspath'];
-                                              print(ap);
                                               final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=${ap}";
                                               playEpi(apiPU);
                                               Navigator.pop(context);
@@ -186,13 +146,11 @@ class ForAllManKindCard extends StatelessWidget {
                               decoration: BoxDecoration(
                                 color: Colors.lightGreenAccent.shade400,
                               ),
-                              
                               child: Center(
                                 child: FutureBuilder<List<dynamic>>(
                                   future: fetchForAllManKindSeason2(),
                                   builder: (BuildContext context, AsyncSnapshot snapshot) {
                                     if(snapshot.hasData){
-                                      print(snapshot.data[0]['tvfspath']);
                                       return ListView.builder(
                                         padding: const EdgeInsets.all(8),
                                         itemCount: snapshot.data.length,
@@ -201,7 +159,65 @@ class ForAllManKindCard extends StatelessWidget {
                                             onTap: () {
                                               String dirp = "/media/pi/PiTB/media/TVShows";
                                               String ap = dirp + snapshot.data[index]['tvfspath'];
-                                              print(ap);
+                                              final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=${ap}";
+                                              print(apiPU);
+                                              playEpi(apiPU);
+                                              Navigator.pop(context);
+                                            },
+                                            child: Container(
+                                              height: 50,
+                                              color: Colors.amber[600],
+                                              child: Center(
+                                                child: Text(
+                                                  '${snapshot.data[index]['title']}',
+                                                  style: TextStyle(fontSize: 32, color: Colors.black),
+                                                ),
+                                              ),
+                                            )
+                                          );
+                                        }
+                                      );
+                                    } else {
+                                      return Text("OOOOOOOH FUCK");
+                                    }
+                                    return CircularProgressIndicator();
+                                  }
+                                ),
+                            ))
+                          );
+                    }));
+                    }),
+                    const SizedBox(width: 12),
+                    TextButton(
+                      child: const Text('Season 3'),
+                      style: TextButton.styleFrom(
+                        textStyle: TextStyle(fontSize: 32)
+                      ),
+                      onPressed: () {
+                         Navigator.push(context,
+                          MaterialPageRoute<void>(builder: (BuildContext context) {
+                            return Scaffold(
+                              appBar: AppBar(
+                                title: Text("ForAllManKind"),
+                                backgroundColor: Colors.lightGreen[900],
+                              ),
+                              body: Container(
+                              decoration: BoxDecoration(
+                                color: Colors.lightGreenAccent.shade400,
+                              ),
+                              child: Center(
+                                child: FutureBuilder<List<dynamic>>(
+                                  future: fetchForAllManKindSeason2(),
+                                  builder: (BuildContext context, AsyncSnapshot snapshot) {
+                                    if(snapshot.hasData){
+                                      return ListView.builder(
+                                        padding: const EdgeInsets.all(8),
+                                        itemCount: snapshot.data.length,
+                                        itemBuilder: (BuildContext context, int index) {
+                                          return GestureDetector(
+                                            onTap: () {
+                                              String dirp = "/media/pi/PiTB/media/TVShows";
+                                              String ap = dirp + snapshot.data[index]['tvfspath'];
                                               final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=${ap}";
                                               print(apiPU);
                                               playEpi(apiPU);
@@ -231,88 +247,7 @@ class ForAllManKindCard extends StatelessWidget {
                           );
                     }));
                     }),
-                     const SizedBox(width: 12),
-                    TextButton(
-                      child: const Text('Season 3'),
-                      style: TextButton.styleFrom(
-                        textStyle: TextStyle(fontSize: 32)
-                      ),
-                      onPressed: () {
-                         Navigator.push(context,
-                          MaterialPageRoute<void>(builder: (BuildContext context) {
-                            return Scaffold(
-                              appBar: AppBar(
-                                title: Text("ForAllManKind"),
-                                backgroundColor: Colors.lightGreen[900],
-                              ),
-                              body: Container(
-                              decoration: BoxDecoration(
-                                color: Colors.lightGreenAccent.shade400,
-                              ),
-                              
-                              child: Center(
-                                child: FutureBuilder<List<dynamic>>(
-                                  future: fetchForAllManKindSeason2(),
-                                  builder: (BuildContext context, AsyncSnapshot snapshot) {
-                                    if(snapshot.hasData){
-                                      print(snapshot.data[0]['tvfspath']);
-                                      return ListView.builder(
-                                        padding: const EdgeInsets.all(8),
-                                        itemCount: snapshot.data.length,
-                                        itemBuilder: (BuildContext context, int index) {
-                                          return GestureDetector(
-                                            onTap: () {
-                                              String dirp = "/media/pi/PiTB/media/TVShows";
-                                              String ap = dirp + snapshot.data[index]['tvfspath'];
-                                              print(ap);
-                                              final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=${ap}";
-                                              print(apiPU);
-                                              playEpi(apiPU);
-                                              Navigator.pop(context);
-                                            },
-                                            child: Container(
-                                              height: 50,
-                                              color: Colors.amber[600],
-                                              child: Center(
-                                                child: Text(
-                                                  '${snapshot.data[index]['title']}',
-                                                  style: TextStyle(fontSize: 32, color: Colors.black),
-                                                ),
-                                              ),
-                                            )
-                                          );
-                                        }
-                                      );
-                                    } else {
-                                      return Text("OOOOOOOH FUCK");
-                                    }
-                                    return CircularProgressIndicator();
-                                  }
-                                ),
-                            ))
-
-                          );
-                    }));
-                    })
-                        // Navigator.push(context,
-                        //   MaterialPageRoute<void>(builder: (BuildContext context) {
-                        //     return Scaffold(
-                        //       appBar: AppBar(
-                        //         title: Text("For All Man Kind"),
-                        //         backgroundColor: Colors.lightGreen[900],
-                        //       ),
-                        //       body: const Center(
-                        //         child: Text(
-                        //           'This is For All Man Kind episode list',
-                        //           style: TextStyle(fontSize: 24),
-                        //         ),
-                        //       ),
-                        //     );
-                        //   }
-                        // ));
-                    //   },
-                    // ),
-                    // const SizedBox(width: 12),
+                    const SizedBox(width: 12),
                   ]
                 ))),
               ]),

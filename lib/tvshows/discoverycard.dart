@@ -68,7 +68,6 @@ final String api1Url = "http://192.168.0.42:8888/intDiscovery?season=01";
                 Expanded(
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(0.0, 100.0, 0.0, 0.0),
-
                   child: Column(
                   children: <Widget>[
                                         TextButton(
@@ -88,23 +87,19 @@ final String api1Url = "http://192.168.0.42:8888/intDiscovery?season=01";
                               decoration: BoxDecoration(
                                 color: Colors.lightGreenAccent.shade400,
                               ),
-                              
                               child: Center(
                                 child: FutureBuilder<List<dynamic>>(
                                   future: fetchDiscoverySeason1(),
                                   builder: (BuildContext context, AsyncSnapshot snapshot) {
                                     if(snapshot.hasData){
-                                      print(snapshot.data[0]['tvfspath']);
                                       return ListView.builder(
                                         padding: const EdgeInsets.all(8),
                                         itemCount: snapshot.data.length,
                                         itemBuilder: (BuildContext context, int index) {
                                           return GestureDetector(
                                             onTap: () {
-                                              print(snapshot.data[index]);
                                               String dirp = "/media/pi/PiTB/media/TVShows";
                                               String ap = dirp + snapshot.data[index]['tvfspath'];
-                                              print(ap);
                                               final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=${ap}";
                                               playEpi(apiPU);
                                               Navigator.pop(context);
@@ -158,7 +153,6 @@ final String api1Url = "http://192.168.0.42:8888/intDiscovery?season=01";
                                   future: fetchDiscoverySeason2(),
                                   builder: (BuildContext context, AsyncSnapshot snapshot) {
                                     if(snapshot.hasData){
-                                      print(snapshot.data[0]['tvfspath']);
                                       return ListView.builder(
                                         padding: const EdgeInsets.all(8),
                                         itemCount: snapshot.data.length,
@@ -167,7 +161,6 @@ final String api1Url = "http://192.168.0.42:8888/intDiscovery?season=01";
                                             onTap: () {
                                               String dirp = "/media/pi/PiTB/media/TVShows";
                                               String ap = dirp + snapshot.data[index]['tvfspath'];
-                                              print(ap);
                                               final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=${ap}";
                                               print(apiPU);
                                               playEpi(apiPU);
@@ -197,7 +190,7 @@ final String api1Url = "http://192.168.0.42:8888/intDiscovery?season=01";
                           );
                     }));
                     }),
-                     const SizedBox(width: 12),
+                    const SizedBox(width: 12),
                     TextButton(
                       child: const Text('Season 3'),
                       style: TextButton.styleFrom(
@@ -215,13 +208,11 @@ final String api1Url = "http://192.168.0.42:8888/intDiscovery?season=01";
                               decoration: BoxDecoration(
                                 color: Colors.lightGreenAccent.shade400,
                               ),
-                              
                               child: Center(
                                 child: FutureBuilder<List<dynamic>>(
                                   future: fetchDiscoverySeason2(),
                                   builder: (BuildContext context, AsyncSnapshot snapshot) {
                                     if(snapshot.hasData){
-                                      print(snapshot.data[0]['tvfspath']);
                                       return ListView.builder(
                                         padding: const EdgeInsets.all(8),
                                         itemCount: snapshot.data.length,
@@ -230,7 +221,6 @@ final String api1Url = "http://192.168.0.42:8888/intDiscovery?season=01";
                                             onTap: () {
                                               String dirp = "/media/pi/PiTB/media/TVShows";
                                               String ap = dirp + snapshot.data[index]['tvfspath'];
-                                              print(ap);
                                               final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=${ap}";
                                               print(apiPU);
                                               playEpi(apiPU);
@@ -256,7 +246,6 @@ final String api1Url = "http://192.168.0.42:8888/intDiscovery?season=01";
                                   }
                                 ),
                             ))
-
                           );
                     }));
                     })

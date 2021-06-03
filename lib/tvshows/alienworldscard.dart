@@ -69,8 +69,7 @@ class AlienWorldsCard extends StatelessWidget {
                               ),
                               body: Container(
                                 decoration: BoxDecoration(
-                                  color: Colors
-                                      .lightGreenAccent.shade400,
+                                  color: Colors.lightGreenAccent.shade400,
                                 ),
                                 child: Center(
                                   child:
@@ -78,7 +77,6 @@ class AlienWorldsCard extends StatelessWidget {
                                       future: fetchEpisodes(),
                                       builder: (BuildContext context,AsyncSnapshot snapshot) {
                                         if (snapshot.hasData) {
-                                          print(snapshot.data[0]);
                                           return ListView.builder(
                                             padding: const EdgeInsets.all(8),
                                             itemCount: snapshot.data.length,
@@ -109,9 +107,9 @@ class AlienWorldsCard extends StatelessWidget {
                                       }),
                                 )));
                           }));
-                        })
+                        }),
 
-                      // const SizedBox(width: 12),
+                      const SizedBox(width: 12),
                     ])),
                   )
                 ],

@@ -51,7 +51,6 @@ class BadBatchCard extends StatelessWidget {
                 Expanded(
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(0.0, 120.0, 0.0, 0.0),
-
                   child: Column(
                   children: <Widget>[
                     TextButton(
@@ -70,8 +69,7 @@ class BadBatchCard extends StatelessWidget {
                               ),
                               body: Container(
                                 decoration: BoxDecoration(
-                                  color: Colors
-                                      .lightGreenAccent.shade400,
+                                  color: Colors.lightGreenAccent.shade400,
                                 ),
                                 child: Center(
                                   child:
@@ -79,7 +77,6 @@ class BadBatchCard extends StatelessWidget {
                                       future: fetchEpisodes(),
                                       builder: (BuildContext context,AsyncSnapshot snapshot) {
                                         if (snapshot.hasData) {
-                                          print(snapshot.data[0]);
                                           return ListView.builder(
                                             padding: const EdgeInsets.all(8),
                                             itemCount: snapshot.data.length,
@@ -111,22 +108,6 @@ class BadBatchCard extends StatelessWidget {
                                       }),
                                 )));
                           }));
-                        // Navigator.push(context,
-                        //   MaterialPageRoute<void>(builder: (BuildContext context) {
-                        //     return Scaffold(
-                        //       appBar: AppBar(
-                        //         title: Text("The Bad Batch"),
-                        //         backgroundColor: Colors.lightGreen[900],
-                        //       ),
-                        //       body: const Center(
-                        //         child: Text(
-                        //           'This is the bad batch episode list',
-                        //           style: TextStyle(fontSize: 24),
-                        //         ),
-                        //       ),
-                        //     );
-                        //   }
-                        // ));
                       },
                     ),
                     const SizedBox(width: 12),
