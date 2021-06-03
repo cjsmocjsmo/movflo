@@ -33,56 +33,56 @@ class PicardCard extends StatelessWidget {
 
                   child: Column(
                   children: <Widget>[
-                    TextButton(
-                      child: const Text('Season 1'),
-                      style: TextButton.styleFrom(
-                        textStyle: TextStyle(fontSize: 32, color: Colors.white)
-                      ),
-                      onPressed: () {
-                        Navigator.push(context,
-                          MaterialPageRoute<void>(builder: (BuildContext context) {
-                            return Scaffold(
-                              appBar: AppBar(
-                                title: Text("Picard"),
-                                backgroundColor: Colors.lightGreen[900],
-                              ),
-                              body: const Center(
-                                child: Text(
-                                  'This is Picard episode list',
-                                  style: TextStyle(fontSize: 24),
-                                ),
-                              ),
-                            );
-                          }
-                        ));
-                      },
-                    ),
-                    const SizedBox(width: 12),
-                    TextButton(
-                      child: const Text('Season 2'),
-                      style: TextButton.styleFrom(
-                        textStyle: TextStyle(fontSize: 32)
-                      ),
-                      onPressed: () {
-                        Navigator.push(context,
-                          MaterialPageRoute<void>(builder: (BuildContext context) {
-                            return Scaffold(
-                              appBar: AppBar(
-                                title: Text("Picard"),
-                                backgroundColor: Colors.lightGreen[900],
-                              ),
-                              body: const Center(
-                                child: Text(
-                                  'This is Picard episode list',
-                                  style: TextStyle(fontSize: 24),
-                                ),
-                              ),
-                            );
-                          }
-                        ));
-                      },
-                    ),
-                    const SizedBox(width: 12),
+                    // TextButton(
+                    //   child: const Text('Season 1'),
+                    //   style: TextButton.styleFrom(
+                    //     textStyle: TextStyle(fontSize: 32, color: Colors.white)
+                    //   ),
+                    //   onPressed: () {
+                    //     Navigator.push(context,
+                    //       MaterialPageRoute<void>(builder: (BuildContext context) {
+                    //         return Scaffold(
+                    //           appBar: AppBar(
+                    //             title: Text("Picard"),
+                    //             backgroundColor: Colors.lightGreen[900],
+                    //           ),
+                    //           body: const Center(
+                    //             child: Text(
+                    //               'This is Picard episode list',
+                    //               style: TextStyle(fontSize: 24),
+                    //             ),
+                    //           ),
+                    //         );
+                    //       }
+                    //     ));
+                    //   },
+                    // ),
+                    // const SizedBox(width: 12),
+                    // TextButton(
+                    //   child: const Text('Season 2'),
+                    //   style: TextButton.styleFrom(
+                    //     textStyle: TextStyle(fontSize: 32)
+                    //   ),
+                    //   onPressed: () {
+                    //     Navigator.push(context,
+                    //       MaterialPageRoute<void>(builder: (BuildContext context) {
+                    //         return Scaffold(
+                    //           appBar: AppBar(
+                    //             title: Text("Picard"),
+                    //             backgroundColor: Colors.lightGreen[900],
+                    //           ),
+                    //           body: const Center(
+                    //             child: Text(
+                    //               'This is Picard episode list',
+                    //               style: TextStyle(fontSize: 24),
+                    //             ),
+                    //           ),
+                    //         );
+                    //       }
+                    //     ));
+                    //   },
+                    // ),
+                    // const SizedBox(width: 12),
                     // TextButton(
                     //   child: const Text('Season 3'),
                     //   style: TextButton.styleFrom(
