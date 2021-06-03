@@ -107,6 +107,7 @@ class BadBatchCard extends StatelessWidget {
                                           return Text(
                                               "No episodes found");
                                         }
+                                        return CircularProgressIndicator();
                                       }),
                                 )));
                           }));

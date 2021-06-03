@@ -113,6 +113,7 @@ class AlteredCarbonCard extends StatelessWidget {
                                     } else {
                                       return Text("OOOOOOOH FUCK");
                                     }
+                                    return CircularProgressIndicator();
                                   }
                                 ),
                             )));
@@ -176,6 +177,7 @@ class AlteredCarbonCard extends StatelessWidget {
                                     } else {
                                       return Text("OOOOOOOH FUCK");
                                     }
+                                    return CircularProgressIndicator();
                                   }
                                 ),
                             ))

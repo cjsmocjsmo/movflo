@@ -123,6 +123,7 @@ class EnterpriseCard extends StatelessWidget {
                                     } else {
                                       return Text("OOOOOOOH FUCK");
                                     }
+                                    return CircularProgressIndicator();
                                   }
                                 ),
                             )));
@@ -186,6 +187,7 @@ class EnterpriseCard extends StatelessWidget {
                                     } else {
                                       return Text("OOOOOOOH FUCK");
                                     }
+                                    return CircularProgressIndicator();
                                   }
                                 ),
                             ))
@@ -245,9 +247,10 @@ class EnterpriseCard extends StatelessWidget {
                                           );
                                         }
                                       );
-                                    } else {
-                                      return Text("OOOOOOOH FUCK");
+                                    } else if (snapshot.hasError) {
+                                      return Text("${snapshot.error}");
                                     }
+                                    return CircularProgressIndicator();
                                   }
                                 ),
                             ))
@@ -255,6 +258,17 @@ class EnterpriseCard extends StatelessWidget {
                           );
                     }));
                     })
+
+
+
+
+
+
+
+
+
+
+                    
                   ]
                 ))),
               ]),

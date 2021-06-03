@@ -103,9 +103,9 @@ class AlienWorldsCard extends StatelessWidget {
                                                 ));
                                             });
                                         } else {
-                                          return Text(
-                                              "No episodes found");
+                                          return Text("No episodes found");
                                         }
+                                        return CircularProgressIndicator();
                                       }),
                                 )));
                           }));

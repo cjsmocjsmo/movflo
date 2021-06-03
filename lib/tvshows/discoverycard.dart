@@ -125,6 +125,7 @@ final String api1Url = "http://192.168.0.42:8888/intDiscovery?season=01";
                                     } else {
                                       return Text("OOOOOOOH FUCK");
                                     }
+                                    return CircularProgressIndicator();
                                   }
                                 ),
                             )));
@@ -188,6 +189,7 @@ final String api1Url = "http://192.168.0.42:8888/intDiscovery?season=01";
                                     } else {
                                       return Text("OOOOOOOH FUCK");
                                     }
+                                    return CircularProgressIndicator();
                                   }
                                 ),
                             ))
@@ -250,6 +252,7 @@ final String api1Url = "http://192.168.0.42:8888/intDiscovery?season=01";
                                     } else {
                                       return Text("OOOOOOOH FUCK");
                                     }
+                                    return CircularProgressIndicator();
                                   }
                                 ),
                             ))

@@ -28,10 +28,6 @@ import 'movies/therockscreen.dart';
 import 'movies/xmenscreen.dart';
 
 import 'tvshows/startrektvcard.dart';
-import 'tvshows/junkscreen.dart';
-// import 'tvshows/mystatelesswidget.dart';
-
-// import 'tvshows/alienworldsview.dart';
 
 void main() => runApp(MovFlo());
 
@@ -72,7 +68,7 @@ class MovFlo extends StatelessWidget {
       '/The Rock': (context) => TheRockScreen(),
       '/X-Men': (context) => XMenScreen(),
       
-      '/Junk': (context) => JunkScreen(),
+      // '/Junk': (context) => JunkScreen(),
       // '/Alien Worlds View': (contest) => AlienWorldsView(),
 
       
