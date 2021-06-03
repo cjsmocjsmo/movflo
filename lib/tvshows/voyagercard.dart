@@ -231,7 +231,7 @@ class VoyagerCard extends StatelessWidget {
                           );
                     }));
                     }),
-                     const SizedBox(width: 12),
+                    const SizedBox(width: 12),
                     TextButton(
                       child: const Text('Season 3'),
                       style: TextButton.styleFrom(
@@ -293,6 +293,7 @@ class VoyagerCard extends StatelessWidget {
                           );
                     }));
                     }),
+                    const SizedBox(width: 12),
                     TextButton(
                       child: const Text('Season 4'),
                       style: TextButton.styleFrom(
@@ -417,7 +418,7 @@ class VoyagerCard extends StatelessWidget {
                           );
                     }));
                     }),
-                     const SizedBox(width: 12),
+                    const SizedBox(width: 12),
                     TextButton(
                       child: const Text('Season 6'),
                       style: TextButton.styleFrom(
@@ -479,6 +480,7 @@ class VoyagerCard extends StatelessWidget {
                           );
                     }));
                     }),
+                    const SizedBox(width: 12),
                     TextButton(
                       child: const Text('Season 7'),
                       style: TextButton.styleFrom(
@@ -539,7 +541,8 @@ class VoyagerCard extends StatelessWidget {
 
                           );
                     }));
-                    })
+                    }),
+                    const SizedBox(width: 12),
                   ]
                 ))),
               ]),

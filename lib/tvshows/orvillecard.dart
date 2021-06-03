@@ -92,17 +92,14 @@ class OrvilleCard extends StatelessWidget {
                                   future: fetchOrvilleSeason1(),
                                   builder: (BuildContext context, AsyncSnapshot snapshot) {
                                     if(snapshot.hasData){
-                                      print(snapshot.data[0]['tvfspath']);
                                       return ListView.builder(
                                         padding: const EdgeInsets.all(8),
                                         itemCount: snapshot.data.length,
                                         itemBuilder: (BuildContext context, int index) {
                                           return GestureDetector(
                                             onTap: () {
-                                              print(snapshot.data[index]);
                                               String dirp = "/media/pi/PiTB/media/TVShows";
                                               String ap = dirp + snapshot.data[index]['tvfspath'];
-                                              print(ap);
                                               final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=${ap}";
                                               playEpi(apiPU);
                                               Navigator.pop(context);
@@ -156,7 +153,6 @@ class OrvilleCard extends StatelessWidget {
                                   future: fetchOrvilleSeason2(),
                                   builder: (BuildContext context, AsyncSnapshot snapshot) {
                                     if(snapshot.hasData){
-                                      print(snapshot.data[0]['tvfspath']);
                                       return ListView.builder(
                                         padding: const EdgeInsets.all(8),
                                         itemCount: snapshot.data.length,
@@ -165,9 +161,7 @@ class OrvilleCard extends StatelessWidget {
                                             onTap: () {
                                               String dirp = "/media/pi/PiTB/media/TVShows";
                                               String ap = dirp + snapshot.data[index]['tvfspath'];
-                                              print(ap);
                                               final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=${ap}";
-                                              print(apiPU);
                                               playEpi(apiPU);
                                               Navigator.pop(context);
                                             },
@@ -195,7 +189,7 @@ class OrvilleCard extends StatelessWidget {
                           );
                     }));
                     }),
-                     const SizedBox(width: 12),
+                    const SizedBox(width: 12),
                     TextButton(
                       child: const Text('Season 3'),
                       style: TextButton.styleFrom(
@@ -219,7 +213,6 @@ class OrvilleCard extends StatelessWidget {
                                   future: fetchOrvilleSeason2(),
                                   builder: (BuildContext context, AsyncSnapshot snapshot) {
                                     if(snapshot.hasData){
-                                      print(snapshot.data[0]['tvfspath']);
                                       return ListView.builder(
                                         padding: const EdgeInsets.all(8),
                                         itemCount: snapshot.data.length,
@@ -228,7 +221,6 @@ class OrvilleCard extends StatelessWidget {
                                             onTap: () {
                                               String dirp = "/media/pi/PiTB/media/TVShows";
                                               String ap = dirp + snapshot.data[index]['tvfspath'];
-                                              print(ap);
                                               final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=${ap}";
                                               print(apiPU);
                                               playEpi(apiPU);
@@ -257,82 +249,8 @@ class OrvilleCard extends StatelessWidget {
 
                           );
                     }));
-                    })
-                    // TextButton(
-                    //   child: const Text('Season 1'),
-                    //   style: TextButton.styleFrom(
-                    //     textStyle: TextStyle(fontSize: 32, color: Colors.white)
-                    //   ),
-                    //   onPressed: () {
-                    //     Navigator.push(context,
-                    //       MaterialPageRoute<void>(builder: (BuildContext context) {
-                    //         return Scaffold(
-                    //           appBar: AppBar(
-                    //             title: Text("The Orville"),
-                    //             backgroundColor: Colors.lightGreen[900],
-                    //           ),
-                    //           body: const Center(
-                    //             child: Text(
-                    //               'This is The Orville episode list',
-                    //               style: TextStyle(fontSize: 24),
-                    //             ),
-                    //           ),
-                    //         );
-                    //       }
-                    //     ));
-                    //   },
-                    // ),
-                    // const SizedBox(width: 12),
-                    // TextButton(
-                    //   child: const Text('Season 2'),
-                    //   style: TextButton.styleFrom(
-                    //     textStyle: TextStyle(fontSize: 32)
-                    //   ),
-                    //   onPressed: () {
-                    //     Navigator.push(context,
-                    //       MaterialPageRoute<void>(builder: (BuildContext context) {
-                    //         return Scaffold(
-                    //           appBar: AppBar(
-                    //             title: Text("The Orville"),
-                    //             backgroundColor: Colors.lightGreen[900],
-                    //           ),
-                    //           body: const Center(
-                    //             child: Text(
-                    //               'This is The Orville episode list',
-                    //               style: TextStyle(fontSize: 24),
-                    //             ),
-                    //           ),
-                    //         );
-                    //       }
-                    //     ));
-                    //   },
-                    // ),
-                    // const SizedBox(width: 12),
-                    // TextButton(
-                    //   child: const Text('Season 3'),
-                    //   style: TextButton.styleFrom(
-                    //     textStyle: TextStyle(fontSize: 32)
-                    //   ),
-                    //   onPressed: () {
-                    //     Navigator.push(context,
-                    //       MaterialPageRoute<void>(builder: (BuildContext context) {
-                    //         return Scaffold(
-                    //           appBar: AppBar(
-                    //             title: Text("The Orville"),
-                    //             backgroundColor: Colors.lightGreen[900],
-                    //           ),
-                    //           body: const Center(
-                    //             child: Text(
-                    //               'This is The Orville episode list',
-                    //               style: TextStyle(fontSize: 24),
-                    //             ),
-                    //           ),
-                    //         );
-                    //       }
-                    //     ));
-                    //   },
-                    // ),
-                    // const SizedBox(width: 12),
+                    }),
+                    const SizedBox(width: 12),
                   ]
                 ))),
               ]),

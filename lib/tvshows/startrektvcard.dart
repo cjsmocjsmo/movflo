@@ -93,7 +93,6 @@ class StarTrekTVCard extends StatelessWidget {
                                   future: fetchStarTrekSeason1(),
                                   builder: (BuildContext context, AsyncSnapshot snapshot) {
                                     if(snapshot.hasData){
-                                      print(snapshot.data[0]['tvfspath']);
                                       return ListView.builder(
                                         padding: const EdgeInsets.all(8),
                                         itemCount: snapshot.data.length,
@@ -157,7 +156,6 @@ class StarTrekTVCard extends StatelessWidget {
                                   future: fetchStarTrekSeason2(),
                                   builder: (BuildContext context, AsyncSnapshot snapshot) {
                                     if(snapshot.hasData){
-                                      print(snapshot.data[0]['tvfspath']);
                                       return ListView.builder(
                                         padding: const EdgeInsets.all(8),
                                         itemCount: snapshot.data.length,
@@ -196,7 +194,7 @@ class StarTrekTVCard extends StatelessWidget {
                           );
                     }));
                     }),
-                     const SizedBox(width: 12),
+                    const SizedBox(width: 12),
                     TextButton(
                       child: const Text('Season 3'),
                       style: TextButton.styleFrom(
@@ -220,7 +218,6 @@ class StarTrekTVCard extends StatelessWidget {
                                   future: fetchStarTrekSeason2(),
                                   builder: (BuildContext context, AsyncSnapshot snapshot) {
                                     if(snapshot.hasData){
-                                      print(snapshot.data[0]['tvfspath']);
                                       return ListView.builder(
                                         padding: const EdgeInsets.all(8),
                                         itemCount: snapshot.data.length,
@@ -258,82 +255,9 @@ class StarTrekTVCard extends StatelessWidget {
 
                           );
                     }));
-                    })
-                    // TextButton(
-                    //   child: const Text('Season 1'),
-                    //   style: TextButton.styleFrom(
-                    //     textStyle: TextStyle(fontSize: 32, color: Colors.white)
-                    //   ),
-                    //   onPressed: () {
-                    //     Navigator.push(context,
-                    //       MaterialPageRoute<void>(builder: (BuildContext context) {
-                    //         return Scaffold(
-                    //           appBar: AppBar(
-                    //             title: Text("Star Trek TV"),
-                    //             backgroundColor: Colors.lightGreen[900],
-                    //           ),
-                    //           body: const Center(
-                    //             child: Text(
-                    //               'This is Star Trek TV episode list',
-                    //               style: TextStyle(fontSize: 24),
-                    //             ),
-                    //           ),
-                    //         );
-                    //       }
-                    //     ));
-                    //   },
-                    // ),
-                    // const SizedBox(width: 12),
-                    // TextButton(
-                    //   child: const Text('Season 2'),
-                    //   style: TextButton.styleFrom(
-                    //     textStyle: TextStyle(fontSize: 32)
-                    //   ),
-                    //   onPressed: () {
-                    //     Navigator.push(context,
-                    //       MaterialPageRoute<void>(builder: (BuildContext context) {
-                    //         return Scaffold(
-                    //           appBar: AppBar(
-                    //             title: Text("Star Trek TV"),
-                    //             backgroundColor: Colors.lightGreen[900],
-                    //           ),
-                    //           body: const Center(
-                    //             child: Text(
-                    //               'This is Star Trek TV episode list',
-                    //               style: TextStyle(fontSize: 24),
-                    //             ),
-                    //           ),
-                    //         );
-                    //       }
-                    //     ));
-                    //   },
-                    // ),
-                    // const SizedBox(width: 12),
-                    // TextButton(
-                    //   child: const Text('Season 3'),
-                    //   style: TextButton.styleFrom(
-                    //     textStyle: TextStyle(fontSize: 32)
-                    //   ),
-                    //   onPressed: () {
-                    //     Navigator.push(context,
-                    //       MaterialPageRoute<void>(builder: (BuildContext context) {
-                    //         return Scaffold(
-                    //           appBar: AppBar(
-                    //             title: Text("Star Trek TV"),
-                    //             backgroundColor: Colors.lightGreen[900],
-                    //           ),
-                    //           body: const Center(
-                    //             child: Text(
-                    //               'This is Star Trek TV episode list',
-                    //               style: TextStyle(fontSize: 24),
-                    //             ),
-                    //           ),
-                    //         );
-                    //       }
-                    //     ));
-                    //   },
-                    // ),
-                    // const SizedBox(width: 12),
+                    }),
+                    
+                    const SizedBox(width: 12),
                   ]
                 ))),
               ]),
