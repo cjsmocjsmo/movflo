@@ -105,9 +105,9 @@ class LowerDecksCard extends StatelessWidget {
                                         }
                                       );
                                     } else {
-                                      return Text("OOOOOOOH FUCK");
+                                      return CircularProgressIndicator();
                                     }
-                                    return CircularProgressIndicator();
+                                    
                                   }
                                 ),
                             )));
@@ -166,9 +166,9 @@ class LowerDecksCard extends StatelessWidget {
                                         }
                                       );
                                     } else {
-                                      return Text("OOOOOOOH FUCK");
+                                      return CircularProgressIndicator();
                                     }
-                                    return CircularProgressIndicator();
+                                    
                                   }
                                 ),
                             ))

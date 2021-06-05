@@ -108,9 +108,9 @@ class PicardCard extends StatelessWidget {
                                         }
                                       );
                                     } else {
-                                      return Text("OOOOOOOH FUCK");
+                                      return CircularProgressIndicator();
                                     }
-                                    return CircularProgressIndicator();
+                                    
                                   }
                                 ),
                             )));
@@ -169,9 +169,9 @@ class PicardCard extends StatelessWidget {
                                         }
                                       );
                                     } else {
-                                      return Text("OOOOOOOH FUCK");
+                                      return CircularProgressIndicator();
                                     }
-                                    return CircularProgressIndicator();
+                                    
                                   }
                                 ),
                             ))

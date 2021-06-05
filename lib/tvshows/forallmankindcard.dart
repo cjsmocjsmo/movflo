@@ -117,9 +117,9 @@ class ForAllManKindCard extends StatelessWidget {
                                         }
                                       );
                                     } else {
-                                      return Text("OOOOOOOH FUCK");
+                                      return CircularProgressIndicator();
                                     }
-                                    return CircularProgressIndicator();
+                                    
                                   }
                                 ),
                             )));
@@ -178,9 +178,9 @@ class ForAllManKindCard extends StatelessWidget {
                                         }
                                       );
                                     } else {
-                                      return Text("OOOOOOOH FUCK");
+                                      return CircularProgressIndicator();
                                     }
-                                    return CircularProgressIndicator();
+                                    
                                   }
                                 ),
                             ))
@@ -237,9 +237,9 @@ class ForAllManKindCard extends StatelessWidget {
                                         }
                                       );
                                     } else {
-                                      return Text("OOOOOOOH FUCK");
+                                      return CircularProgressIndicator();
                                     }
-                                    return CircularProgressIndicator();
+                                    
                                   }
                                 ),
                             ))

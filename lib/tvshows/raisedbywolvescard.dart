@@ -110,9 +110,9 @@ class RaisedByWolvesCard extends StatelessWidget {
                                         }
                                       );
                                     } else {
-                                      return Text("OOOOOOOH FUCK");
+                                      return CircularProgressIndicator();
                                     }
-                                    return CircularProgressIndicator();
+                                    
                                   }
                                 ),
                             )));
@@ -173,9 +173,9 @@ class RaisedByWolvesCard extends StatelessWidget {
                                         }
                                       );
                                     } else {
-                                      return Text("OOOOOOOH FUCK");
+                                      return CircularProgressIndicator();
                                     }
-                                    return CircularProgressIndicator();
+                                    
                                   }
                                 ),
                             ))

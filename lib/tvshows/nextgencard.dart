@@ -155,9 +155,9 @@ class NextGenCard extends StatelessWidget {
                                         }
                                       );
                                     } else {
-                                      return Text("OOOOOOOH FUCK");
+                                      return CircularProgressIndicator();
                                     }
-                                    return CircularProgressIndicator();
+                                    
                                   }
                                 ),
                             )));
@@ -275,10 +275,10 @@ class NextGenCard extends StatelessWidget {
                                           );
                                         }
                                       );
-                                    } else if (snapshot.hasError) {
-                                      return Text("${snapshot.error}");
+                                    } else {
+                                      return CircularProgressIndicator();
                                     }
-                                    return CircularProgressIndicator();
+                                    
                                   }
                                 ),
                             ))
@@ -334,9 +334,9 @@ class NextGenCard extends StatelessWidget {
                                         }
                                       );
                                     } else {
-                                      return Text("OOOOOOOH FUCK");
+                                      return CircularProgressIndicator();
                                     }
-                                    return CircularProgressIndicator();
+                                    
                                   }
                                 ),
                             )));
@@ -395,9 +395,9 @@ class NextGenCard extends StatelessWidget {
                                         }
                                       );
                                     } else {
-                                      return Text("OOOOOOOH FUCK");
+                                      return CircularProgressIndicator();
                                     }
-                                    return CircularProgressIndicator();
+                                    
                                   }
                                 ),
                             ))
@@ -454,10 +454,10 @@ class NextGenCard extends StatelessWidget {
                                           );
                                         }
                                       );
-                                    } else if (snapshot.hasError) {
-                                      return Text("${snapshot.error}");
+                                    } else {
+                                      return CircularProgressIndicator();
                                     }
-                                    return CircularProgressIndicator();
+                                    
                                   }
                                 ),
                             ))
@@ -513,9 +513,9 @@ class NextGenCard extends StatelessWidget {
                                         }
                                       );
                                     } else {
-                                      return Text("OOOOOOOH FUCK");
+                                      return CircularProgressIndicator();
                                     }
-                                    return CircularProgressIndicator();
+                                    
                                   }
                                 ),
                             ))

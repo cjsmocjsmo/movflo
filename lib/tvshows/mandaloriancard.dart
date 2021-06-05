@@ -117,9 +117,9 @@ class MandalorianCard extends StatelessWidget {
                                         }
                                       );
                                     } else {
-                                      return Text("OOOOOOOH FUCK");
+                                      return CircularProgressIndicator();
                                     }
-                                    return CircularProgressIndicator();
+                                    
                                   }
                                 ),
                             )));
@@ -178,9 +178,9 @@ class MandalorianCard extends StatelessWidget {
                                         }
                                       );
                                     } else {
-                                      return Text("OOOOOOOH FUCK");
+                                      return CircularProgressIndicator();
                                     }
-                                    return CircularProgressIndicator();
+                                    
                                   }
                                 ),
                             ))
@@ -235,10 +235,10 @@ class MandalorianCard extends StatelessWidget {
                                           );
                                         }
                                       );
-                                    } else if (snapshot.hasError) {
-                                      return Text("${snapshot.error}");
+                                    } else {
+                                      return CircularProgressIndicator();
                                     }
-                                    return CircularProgressIndicator();
+                                    
                                   }
                                 ),
                             ))
