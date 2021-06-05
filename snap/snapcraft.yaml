@@ -1,0 +1,27 @@
+name: movflo
+version: 0.0.1
+summary: Movflo
+description: Remote control for raspberry pi
+
+confinement: strict
+base: core18
+grade: stable
+
+slots:
+  dbus-movflo-app:
+    interface: dbus
+    bus: session
+    name: org.movflo
+
+apps:
+  movflo:
+    command: movflo
+    extensions: [flutter-master]
+    plugs:
+    - network
+
+parts:
+  movflo:
+    source: .
+    plugin: flutter
+    flutter-target: lib/main.dart

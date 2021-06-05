@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Movflo
+Comment=Super Cool
+Exec=movflo
+Icon=${SNAP}/meta/gui/movflo.png
+Terminal=false
+Type=Application
+Catagories=Education
