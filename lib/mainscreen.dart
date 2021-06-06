@@ -85,6 +85,20 @@ class MainScreen extends StatelessWidget {
 
   }
 
+  Future<void> nextMov(nextURL) async {
+    
+    var resultNext = await http.get(Uri.parse(nextURL));
+    return json.decode(resultNext.body);
+
+  }
+
+  Future<void> previousMov(previousURL) async {
+    
+    var resultPrevious = await http.get(Uri.parse(previousURL));
+    return json.decode(resultPrevious.body);
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -101,12 +115,26 @@ class MainScreen extends StatelessWidget {
           ),
         ),
         bottomNavigationBar: BottomAppBar(
+          color: Colors.purple[400],
           child: Row(
             children: [
-              // IconButton(icon: Icon(Icons.menu), onPressed: () {}),
-              // // Spacer(),
-              // IconButton(icon: Icon(Icons.search), onPressed: () {}),
-              // IconButton(icon: Icon(Icons.more_vert), onPressed: () {}),
+              Spacer(),
+              IconButton(
+                icon: Icon(Icons.skip_previous), 
+                onPressed: () {
+                  final String apiPrevious = "http://192.168.0.42:8181/Previous";
+                  previousMov(apiPrevious);
+                },
+              ),
+              Spacer(),
+              IconButton(
+                icon: Icon(Icons.skip_next), 
+                onPressed: () {
+                  final String apiNext = "http://192.168.0.42:8181/Next";
+                  nextMov(apiNext);
+                },
+              ),
+              Spacer(),
             ],
           ),
         ),
@@ -115,11 +143,12 @@ class MainScreen extends StatelessWidget {
           child: Icon(Icons.close_sharp), 
           onPressed: () { 
             final String apiStop = "http://192.168.0.42:8181/Stop";
-            stop(apiStop); 
+            stopMov(apiStop); 
           }
         ),
         floatingActionButtonLocation:
-            FloatingActionButtonLocation.endDocked,
+            // FloatingActionButtonLocation.endDocked,
+            FloatingActionButtonLocation.endFloat,
         body: Container(
           decoration: BoxDecoration(
             color: Colors.lightGreenAccent.shade400,
@@ -147,24 +176,78 @@ Widget moviesListView = ListView.builder(
   padding: const EdgeInsets.all(10.0),
   itemCount: movies.length,
   itemBuilder: (BuildContext context, int index) {
-    return InkWell(
-      child: Container(
+    return 
+    InkWell(
+      splashColor: Colors.red,
+      // onTap: () {}, // button pressed
+      child: 
+        // ListTile(
+        //   selected: false,
+        //   tileColor: Colors.amber,
+        //   title: Text(
+        //     '${movies[index]}',
+        //     style: TextStyle(
+        //       color: Colors.black,
+        //       fontSize: 29.0,
+        //       fontWeight: FontWeight.bold,
+        //     ),
+        //   ),
+        //   trailing: Icon(Icons.play_arrow, color: Colors.purple[900], size: 29.0),
+        //   // selectedTileColor: Colors.blue,
+          
+        //   onTap: () {
+        //     Navigator.pushNamed(context, '/${movies[index]}');
+        //   },
+        // );
+      // Container(
+      //   // width: 120.0,
+      //   height: 80.0,
+      //   child: ElevatedButton(
+      //     onPressed: null,
+      //     child: Container(
+      //       height: 75,
+      //       color: Colors.amber[400],
+      //       child: Padding(
+      //         padding: EdgeInsets.fromLTRB(
+      //           20.0, 13.0, 0.0, 0.0,
+      //         ),
+      //         child: Row(
+      //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      //           children: <Widget>[
+      //             Text(
+      //               '${movies[index]}',
+      //               style: TextStyle(
+      //                 color: Colors.black,
+      //                 fontSize: 29.0,
+      //                 fontWeight: FontWeight.bold,
+      //               ),
+      //             ),
+      //             Icon(Icons.play_arrow, color: Colors.purple[900], size: 29.0),
+      //           ],
+      //         ),
+      //       ),
+      //     ),
+      //   ),
+      // ),
+      
+      Container(
         height: 50,
         color: Colors.amber[400],
         child: Center(
             child: Text('${movies[index]}',
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              fontSize: 22.0,
+              fontSize: 28.0,
             )
           )
         ),
       ),
+
+
+
+
       onTap: () {
-        Navigator.pushNamed(
-          context,
-          '/${movies[index]}',
-        );
+        Navigator.pushNamed(context, '/${movies[index]}');
       },
     );
   }
