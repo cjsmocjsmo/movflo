@@ -104,7 +104,7 @@ class NextGenCard extends StatelessWidget {
                 ),
                 Expanded(
                   child: Padding(
-                      padding: EdgeInsets.fromLTRB(0.0, 15.0, 0.0, 0.0),
+                      padding: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
                       child: Column(
                         children: <Widget>[
                            Row(
@@ -113,9 +113,9 @@ class NextGenCard extends StatelessWidget {
                                  Column(
                                   children: <Widget>[
                                     Padding(
-                                      padding: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 8.0),
+                                      padding: EdgeInsets.fromLTRB(4.0, 4.0, 4.0, 4.0),
                                       child: SizedBox.fromSize(
-                                          size: Size(56, 56), // button width and height
+                                          size: Size(60, 60), // button width and height
                                           child: ClipOval(
                                             child: Material(
                                               color: Colors.lightGreenAccent.shade400, //amber[400], // button color
@@ -194,9 +194,9 @@ class NextGenCard extends StatelessWidget {
                                         ),
                                       ),
                                       Padding(
-                                      padding: EdgeInsets.fromLTRB(0.0, 8.0, 0.0, 8.0),
+                                      padding: EdgeInsets.fromLTRB(4.0, 4.0, 4.0, 4.0),
                                       child: SizedBox.fromSize(
-                                          size: Size(56, 56), // button width and height
+                                          size: Size(60, 60), // button width and height
                                           child: ClipOval(
                                             child: Material(
                                               color: Colors.lightGreenAccent.shade400, //amber[400], // button color
@@ -275,9 +275,9 @@ class NextGenCard extends StatelessWidget {
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsets.fromLTRB(0.0, 8.0, 0.0, 8.0),
+                                        padding: EdgeInsets.fromLTRB(4.0, 4.0, 4.0, 4.0),
                                         child: SizedBox.fromSize(
-                                          size: Size(56, 56), // button width and height
+                                          size: Size(60, 60), // button width and height
                                           child: ClipOval(
                                             child: Material(
                                               color: Colors.lightGreenAccent.shade400, //amber[400], // button color
@@ -356,9 +356,9 @@ class NextGenCard extends StatelessWidget {
                                         ),
                                       ),
                                       Padding(
-                                      padding: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 10.0),
+                                      padding: EdgeInsets.fromLTRB(4.0, 4.0, 4.0, 4.0),
                                       child: SizedBox.fromSize(
-                                          size: Size(56, 56), // button width and height
+                                          size: Size(60, 60), // button width and height
                                           child: ClipOval(
                                             child: Material(
                                               color: Colors.lightGreenAccent.shade400, //amber[400], // button color
@@ -440,9 +440,9 @@ class NextGenCard extends StatelessWidget {
                                     Column(
                                       children: <Widget>[
                                       Padding(
-                                      padding: EdgeInsets.fromLTRB(0.0, 8.0, 0.0, 8.0),
+                                      padding: EdgeInsets.fromLTRB(4.0, 4.0, 4.0, 4.0),
                                       child: SizedBox.fromSize(
-                                          size: Size(56, 56), // button width and height
+                                          size: Size(60, 60), // button width and height
                                           child: ClipOval(
                                             child: Material(
                                               color: Colors.lightGreenAccent.shade400, //amber[400], // button color
@@ -521,9 +521,9 @@ class NextGenCard extends StatelessWidget {
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsets.fromLTRB(0.0, 8.0, 0.0, 8.0),
+                                        padding: EdgeInsets.fromLTRB(4.0, 4.0, 4.0, 4.0),
                                         child: SizedBox.fromSize(
-                                          size: Size(56, 56), // button width and height
+                                          size: Size(60, 60), // button width and height
                                           child: ClipOval(
                                             child: Material(
                                               color: Colors.lightGreenAccent.shade400, //amber[400], // button color
@@ -602,9 +602,9 @@ class NextGenCard extends StatelessWidget {
                                         ),
                                       ),
                                       Padding(
-                                      padding: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 10.0),
+                                      padding: EdgeInsets.fromLTRB(4.0, 4.0, 4.0, 4.0),
                                       child: SizedBox.fromSize(
-                                          size: Size(56, 56), // button width and height
+                                          size: Size(60, 60), // button width and height
                                           child: ClipOval(
                                             child: Material(
                                               color: Colors.lightGreenAccent.shade400, //amber[400], // button color
