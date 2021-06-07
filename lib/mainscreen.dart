@@ -115,12 +115,12 @@ class MainScreen extends StatelessWidget {
           ),
         ),
         bottomNavigationBar: BottomAppBar(
-          color: Colors.purple[400],
+          color: Colors.lightGreen[900],
           child: Row(
             children: [
               Spacer(),
               IconButton(
-                icon: Icon(Icons.skip_previous), 
+                icon: Icon(Icons.skip_previous, color: Colors.white), 
                 onPressed: () {
                   final String apiPrevious = "http://192.168.0.42:8181/Previous";
                   previousMov(apiPrevious);
@@ -128,7 +128,7 @@ class MainScreen extends StatelessWidget {
               ),
               Spacer(),
               IconButton(
-                icon: Icon(Icons.skip_next), 
+                icon: Icon(Icons.skip_next, color: Colors.white), 
                 onPressed: () {
                   final String apiNext = "http://192.168.0.42:8181/Next";
                   nextMov(apiNext);
