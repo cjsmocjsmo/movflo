@@ -65,7 +65,7 @@ class AlteredCarbonCard extends StatelessWidget {
                           size: Size(66, 66), // button width and height
                           child: ClipOval(
                             child: Material(
-                              color: Colors.amber[400], // button color
+                              color: Colors.lightGreenAccent.shade400, //amber[400], // button color
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
@@ -73,7 +73,7 @@ class AlteredCarbonCard extends StatelessWidget {
                                     builder: (BuildContext context) {
                                     return Scaffold(
                                       appBar: AppBar(
-                                        title: Text("Alien Worlds"),
+                                        title: Text("Altered Carbon"),
                                         backgroundColor: Colors.lightGreen[900],
                                       ),
                                       body: Container(
@@ -101,7 +101,7 @@ class AlteredCarbonCard extends StatelessWidget {
                                                         child: 
 
                                                         Container(
-                                                          height: 50,
+                                                          height: 75,
                                                           color: Colors.amber[600],
                                                           child:Center(
                                                             child: Text(
@@ -146,7 +146,7 @@ class AlteredCarbonCard extends StatelessWidget {
                           size: Size(66, 66), // button width and height
                           child: ClipOval(
                             child: Material(
-                              color: Colors.amber[400], // button color
+                              color: Colors.lightGreenAccent.shade400, //amber[400], // button color
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
@@ -154,7 +154,7 @@ class AlteredCarbonCard extends StatelessWidget {
                                     builder: (BuildContext context) {
                                     return Scaffold(
                                       appBar: AppBar(
-                                        title: Text("Alien Worlds"),
+                                        title: Text("Altered Carbon"),
                                         backgroundColor: Colors.lightGreen[900],
                                       ),
                                       body: Container(
@@ -182,7 +182,7 @@ class AlteredCarbonCard extends StatelessWidget {
                                                         child: 
 
                                                         Container(
-                                                          height: 50,
+                                                          height: 75,
                                                           color: Colors.amber[600],
                                                           child:Center(
                                                             child: Text(

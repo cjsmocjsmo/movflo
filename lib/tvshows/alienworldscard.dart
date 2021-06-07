@@ -57,7 +57,7 @@ class AlienWorldsCard extends StatelessWidget {
                           size: Size(66, 66), // button width and height
                           child: ClipOval(
                             child: Material(
-                              color: Colors.amber[400], // button color
+                              color: Colors.lightGreenAccent.shade400, //amber[400], // button color
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
@@ -93,7 +93,7 @@ class AlienWorldsCard extends StatelessWidget {
                                                         child: 
 
                                                         Container(
-                                                          height: 50,
+                                                          height: 75,
                                                           color: Colors.amber[600],
                                                           child:Center(
                                                             child: Text(
