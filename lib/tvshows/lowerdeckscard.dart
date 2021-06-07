@@ -340,7 +340,7 @@ class LowerDecksCard extends StatelessWidget {
                     // }),
                     // const SizedBox(width: 12),
                   ]
-                ))),
+            ))),
               ]),
             )
         ),
