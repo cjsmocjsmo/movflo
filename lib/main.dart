@@ -45,7 +45,6 @@ class MovFlo extends StatelessWidget {
       '/Comedy': (context) => ComedyScreen(),
       '/Drama': (context) => DramaScreen(),
       '/Documentary': (context) => DocumentaryScreen(),
-      // '/Enterprise': (context) => EnterpriseCard(),
       '/Fantasy': (context) => FantasyScreen(),
       '/Godzilla': (context) => GodzillaScreen(),
       '/Harry Potter': (context) => HarryPotterScreen(),
@@ -67,11 +66,6 @@ class MovFlo extends StatelessWidget {
       '/Tremors': (context) => TremorsScreen(),
       '/The Rock': (context) => TheRockScreen(),
       '/X-Men': (context) => XMenScreen(),
-      
-      // '/Junk': (context) => JunkScreen(),
-      // '/Alien Worlds View': (contest) => AlienWorldsView(),
-
-      
     });
   }
 }
