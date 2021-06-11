@@ -690,16 +690,6 @@ class NextGenCard extends StatelessWidget {
                     ),
                   ),
                 ),
-
-
-
-
-
-
-
-
-
-
               ],
             ),
           ),

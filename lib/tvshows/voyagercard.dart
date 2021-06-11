@@ -689,14 +689,6 @@ class VoyagerCard extends StatelessWidget {
                     ),
                   ),
                 ),
-
-
-
-
-
-
-
-
               ]),
             )
         ),
