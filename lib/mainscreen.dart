@@ -21,6 +21,7 @@ import 'tvshows/raisedbywolvescard.dart';
 import 'tvshows/voyagercard.dart';
 import 'tvshows/startrektvcard.dart';
 import 'tvshows/wandavisioncard.dart';
+import 'tvshows/lokicard.dart';
 
 
 final List<String> movies = <String>[
@@ -74,6 +75,7 @@ final List<String> tvShows = <String>[
   'WandaVision',
   'Invincible',
   'The Bad Batch',
+  'Loki'
 ];
 
 class MainScreen extends StatelessWidget {
@@ -266,6 +268,7 @@ Widget tvShowsListView(BuildContext context) {
     FalconWinterSoldierCard(),
     ForAllManKindCard(),
     LostInSpaceCard(),
+    LokiCard(),
     LowerDecksCard(),
     MandalorianCard(),
     NextGenCard(),
