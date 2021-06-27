@@ -239,7 +239,7 @@ class AlteredCarbonCard extends StatelessWidget {
 }
 
 
-Future<void> _alteredCarbonColumn(episode String) {
+Future<void> _alteredCarbonColumn(String episode) {
   return Column(
     mainAxisAlignment: MainAxisAlignment.center,
     children: <Widget>[
