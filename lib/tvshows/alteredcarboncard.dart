@@ -202,20 +202,23 @@ class AlteredCarbonCard extends StatelessWidget {
                                   }));
                       
                                 }, // button pressed
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
-                                    // Icon(Icons.call), // icon
-                                    Text(
-                                      "2",
-                                      style: TextStyle(
-                                        fontFamily: "Gothic",
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 22, 
-                                        color: Colors.black),
-                                    ), // text
-                                  ],
-                                ),
+                                child: _alteredCarbonColumn("2")
+
+                                // Column(
+                                //   mainAxisAlignment: MainAxisAlignment.center,
+                                //   children: <Widget>[
+                                //     Text(
+                                //       "2",
+                                //       style: TextStyle(
+                                //         fontFamily: "Gothic",
+                                //         fontWeight: FontWeight.bold,
+                                //         fontSize: 22, 
+                                //         color: Colors.black),
+                                //     ), // text
+                                //   ],
+                                // ),
+
+
                               ),
                             ),
                           ),
@@ -233,4 +236,21 @@ class AlteredCarbonCard extends StatelessWidget {
     )
   );                    
 }
+}
+
+
+Future<void> _alteredCarbonColumn(episode String) {
+  return Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: <Widget>[
+      Text(
+        episode,
+        style: TextStyle(
+          fontFamily: "Gothic",
+          fontWeight: FontWeight.bold,
+          fontSize: 22, 
+          color: Colors.black),
+      ), // text
+    ],
+  );
 }

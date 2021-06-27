@@ -149,7 +149,6 @@ class MainScreen extends StatelessWidget {
           }
         ),
         floatingActionButtonLocation:
-            // FloatingActionButtonLocation.endDocked,
             FloatingActionButtonLocation.endFloat,
         body: Container(
           decoration: BoxDecoration(
@@ -158,10 +157,7 @@ class MainScreen extends StatelessWidget {
           child: TabBarView(
             children: [
               moviesListView,
-              // tvShowsListView(),
               tvShowsListView(context),
-              // lowerDecksListView(context),
-
             ],
           ),
         ),
@@ -182,57 +178,7 @@ Widget moviesListView = ListView.builder(
     InkWell(
       splashColor: Colors.red,
       // onTap: () {}, // button pressed
-      child: 
-        // ListTile(
-        //   selected: false,
-        //   tileColor: Colors.amber,
-        //   title: Text(
-        //     '${movies[index]}',
-        //     style: TextStyle(
-        //       color: Colors.black,
-        //       fontSize: 29.0,
-        //       fontWeight: FontWeight.bold,
-        //     ),
-        //   ),
-        //   trailing: Icon(Icons.play_arrow, color: Colors.purple[900], size: 29.0),
-        //   // selectedTileColor: Colors.blue,
-          
-        //   onTap: () {
-        //     Navigator.pushNamed(context, '/${movies[index]}');
-        //   },
-        // );
-      // Container(
-      //   // width: 120.0,
-      //   height: 80.0,
-      //   child: ElevatedButton(
-      //     onPressed: null,
-      //     child: Container(
-      //       height: 75,
-      //       color: Colors.amber[400],
-      //       child: Padding(
-      //         padding: EdgeInsets.fromLTRB(
-      //           20.0, 13.0, 0.0, 0.0,
-      //         ),
-      //         child: Row(
-      //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      //           children: <Widget>[
-      //             Text(
-      //               '${movies[index]}',
-      //               style: TextStyle(
-      //                 color: Colors.black,
-      //                 fontSize: 29.0,
-      //                 fontWeight: FontWeight.bold,
-      //               ),
-      //             ),
-      //             Icon(Icons.play_arrow, color: Colors.purple[900], size: 29.0),
-      //           ],
-      //         ),
-      //       ),
-      //     ),
-      //   ),
-      // ),
-      
-      Container(
+      child: Container(
         height: 50,
         color: Colors.amber[400],
         child: Center(
@@ -244,10 +190,6 @@ Widget moviesListView = ListView.builder(
           )
         ),
       ),
-
-
-
-
       onTap: () {
         Navigator.pushNamed(context, '/${movies[index]}');
       },
@@ -278,29 +220,8 @@ Widget tvShowsListView(BuildContext context) {
     StarTrekTVCard(),
     VoyagerCard(),
     WandaVisionCard(),
-    
-    
-    
-    
-
-
   ]);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // This works DONT DELETE
