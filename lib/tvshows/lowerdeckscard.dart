@@ -170,12 +170,15 @@ _lowerDecks(BuildContext context, String season_num) {
                     });
                 } else {
                   return CircularProgressIndicator();
-                }
-                
-              }),
-        )));
-  }));
-
+                }}
+              ),
+            ),
+          ),
+        );
+      }
+    ),
+  );
+}
 
 _lowerDecksButtonColumn(String episode) {
   return Column(
