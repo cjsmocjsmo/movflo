@@ -221,7 +221,7 @@ _nextGeneration(BuildContext context, String season_num) {
     } else if (season_num == '6') {
       var result = await http.get(Uri.parse(api6Url));
       return json.decode(result.body);
-    } else (season_num == '7') {
+    } else {
       var result = await http.get(Uri.parse(api7Url));
       return json.decode(result.body);
     }
