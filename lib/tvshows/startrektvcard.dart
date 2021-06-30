@@ -28,7 +28,6 @@ class StarTrekTVCard extends StatelessWidget {
                 Expanded(
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(0.0, 25.0, 0.0, 0.0),
-
                   child: Column(
                   children: <Widget>[
                     Padding(
