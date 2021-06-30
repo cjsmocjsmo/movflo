@@ -4,15 +4,15 @@ import 'dart:convert';
 
 class AlteredCarbonCard extends StatelessWidget {
 
-  final String api1Url = "http://192.168.0.42:8888/intAlteredCarbon?season=01";
+  // final String api1Url = "http://192.168.0.42:8888/intAlteredCarbon?season=01";
   
 
-  Future<List<dynamic>> fetchAlteredCarbonSeason1() async {
+  // Future<List<dynamic>> fetchAlteredCarbonSeason1() async {
     
-      var result = await http.get(Uri.parse(api1Url));
-      return json.decode(result.body);
+  //     var result = await http.get(Uri.parse(api1Url));
+  //     return json.decode(result.body);
     
-  }
+  // }
 
   // final String api2Url = "http://192.168.0.42:8888/intAlteredCarbon?season=02";
 
@@ -69,7 +69,7 @@ class AlteredCarbonCard extends StatelessWidget {
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
-                                  _alteredCarbon(context, "1")
+                                  _alteredCarbon(context, "1");
                                   // Navigator.push(context, MaterialPageRoute<void>(
                                   //   builder: (BuildContext context) {
                                   //   return Scaffold(
@@ -122,7 +122,7 @@ class AlteredCarbonCard extends StatelessWidget {
                                   // }));
                       
                                 }, // button pressed
-                                child: _alteredCarbonButtonColumn("1");
+                                child: _alteredCarbonButtonColumn("1")
                               ),
                             ),
                           ),
@@ -171,16 +171,20 @@ Future<void> playEpi(playURL) async {
   }
 
 _alteredCarbon(BuildContext context, String season_num) {
+
+  final String api1Url = "http://192.168.0.42:8888/intAlteredCarbon?season=01";
+
   final String api2Url = "http://192.168.0.42:8888/intAlteredCarbon?season=02";
 
-  Future<List<dynamic>> fetchAlteredCarbonSeason"${season_num}"() async {
-    
+  Future<List<dynamic>> fetchAlteredCarbonSeason() async {
+    if (season_num === "1") {
+      var result = await http.get(Uri.parse(api1Url));
+      return json.decode(result.body);
+    } else {
       var result = await http.get(Uri.parse(api2Url));
       return json.decode(result.body);
-    
+    }
   }
-
-  
 
   return Navigator.push(context, MaterialPageRoute<void>(
     builder: (BuildContext context) {
