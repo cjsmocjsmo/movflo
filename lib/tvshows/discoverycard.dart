@@ -80,7 +80,7 @@ final String api1Url = "http://192.168.0.42:8888/intDiscovery?season=01";
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
-                                  _discovery(context, '1')
+                                  _discovery(context, '1');
 
 
                                   // Navigator.push(context, MaterialPageRoute<void>(
