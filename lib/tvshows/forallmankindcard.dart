@@ -383,7 +383,7 @@ _forAllManKind(BuildContext context, String season_num) {
         child: Center(
           child:
             FutureBuilder<List<dynamic>>(
-              future: fetchForAllManKindSeason1(),
+              future: fetchForAllManKind(),
               builder: (BuildContext context,AsyncSnapshot snapshot) {
                 if (snapshot.hasData) {
                   return ListView.builder(
