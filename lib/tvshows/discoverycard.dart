@@ -422,7 +422,7 @@ _discovery(BuildContext context, String season_num) {
     }
   ),
 );
-
+}
 
 
 
