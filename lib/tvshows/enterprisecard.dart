@@ -78,7 +78,7 @@ class EnterpriseCard extends StatelessWidget {
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
-                                  _enterprise(context, '1')
+                                  _enterprise(context, '1');
                                 }, // button pressed
                                 child: _enterpriseButtonColumn('1')
                               ),
