@@ -113,7 +113,7 @@ _forAllManKind(BuildContext context, String season_num) {
       var result = await http.get(Uri.parse(api1Url));
       return json.decode(result.body);
     } else {
-      var result = await http.get(Uri.parse(api3Url));
+      var result = await http.get(Uri.parse(api2Url));
       return json.decode(result.body);
     }
     // final String api3Url = "http://192.168.0.42:8888/intForAllManKind?season=03";
