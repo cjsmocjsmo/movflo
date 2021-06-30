@@ -58,7 +58,7 @@ class StarTrekTVCard extends StatelessWidget {
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
-                                  _sttv(context, '3');
+                                  _sttv(context, '2');
                                 }, // button pressed
                                 child: _sttvButtonColumn('2')
                               ),
