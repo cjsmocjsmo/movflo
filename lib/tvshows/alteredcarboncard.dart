@@ -69,7 +69,7 @@ class AlteredCarbonCard extends StatelessWidget {
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
-                                  _alteredCarbon(context, "1");
+                                  _alteredCarbon(context, "1")
                                   // Navigator.push(context, MaterialPageRoute<void>(
                                   //   builder: (BuildContext context) {
                                   //   return Scaffold(
