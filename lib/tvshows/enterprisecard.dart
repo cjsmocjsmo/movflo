@@ -207,11 +207,15 @@ _enterprise(BuildContext context, String season_num) {
                     });
                 } else {
                   return CircularProgressIndicator();
-                }
-                
-              }),
-        )));
-  }));
+              }}
+              ),
+            ),
+          ),
+        );
+      }
+    ),
+  );
+}
 
 _enterpriseButtonColumn(String episode) {
   return Column(
