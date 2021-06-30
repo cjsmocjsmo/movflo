@@ -166,7 +166,7 @@ class ForAllManKindCard extends StatelessWidget {
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
-                                  _forAllManKind(context, '2')
+                                  _forAllManKind(context, '2');
 
 
                                   // Navigator.push(context, MaterialPageRoute<void>(
@@ -252,7 +252,7 @@ class ForAllManKindCard extends StatelessWidget {
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
-                                  _forAllManKind(context, '3')
+                                  _forAllManKind(context, '3');
 
                                   // Navigator.push(context, MaterialPageRoute<void>(
                                   //   builder: (BuildContext context) {
