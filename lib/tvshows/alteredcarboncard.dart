@@ -177,7 +177,7 @@ _alteredCarbon(BuildContext context, String season_num) {
   final String api2Url = "http://192.168.0.42:8888/intAlteredCarbon?season=02";
 
   Future<List<dynamic>> fetchAlteredCarbonSeason() async {
-    if (season_num === "1") {
+    if (season_num == "1") {
       var result = await http.get(Uri.parse(api1Url));
       return json.decode(result.body);
     } else {
