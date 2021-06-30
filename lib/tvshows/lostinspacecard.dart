@@ -76,7 +76,7 @@ class LostInSpaceCard extends StatelessWidget {
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
-                                  _lostInSpace(context, '3')
+                                  _lostInSpace(context, '3');
                                 }, // button pressed
                                 child: _lostInSpaceButtonColumn('3')
                               ),
