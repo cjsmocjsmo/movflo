@@ -14,14 +14,14 @@ class AlteredCarbonCard extends StatelessWidget {
     
   }
 
-  final String api2Url = "http://192.168.0.42:8888/intAlteredCarbon?season=02";
+  // final String api2Url = "http://192.168.0.42:8888/intAlteredCarbon?season=02";
 
-  Future<List<dynamic>> fetchAlteredCarbonSeason2() async {
+  // Future<List<dynamic>> fetchAlteredCarbonSeason2() async {
     
-      var result = await http.get(Uri.parse(api2Url));
-      return json.decode(result.body);
+  //     var result = await http.get(Uri.parse(api2Url));
+  //     return json.decode(result.body);
     
-  }
+  // }
 
   Future<void> playEpi(playURL) async {
 
@@ -69,72 +69,60 @@ class AlteredCarbonCard extends StatelessWidget {
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
-                                  Navigator.push(context, MaterialPageRoute<void>(
-                                    builder: (BuildContext context) {
-                                    return Scaffold(
-                                      appBar: AppBar(
-                                        title: Text("Altered Carbon"),
-                                        backgroundColor: Colors.lightGreen[900],
-                                      ),
-                                      body: Container(
-                                        decoration: BoxDecoration(
-                                          color: Colors.lightGreenAccent.shade400,
-                                        ),
-                                        child: Center(
-                                          child:
-                                            FutureBuilder<List<dynamic>>(
-                                              future: fetchAlteredCarbonSeason1(),
-                                              builder: (BuildContext context,AsyncSnapshot snapshot) {
-                                                if (snapshot.hasData) {
-                                                  return ListView.builder(
-                                                    padding: const EdgeInsets.all(8),
-                                                    itemCount: snapshot.data.length,
-                                                    itemBuilder: (BuildContext context, int index) {
-                                                      return GestureDetector(
-                                                        onTap: () {
-                                                          String dirp = "/media/pi/PiTB/media/TVShows";
-                                                          String ap = dirp + snapshot.data[index]["tvfspath"];
-                                                          final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=" + ap;
-                                                          playEpi(apiPU);
-                                                          Navigator.pop(context);
-                                                        },
-                                                        child: 
+                                  _alteredCarbon(context, "1");
+                                  // Navigator.push(context, MaterialPageRoute<void>(
+                                  //   builder: (BuildContext context) {
+                                  //   return Scaffold(
+                                  //     appBar: AppBar(
+                                  //       title: Text("Altered Carbon"),
+                                  //       backgroundColor: Colors.lightGreen[900],
+                                  //     ),
+                                  //     body: Container(
+                                  //       decoration: BoxDecoration(
+                                  //         color: Colors.lightGreenAccent.shade400,
+                                  //       ),
+                                  //       child: Center(
+                                  //         child:
+                                  //           FutureBuilder<List<dynamic>>(
+                                  //             future: fetchAlteredCarbonSeason1(),
+                                  //             builder: (BuildContext context,AsyncSnapshot snapshot) {
+                                  //               if (snapshot.hasData) {
+                                  //                 return ListView.builder(
+                                  //                   padding: const EdgeInsets.all(8),
+                                  //                   itemCount: snapshot.data.length,
+                                  //                   itemBuilder: (BuildContext context, int index) {
+                                  //                     return GestureDetector(
+                                  //                       onTap: () {
+                                  //                         String dirp = "/media/pi/PiTB/media/TVShows";
+                                  //                         String ap = dirp + snapshot.data[index]["tvfspath"];
+                                  //                         final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=" + ap;
+                                  //                         playEpi(apiPU);
+                                  //                         Navigator.pop(context);
+                                  //                       },
+                                  //                       child: 
 
-                                                        Container(
-                                                          height: 75,
-                                                          color: Colors.amber[600],
-                                                          child:Center(
-                                                            child: Text(
-                                                              '${snapshot.data[index]['title']}',
-                                                              style: TextStyle(fontSize: 32, color: Colors.black),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      );
-                                                    });
-                                                } else {
-                                                  return CircularProgressIndicator();
-                                                }
+                                  //                       Container(
+                                  //                         height: 75,
+                                  //                         color: Colors.amber[600],
+                                  //                         child:Center(
+                                  //                           child: Text(
+                                  //                             '${snapshot.data[index]['title']}',
+                                  //                             style: TextStyle(fontSize: 32, color: Colors.black),
+                                  //                           ),
+                                  //                         ),
+                                  //                       ),
+                                  //                     );
+                                  //                   });
+                                  //               } else {
+                                  //                 return CircularProgressIndicator();
+                                  //               }
                                                 
-                                              }),
-                                        )));
-                                  }));
+                                  //             }),
+                                  //       )));
+                                  // }));
                       
                                 }, // button pressed
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
-                                    // Icon(Icons.call), // icon
-                                    Text(
-                                      "1",
-                                      style: TextStyle(
-                                        fontFamily: "Gothic",
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 22, 
-                                        color: Colors.black),
-                                    ), // text
-                                  ],
-                                ),
+                                child: _alteredCarbonButtonColumn("1");
                               ),
                             ),
                           ),
@@ -150,75 +138,9 @@ class AlteredCarbonCard extends StatelessWidget {
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
-                                  Navigator.push(context, MaterialPageRoute<void>(
-                                    builder: (BuildContext context) {
-                                    return Scaffold(
-                                      appBar: AppBar(
-                                        title: Text("Altered Carbon"),
-                                        backgroundColor: Colors.lightGreen[900],
-                                      ),
-                                      body: Container(
-                                        decoration: BoxDecoration(
-                                          color: Colors.lightGreenAccent.shade400,
-                                        ),
-                                        child: Center(
-                                          child:
-                                            FutureBuilder<List<dynamic>>(
-                                              future: fetchAlteredCarbonSeason2(),
-                                              builder: (BuildContext context,AsyncSnapshot snapshot) {
-                                                if (snapshot.hasData) {
-                                                  return ListView.builder(
-                                                    padding: const EdgeInsets.all(8),
-                                                    itemCount: snapshot.data.length,
-                                                    itemBuilder: (BuildContext context, int index) {
-                                                      return GestureDetector(
-                                                        onTap: () {
-                                                          String dirp = "/media/pi/PiTB/media/TVShows";
-                                                          String ap = dirp + snapshot.data[index]["tvfspath"];
-                                                          final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=" + ap;
-                                                          playEpi(apiPU);
-                                                          Navigator.pop(context);
-                                                        },
-                                                        child: 
-
-                                                        Container(
-                                                          height: 75,
-                                                          color: Colors.amber[600],
-                                                          child:Center(
-                                                            child: Text(
-                                                              '${snapshot.data[index]['title']}',
-                                                              style: TextStyle(fontSize: 32, color: Colors.black),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      );
-                                                    });
-                                                } else {
-                                                  return CircularProgressIndicator();
-                                                }
-                                                
-                                              }),
-                                        )));
-                                  }));
-                      
+                                  _alteredCarbon(context, "2");
                                 }, // button pressed
-                                child: _alteredCarbonColumn("2")
-
-                                // Column(
-                                //   mainAxisAlignment: MainAxisAlignment.center,
-                                //   children: <Widget>[
-                                //     Text(
-                                //       "2",
-                                //       style: TextStyle(
-                                //         fontFamily: "Gothic",
-                                //         fontWeight: FontWeight.bold,
-                                //         fontSize: 22, 
-                                //         color: Colors.black),
-                                //     ), // text
-                                //   ],
-                                // ),
-
-
+                                child: _alteredCarbonButtonColumn("2")
                               ),
                             ),
                           ),
@@ -238,8 +160,94 @@ class AlteredCarbonCard extends StatelessWidget {
 }
 }
 
+Future<void> playEpi(playURL) async {
 
-Future<void> _alteredCarbonColumn(String episode) {
+    try {
+      var resultPlay = await http.get(Uri.parse(playURL));
+      return json.decode(resultPlay.body);
+    } catch (e) {
+      print(e);
+    }
+  }
+
+_alteredCarbon(BuildContext context, String season_num) {
+  final String api2Url = "http://192.168.0.42:8888/intAlteredCarbon?season=02";
+
+  Future<List<dynamic>> fetchAlteredCarbonSeason"${season_num}"() async {
+    
+      var result = await http.get(Uri.parse(api2Url));
+      return json.decode(result.body);
+    
+  }
+
+  
+
+  return Navigator.push(context, MaterialPageRoute<void>(
+    builder: (BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Altered Carbon"),
+        backgroundColor: Colors.lightGreen[900],
+      ),
+      body: Container(
+        decoration: BoxDecoration(
+          color: Colors.lightGreenAccent.shade400,
+        ),
+        child: Center(
+          child: FutureBuilder<List<dynamic>>(
+            future: fetchAlteredCarbonSeason"${season_num}"(),
+            builder: (BuildContext context,AsyncSnapshot snapshot) {
+              if (snapshot.hasData) {
+                return ListView.builder(
+                  padding: const EdgeInsets.all(8),
+                  itemCount: snapshot.data.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return GestureDetector(
+                      onTap: () {
+                        String dirp = "/media/pi/PiTB/media/TVShows";
+                        String ap = dirp + snapshot.data[index]["tvfspath"];
+                        final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=" + ap;
+                        playEpi(apiPU);
+                        Navigator.pop(context);
+                      },
+                      child: Container(
+                        height: 75,
+                        color: Colors.amber[600],
+                        child:Center(
+                          child: Text(
+                            '${snapshot.data[index]['title']}',
+                            style: TextStyle(fontSize: 32, color: Colors.black),
+                          ),
+                        ),
+                      ),
+                    );
+                  });
+              } else {
+                return CircularProgressIndicator();
+              }
+            }
+            )),
+          ),
+        );
+      }
+    ),
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+_alteredCarbonButtonColumn(String episode) {
   return Column(
     mainAxisAlignment: MainAxisAlignment.center,
     children: <Widget>[
