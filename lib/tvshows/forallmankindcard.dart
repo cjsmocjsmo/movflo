@@ -351,7 +351,7 @@ Future<void> playEpi(playURL) async {
 
 _forAllManKind(BuildContext context, String season_num) {
 
-  Future<List<dynamic>> fetchForAllManKindSeason() async {
+  Future<List<dynamic>> fetchForAllManKind() async {
 
     final String api1Url = "http://192.168.0.42:8888/intForAllManKind?season=01";
     final String api2Url = "http://192.168.0.42:8888/intForAllManKind?season=02";
