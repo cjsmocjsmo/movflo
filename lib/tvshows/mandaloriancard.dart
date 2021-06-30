@@ -107,7 +107,7 @@ Future<void> playEpi(playURL) async {
 
 _mandalorian(BuildContext context, String season_num) {
 
-  Future<List<dynamic>> fetchMandalorianSeason1() async {
+  Future<List<dynamic>> fetchMandalorian() async {
     final String api1Url = "http://192.168.0.42:8888/intMandalorian?season=01";
     final String api2Url = "http://192.168.0.42:8888/intMandalorian?season=02";
     if (season_num == '1') {
