@@ -199,7 +199,7 @@ _alteredCarbon(BuildContext context, String season_num) {
         ),
         child: Center(
           child: FutureBuilder<List<dynamic>>(
-            future: fetchAlteredCarbonSeason"${season_num}"(),
+            future: fetchAlteredCarbonSeason(),
             builder: (BuildContext context,AsyncSnapshot snapshot) {
               if (snapshot.hasData) {
                 return ListView.builder(
