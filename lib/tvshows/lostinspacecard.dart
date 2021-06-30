@@ -4,43 +4,6 @@ import 'dart:convert';
 
 class LostInSpaceCard extends StatelessWidget {
 
-  final String api1Url = "http://192.168.0.42:8888/intLostInSpace?season=01";
-  
-  Future<List<dynamic>> fetchLostInSpaceSeason1() async {
-    
-      var result = await http.get(Uri.parse(api1Url));
-      return json.decode(result.body);
-    
-  }
-
-  final String api2Url = "http://192.168.0.42:8888/intLostInSpace?season=02";
-
-  Future<List<dynamic>> fetchLostInSpaceSeason2() async {
-    
-      var result = await http.get(Uri.parse(api2Url));
-      return json.decode(result.body);
-    
-  }
-
-  final String api3Url = "http://192.168.0.42:8888/intLostInSpace?season=03";
-
-  Future<List<dynamic>> fetchLostInSpaceSeason3() async {
-    
-      var result = await http.get(Uri.parse(api3Url));
-      return json.decode(result.body);
-    
-  }
-
-  Future<void> playEpi(playURL) async {
-
-    try {
-      var resultPlay = await http.get(Uri.parse(playURL));
-      return json.decode(resultPlay.body);
-    } catch (e) {
-      print(e);
-    }
-
-  }
   @override
     Widget build(BuildContext context) {
     return Center(
@@ -77,72 +40,9 @@ class LostInSpaceCard extends StatelessWidget {
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
-                                  Navigator.push(context, MaterialPageRoute<void>(
-                                    builder: (BuildContext context) {
-                                    return Scaffold(
-                                      appBar: AppBar(
-                                        title: Text("Lost In Space"),
-                                        backgroundColor: Colors.lightGreen[900],
-                                      ),
-                                      body: Container(
-                                        decoration: BoxDecoration(
-                                          color: Colors.lightGreenAccent.shade400,
-                                        ),
-                                        child: Center(
-                                          child:
-                                            FutureBuilder<List<dynamic>>(
-                                              future: fetchLostInSpaceSeason1(),
-                                              builder: (BuildContext context,AsyncSnapshot snapshot) {
-                                                if (snapshot.hasData) {
-                                                  return ListView.builder(
-                                                    padding: const EdgeInsets.all(8),
-                                                    itemCount: snapshot.data.length,
-                                                    itemBuilder: (BuildContext context, int index) {
-                                                      return GestureDetector(
-                                                        onTap: () {
-                                                          String dirp = "/media/pi/PiTB/media/TVShows";
-                                                          String ap = dirp + snapshot.data[index]["tvfspath"];
-                                                          final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=" + ap;
-                                                          playEpi(apiPU);
-                                                          Navigator.pop(context);
-                                                        },
-                                                        child: 
-
-                                                        Container(
-                                                          height: 75,
-                                                          color: Colors.amber[600],
-                                                          child:Center(
-                                                            child: Text(
-                                                              '${snapshot.data[index]['title']}',
-                                                              style: TextStyle(fontSize: 32, color: Colors.black),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      );
-                                                    });
-                                                } else {
-                                                  return CircularProgressIndicator();
-                                                }
-                                                
-                                              }),
-                                        )));
-                                  }));
-                      
+                                  _lostInSpace(context, '1');
                                 }, // button pressed
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
-                                    // Icon(Icons.call), // icon
-                                    Text(
-                                      "1",
-                                      style: TextStyle(
-                                        fontFamily: "Gothic",
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 22, 
-                                        color: Colors.black),
-                                    ), // text
-                                  ],
-                                ),
+                                child: _lostInSpaceButtonColumn('1')
                               ),
                             ),
                           ),
@@ -158,72 +58,9 @@ class LostInSpaceCard extends StatelessWidget {
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
-                                  Navigator.push(context, MaterialPageRoute<void>(
-                                    builder: (BuildContext context) {
-                                    return Scaffold(
-                                      appBar: AppBar(
-                                        title: Text("Lost In Space"),
-                                        backgroundColor: Colors.lightGreen[900],
-                                      ),
-                                      body: Container(
-                                        decoration: BoxDecoration(
-                                          color: Colors.lightGreenAccent.shade400,
-                                        ),
-                                        child: Center(
-                                          child:
-                                            FutureBuilder<List<dynamic>>(
-                                              future: fetchLostInSpaceSeason2(),
-                                              builder: (BuildContext context,AsyncSnapshot snapshot) {
-                                                if (snapshot.hasData) {
-                                                  return ListView.builder(
-                                                    padding: const EdgeInsets.all(8),
-                                                    itemCount: snapshot.data.length,
-                                                    itemBuilder: (BuildContext context, int index) {
-                                                      return GestureDetector(
-                                                        onTap: () {
-                                                          String dirp = "/media/pi/PiTB/media/TVShows";
-                                                          String ap = dirp + snapshot.data[index]["tvfspath"];
-                                                          final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=" + ap;
-                                                          playEpi(apiPU);
-                                                          Navigator.pop(context);
-                                                        },
-                                                        child: 
-
-                                                        Container(
-                                                          height: 75,
-                                                          color: Colors.amber[600],
-                                                          child:Center(
-                                                            child: Text(
-                                                              '${snapshot.data[index]['title']}',
-                                                              style: TextStyle(fontSize: 32, color: Colors.black),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      );
-                                                    });
-                                                } else {
-                                                  return CircularProgressIndicator();
-                                                }
-                                                
-                                              }),
-                                        )));
-                                  }));
-                      
+                                  _lostInSpace(context, '2');
                                 }, // button pressed
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
-                                    // Icon(Icons.call), // icon
-                                    Text(
-                                      "2",
-                                      style: TextStyle(
-                                        fontFamily: "Gothic",
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 22, 
-                                        color: Colors.black),
-                                    ), // text
-                                  ],
-                                ),
+                                child: _lostInSpaceButtonColumn('2')
                               ),
                             ),
                           ),
@@ -239,84 +76,121 @@ class LostInSpaceCard extends StatelessWidget {
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
-                                  Navigator.push(context, MaterialPageRoute<void>(
-                                    builder: (BuildContext context) {
-                                    return Scaffold(
-                                      appBar: AppBar(
-                                        title: Text("Lost In Space"),
-                                        backgroundColor: Colors.lightGreen[900],
-                                      ),
-                                      body: Container(
-                                        decoration: BoxDecoration(
-                                          color: Colors.lightGreenAccent.shade400,
-                                        ),
-                                        child: Center(
-                                          child:
-                                            FutureBuilder<List<dynamic>>(
-                                              future: fetchLostInSpaceSeason3(),
-                                              builder: (BuildContext context,AsyncSnapshot snapshot) {
-                                                if (snapshot.hasData) {
-                                                  return ListView.builder(
-                                                    padding: const EdgeInsets.all(8),
-                                                    itemCount: snapshot.data.length,
-                                                    itemBuilder: (BuildContext context, int index) {
-                                                      return GestureDetector(
-                                                        onTap: () {
-                                                          String dirp = "/media/pi/PiTB/media/TVShows";
-                                                          String ap = dirp + snapshot.data[index]["tvfspath"];
-                                                          final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=" + ap;
-                                                          playEpi(apiPU);
-                                                          Navigator.pop(context);
-                                                        },
-                                                        child: 
-
-                                                        Container(
-                                                          height: 75,
-                                                          color: Colors.amber[600],
-                                                          child:Center(
-                                                            child: Text(
-                                                              '${snapshot.data[index]['title']}',
-                                                              style: TextStyle(fontSize: 32, color: Colors.black),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      );
-                                                    });
-                                                } else {
-                                                  return CircularProgressIndicator();
-                                                }
-                                                
-                                              }),
-                                        )));
-                                  }));
-                      
+                                  _lostInSpace(context, '3')
                                 }, // button pressed
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
-                                    // Icon(Icons.call), // icon
-                                    Text(
-                                      "3",
-                                      style: TextStyle(
-                                        fontFamily: "Gothic",
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 22, 
-                                        color: Colors.black),
-                                    ), // text
-                                  ],
-                                ),
+                                child: _lostInSpaceButtonColumn('3')
                               ),
                             ),
                           ),
                         ),
                       ),
-                  ]
-                ))),
-              ]),
-            )
+                    ]
+                  ),
+                )),
+              ]
+            ),
+          )
         ),
       )
     );
-
   }
+}
+
+Future<void> playEpi(playURL) async {
+  try {
+    var resultPlay = await http.get(Uri.parse(playURL));
+    return json.decode(resultPlay.body);
+  } catch (e) {
+    print(e);
+  }
+}
+
+_lostInSpace(BuildContext context, String season_num) {
+  
+  Future<List<dynamic>> fetchLostInSpace() async {
+
+    final String api1Url = "http://192.168.0.42:8888/intLostInSpace?season=01";
+    final String api2Url = "http://192.168.0.42:8888/intLostInSpace?season=02";
+    final String api3Url = "http://192.168.0.42:8888/intLostInSpace?season=03";
+
+    if (season_num == '1') {
+      var result = await http.get(Uri.parse(api1Url));
+      return json.decode(result.body);
+    } else if (season_num == '2') {
+      var result = await http.get(Uri.parse(api2Url));
+      return json.decode(result.body);
+    } else {
+      var result = await http.get(Uri.parse(api3Url));
+      return json.decode(result.body);
+    }
+  }
+
+  return Navigator.push(context, MaterialPageRoute<void>(
+    builder: (BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Lost In Space"),
+        backgroundColor: Colors.lightGreen[900],
+      ),
+      body: Container(
+        decoration: BoxDecoration(
+          color: Colors.lightGreenAccent.shade400,
+        ),
+        child: Center(
+          child:
+            FutureBuilder<List<dynamic>>(
+              future: fetchLostInSpace(),
+              builder: (BuildContext context,AsyncSnapshot snapshot) {
+                if (snapshot.hasData) {
+                  return ListView.builder(
+                    padding: const EdgeInsets.all(8),
+                    itemCount: snapshot.data.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return GestureDetector(
+                        onTap: () {
+                          String dirp = "/media/pi/PiTB/media/TVShows";
+                          String ap = dirp + snapshot.data[index]["tvfspath"];
+                          final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=" + ap;
+                          playEpi(apiPU);
+                          Navigator.pop(context);
+                        },
+                        child: 
+                        Container(
+                          height: 75,
+                          color: Colors.amber[600],
+                          child:Center(
+                            child: Text(
+                              '${snapshot.data[index]['title']}',
+                              style: TextStyle(fontSize: 32, color: Colors.black),
+                            ),
+                          ),
+                        ),
+                      );
+                    });
+                } else {
+                  return CircularProgressIndicator();
+                }}
+              ),
+            ),
+          ),
+        );
+      }
+    ),
+  );
+}
+
+_lostInSpaceButtonColumn(String episode) {
+  return Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: <Widget>[
+      Text(
+        episode,
+        style: TextStyle(
+          fontFamily: "Gothic",
+          fontWeight: FontWeight.bold,
+          fontSize: 22, 
+          color: Colors.black),
+      ), // text
+    ],
+  );
 }

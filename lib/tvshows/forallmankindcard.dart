@@ -28,7 +28,6 @@ class ForAllManKindCard extends StatelessWidget {
                 Expanded(
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(0.0, 25.0, 0.0, 0.0),
-
                   child: Column(
                   children: <Widget>[
                     Padding(
@@ -73,7 +72,7 @@ class ForAllManKindCard extends StatelessWidget {
                           size: Size(66, 66), // button width and height
                           child: ClipOval(
                             child: Material(
-                              color: Colors.lightGreenAccent.shade400, //amber[400], // button color
+                              color: Colors.lightGreenAccent.shade400, 
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
