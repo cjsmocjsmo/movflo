@@ -40,7 +40,7 @@ class MandalorianCard extends StatelessWidget {
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
-                                  _mandalorian(context, '1')
+                                  _mandalorian(context, '1');
                                 }, // button pressed
                                 child: _mandalorianButtonColumn('1')
                               ),
@@ -58,7 +58,7 @@ class MandalorianCard extends StatelessWidget {
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
-                                  _mandalorian(context, '2')
+                                  _mandalorian(context, '2');
                                 }, // button pressed
                                 child: _mandalorianButtonColumn('2')
                               ),
@@ -76,7 +76,7 @@ class MandalorianCard extends StatelessWidget {
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
-                                  _mandalorian(context, '3')
+                                  _mandalorian(context, '3');
                                 }, // button pressed
                                 child: _mandalorianButtonColumn('3')
                               ),
