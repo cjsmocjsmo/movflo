@@ -132,20 +132,24 @@ final String api1Url = "http://192.168.0.42:8888/intDiscovery?season=01";
                                   }));
                       
                                 }, // button pressed
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
-                                    // Icon(Icons.call), // icon
-                                    Text(
-                                      "1",
-                                      style: TextStyle(
-                                        fontFamily: "Gothic",
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 22, 
-                                        color: Colors.black),
-                                    ), // text
-                                  ],
-                                ),
+                                child: _discoveryButtonColumn('1')
+                                // Column(
+                                //   mainAxisAlignment: MainAxisAlignment.center,
+                                //   children: <Widget>[
+                                //     // Icon(Icons.call), // icon
+                                //     Text(
+                                //       "1",
+                                //       style: TextStyle(
+                                //         fontFamily: "Gothic",
+                                //         fontWeight: FontWeight.bold,
+                                //         fontSize: 22, 
+                                //         color: Colors.black),
+                                //     ), // text
+                                //   ],
+                                // ),
+
+
+
                               ),
                             ),
                           ),
@@ -213,20 +217,23 @@ final String api1Url = "http://192.168.0.42:8888/intDiscovery?season=01";
                                   }));
                       
                                 }, // button pressed
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
-                                    // Icon(Icons.call), // icon
-                                    Text(
-                                      "2",
-                                      style: TextStyle(
-                                        fontFamily: "Gothic",
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 22, 
-                                        color: Colors.black),
-                                    ), // text
-                                  ],
-                                ),
+                                child: _discoveryButtonColumn('2')
+                                // Column(
+                                //   mainAxisAlignment: MainAxisAlignment.center,
+                                //   children: <Widget>[
+                                //     // Icon(Icons.call), // icon
+                                //     Text(
+                                //       "2",
+                                //       style: TextStyle(
+                                //         fontFamily: "Gothic",
+                                //         fontWeight: FontWeight.bold,
+                                //         fontSize: 22, 
+                                //         color: Colors.black),
+                                //     ), // text
+                                //   ],
+                                // ),
+
+
                               ),
                             ),
                           ),
@@ -294,20 +301,24 @@ final String api1Url = "http://192.168.0.42:8888/intDiscovery?season=01";
                                   }));
                       
                                 }, // button pressed
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
-                                    // Icon(Icons.call), // icon
-                                    Text(
-                                      "3",
-                                      style: TextStyle(
-                                        fontFamily: "Gothic",
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 22, 
-                                        color: Colors.black),
-                                    ), // text
-                                  ],
-                                ),
+                                child: _discoveryButtonColumn('3')
+                                
+                                // Column(
+                                //   mainAxisAlignment: MainAxisAlignment.center,
+                                //   children: <Widget>[
+                                //     // Icon(Icons.call), // icon
+                                //     Text(
+                                //       "3",
+                                //       style: TextStyle(
+                                //         fontFamily: "Gothic",
+                                //         fontWeight: FontWeight.bold,
+                                //         fontSize: 22, 
+                                //         color: Colors.black),
+                                //     ), // text
+                                //   ],
+                                // ),
+
+
                               ),
                             ),
                           ),
@@ -322,4 +333,20 @@ final String api1Url = "http://192.168.0.42:8888/intDiscovery?season=01";
     );
 
   }
+}
+
+_discoveryButtonColumn(String episode) {
+  return Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: <Widget>[
+      Text(
+        episode,
+        style: TextStyle(
+          fontFamily: "Gothic",
+          fontWeight: FontWeight.bold,
+          fontSize: 22, 
+          color: Colors.black),
+      ), // text
+    ],
+  );
 }
