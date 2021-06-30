@@ -109,18 +109,25 @@ _forAllManKind(BuildContext context, String season_num) {
 
     final String api1Url = "http://192.168.0.42:8888/intForAllManKind?season=01";
     final String api2Url = "http://192.168.0.42:8888/intForAllManKind?season=02";
-    final String api3Url = "http://192.168.0.42:8888/intForAllManKind?season=03";
-    
     if (season_num == '1') {
       var result = await http.get(Uri.parse(api1Url));
-      return json.decode(result.body);
-    } else if (season_num == '2') {
-      var result = await http.get(Uri.parse(api2Url));
       return json.decode(result.body);
     } else {
       var result = await http.get(Uri.parse(api3Url));
       return json.decode(result.body);
     }
+    // final String api3Url = "http://192.168.0.42:8888/intForAllManKind?season=03";
+    
+    // if (season_num == '1') {
+    //   var result = await http.get(Uri.parse(api1Url));
+    //   return json.decode(result.body);
+    // } else if (season_num == '2') {
+    //   var result = await http.get(Uri.parse(api2Url));
+    //   return json.decode(result.body);
+    // } else {
+    //   var result = await http.get(Uri.parse(api3Url));
+    //   return json.decode(result.body);
+    // }
   }
 
   return Navigator.push(context, MaterialPageRoute<void>(
