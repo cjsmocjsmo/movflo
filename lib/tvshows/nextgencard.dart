@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class NextGenCard extends StatelessWidget {
-  
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -221,7 +221,7 @@ _nextGeneration(BuildContext context, String season_num) {
     } else if (season_num == '6') {
       var result = await http.get(Uri.parse(api6Url));
       return json.decode(result.body);
-    } else if (season_num == '7') {
+    } else (season_num == '7') {
       var result = await http.get(Uri.parse(api7Url));
       return json.decode(result.body);
     }
