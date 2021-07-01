@@ -103,7 +103,7 @@ Future<void> playEpi(playURL) async {
   } catch (e) {
     print(e);
   }
-// }
+}
 
 _sttv(BuildContext context, String season_num) {
 
