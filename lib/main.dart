@@ -66,7 +66,7 @@ class MovFlo extends StatelessWidget {
       '/Tremors': (context) => TremorsScreen(),
       '/The Rock': (context) => TheRockScreen(),
       '/X-Men': (context) => XMenScreen(),
-      '/Masters Of The Universe': (context) => MastersOfTheUniverseScreen(),
+      
     });
   }
 }
