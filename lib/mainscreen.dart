@@ -22,6 +22,7 @@ import 'tvshows/voyagercard.dart';
 import 'tvshows/startrektvcard.dart';
 import 'tvshows/wandavisioncard.dart';
 import 'tvshows/lokicard.dart';
+import 'tvshows/mastersoftheuniverse.dart';
 
 
 final List<String> movies = <String>[
@@ -76,6 +77,7 @@ final List<String> tvShows = <String>[
   'Invincible',
   'The Bad Batch',
   'Loki'
+  'Masters Of The Universe'
 ];
 
 class MainScreen extends StatelessWidget {
@@ -220,6 +222,7 @@ Widget tvShowsListView(BuildContext context) {
     StarTrekTVCard(),
     VoyagerCard(),
     WandaVisionCard(),
+    MastersOfTheUniverseCard()
   ]);
 }
 

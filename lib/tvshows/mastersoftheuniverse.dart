@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-class LokiCard extends StatelessWidget {
+class MastersOfTheUniverseCard extends StatelessWidget {
 
-  final String apiUrl = "http://192.168.0.42:8888/intLoki?season=01";
+  final String apiUrl = "http://192.168.0.42:8888/intMastersOfTheUniverse?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;
@@ -43,7 +43,7 @@ class LokiCard extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 Image.asset(
-                  'images/loki.jpg',
+                  'images/mastersoftheuniverse.jpg',
                   fit: BoxFit.contain,
                     height: 355.5,
                     width: 200.0,
@@ -65,7 +65,7 @@ class LokiCard extends StatelessWidget {
                                     builder: (BuildContext context) {
                                     return Scaffold(
                                       appBar: AppBar(
-                                        title: Text("Loki"),
+                                        title: Text("Masters Of The Universe"),
                                         backgroundColor: Colors.lightGreen[900],
                                       ),
                                       body: Container(
