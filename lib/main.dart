@@ -27,6 +27,7 @@ import 'movies/tremorsscreen.dart';
 import 'movies/therockscreen.dart';
 import 'movies/xmenscreen.dart';
 import 'tvshows/startrektvcard.dart';
+import 'tvshows/mastersoftheuniversecard.dart';
 
 void main() => runApp(MovFlo());
 
