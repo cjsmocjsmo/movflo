@@ -100,9 +100,9 @@ Future<void> playEpi(playURL) async {
 
 _alteredCarbon(BuildContext context, String season_num) {
 
-  final String api1Url = "http://192.168.0.91:8888/intAlteredCarbon?season=01";
+  final String api1Url = ""http://192.168.0.93:8888/intAlteredCarbon?season=01";
 
-  final String api2Url = "http://192.168.0.91:8888/intAlteredCarbon?season=02";
+  final String api2Url = ""http://192.168.0.93:8888/intAlteredCarbon?season=02";
 
   Future<List<dynamic>> fetchAlteredCarbonSeason() async {
     if (season_num == "1") {
@@ -138,7 +138,7 @@ _alteredCarbon(BuildContext context, String season_num) {
                       onTap: () {
                         String dirp = "/media/pi/PiTB/media/TVShows";
                         String ap = dirp + snapshot.data[index]["tvfspath"];
-                        final String apiPU = "http://192.168.0.91:8181/OmxplayerPlayMediaReact?medPath=" + ap;
+                        final String apiPU = ""http://192.168.0.93:8181/OmxplayerPlayMediaReact?medPath=" + ap;
                         playEpi(apiPU);
                         Navigator.pop(context);
                       },

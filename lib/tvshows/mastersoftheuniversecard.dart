@@ -4,7 +4,7 @@ import 'dart:convert';
 
 class MastersOfTheUniverseCard extends StatelessWidget {
 
-  final String apiUrl = "http://192.168.0.91:8888/intMastersOfTheUniverse?season=01";
+  final String apiUrl = ""http://192.168.0.93:8888/intMastersOfTheUniverse?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;
@@ -86,7 +86,7 @@ class MastersOfTheUniverseCard extends StatelessWidget {
                                                         onTap: () {
                                                           String dirp = "/media/pi/PiTB/media/TVShows";
                                                           String ap = dirp + snapshot.data[index]["tvfspath"];
-                                                          final String apiPU = "http://192.168.0.91:8181/OmxplayerPlayMediaReact?medPath=" + ap;
+                                                          final String apiPU = ""http://192.168.0.93:8181/OmxplayerPlayMediaReact?medPath=" + ap;
                                                           playEpi(apiPU);
                                                           Navigator.pop(context);
                                                         },

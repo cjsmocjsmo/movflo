@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class RaisedByWolvesCard extends StatelessWidget {
-  final String api1Url = "http://192.168.0.91:8888/intRaisedByWolves?season=01";
+  final String api1Url = ""http://192.168.0.93:8888/intRaisedByWolves?season=01";
   
 
   Future<List<dynamic>> fetchRaisedByWolvesSeason1() async {
@@ -83,7 +83,7 @@ class RaisedByWolvesCard extends StatelessWidget {
                                                         onTap: () {
                                                           String dirp = "/media/pi/PiTB/media/TVShows";
                                                           String ap = dirp + snapshot.data[index]["tvfspath"];
-                                                          final String apiPU = "http://192.168.0.91:8181/OmxplayerPlayMediaReact?medPath=" + ap;
+                                                          final String apiPU = ""http://192.168.0.93:8181/OmxplayerPlayMediaReact?medPath=" + ap;
                                                           playEpi(apiPU);
                                                           Navigator.pop(context);
                                                         },
