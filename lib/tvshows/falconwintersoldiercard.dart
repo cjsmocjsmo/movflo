@@ -4,7 +4,7 @@ import 'dart:convert';
 
 class FalconWinterSoldierCard extends StatelessWidget {
 
-  final String apiUrl = "http://192.168.0.93:8080/intFalconWinterSoldier?season=01";
+  final String apiUrl = "http://192.168.0.93:8888/intFalconWinterSoldier?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

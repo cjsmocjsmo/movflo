@@ -194,13 +194,13 @@ _voyager(BuildContext context, String season_num) {
   
   Future<List<dynamic>> fetchVoyagerSeason1() async {
 
-    final String api1Url = "http://192.168.0.93:8080/intVoyager?season=01";
-    final String api2Url = "http://192.168.0.93:8080/intVoyager?season=02";
-    final String api3Url = "http://192.168.0.93:8080/intVoyager?season=03";
-    final String api4Url = "http://192.168.0.93:8080/intVoyager?season=04";
-    final String api5Url = "http://192.168.0.93:8080/intVoyager?season=05";
-    final String api6Url = "http://192.168.0.93:8080/intVoyager?season=06";
-    final String api7Url = "http://192.168.0.93:8080/intVoyager?season=07";
+    final String api1Url = "http://192.168.0.93:8888/intVoyager?season=01";
+    final String api2Url = "http://192.168.0.93:8888/intVoyager?season=02";
+    final String api3Url = "http://192.168.0.93:8888/intVoyager?season=03";
+    final String api4Url = "http://192.168.0.93:8888/intVoyager?season=04";
+    final String api5Url = "http://192.168.0.93:8888/intVoyager?season=05";
+    final String api6Url = "http://192.168.0.93:8888/intVoyager?season=06";
+    final String api7Url = "http://192.168.0.93:8888/intVoyager?season=07";
 
     if (season_num == '1') {
       var result = await http.get(Uri.parse(api1Url));

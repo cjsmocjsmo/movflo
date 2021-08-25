@@ -5,7 +5,7 @@ import 'package:transparent_image/transparent_image.dart';
 
 class RiddickScreen extends StatelessWidget{
 
-  final String apiUrl = "http://192.168.0.93:8080/intRiddick";
+  final String apiUrl = "http://192.168.0.93:8888/intRiddick";
 
   Future<List<dynamic>> fetchMovies() async {
 

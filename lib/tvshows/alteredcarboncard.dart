@@ -100,9 +100,9 @@ Future<void> playEpi(playURL) async {
 
 _alteredCarbon(BuildContext context, String season_num) {
 
-  final String api1Url = "http://192.168.0.93:8080/intAlteredCarbon?season=01";
+  final String api1Url = "http://192.168.0.93:8888/intAlteredCarbon?season=01";
 
-  final String api2Url = "http://192.168.0.93:8080/intAlteredCarbon?season=02";
+  final String api2Url = "http://192.168.0.93:8888/intAlteredCarbon?season=02";
 
   Future<List<dynamic>> fetchAlteredCarbonSeason() async {
     if (season_num == "1") {
