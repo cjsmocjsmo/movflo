@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:transparent_image/transparent_image.dart';
 
 class ActionScreen extends StatelessWidget{
 
@@ -69,12 +70,24 @@ class ActionScreen extends StatelessWidget{
                         foo(apiPlayUrl);
                         Navigator.pop(context);
                       },
-                      child: Image.network(_thumb(snapshot.data[index]),
+                      child: FadeInImage.memoryNetwork(
+                        placeholder: kTransparentImage,
+                        image: 'https://picsum.photos/250?image=9',
                         fit: BoxFit.contain,
                           height: 400.0,
                           width: 200.0,
-                      )
-                    )
+                      );
+                                            
+                                            
+                      
+                      
+                      
+                      //  Image.network(_thumb(snapshot.data[index]),
+                      //   fit: BoxFit.contain,
+                      //     height: 400.0,
+                      //     width: 200.0,
+                      // )
+                    ),
                   );
               }
             );
