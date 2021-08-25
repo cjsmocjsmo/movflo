@@ -4,7 +4,7 @@ import 'dart:convert';
 
 class WandaVisionCard extends StatelessWidget {
 
-  final String apiUrl = "http://192.168.0.93/intWandaVision?season=01";
+  final String apiUrl = "http://192.168.0.93:8080/intWandaVision?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

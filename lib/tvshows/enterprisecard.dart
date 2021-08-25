@@ -4,7 +4,7 @@ import 'dart:convert';
 
 class EnterpriseCard extends StatelessWidget {
 
-  // final String api1Url = "http://192.168.0.93/intEnterprise?season=01";
+  // final String api1Url = "http://192.168.0.93:8080/intEnterprise?season=01";
   
 
   // Future<List<dynamic>> fetchEnterpriseSeason1() async {
@@ -14,7 +14,7 @@ class EnterpriseCard extends StatelessWidget {
     
   // }
 
-  // final String api2Url = "http://192.168.0.93/intEnterprise?season=02";
+  // final String api2Url = "http://192.168.0.93:8080/intEnterprise?season=02";
 
   // Future<List<dynamic>> fetchEnterpriseSeason2() async {
     
@@ -23,7 +23,7 @@ class EnterpriseCard extends StatelessWidget {
     
   // }
 
-  // final String api3Url = "http://192.168.0.93/intEnterprise?season=03";
+  // final String api3Url = "http://192.168.0.93:8080/intEnterprise?season=03";
 
   // Future<List<dynamic>> fetchEnterpriseSeason3() async {
     
@@ -148,9 +148,9 @@ Future<void> playEpi(playURL) async {
 _enterprise(BuildContext context, String season_num) {
 
   Future<List<dynamic>> fetchEnterpriseSeason1() async {
-    final String api1Url = "http://192.168.0.93/intEnterprise?season=01";
-    final String api2Url = "http://192.168.0.93/intEnterprise?season=02";
-    final String api3Url = "http://192.168.0.93/intEnterprise?season=03";
+    final String api1Url = "http://192.168.0.93:8080/intEnterprise?season=01";
+    final String api2Url = "http://192.168.0.93:8080/intEnterprise?season=02";
+    final String api3Url = "http://192.168.0.93:8080/intEnterprise?season=03";
     if (season_num == '1') {
       var result = await http.get(Uri.parse(api1Url));
       return json.decode(result.body);

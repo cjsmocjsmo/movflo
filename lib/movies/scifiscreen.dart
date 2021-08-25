@@ -5,7 +5,7 @@ import 'package:transparent_image/transparent_image.dart';
 
 class SciFiScreen extends StatelessWidget{
 
-  final String apiUrl = "http://192.168.0.93/intSciFi";
+  final String apiUrl = "http://192.168.0.93:8080/intSciFi";
 
   Future<List<dynamic>> fetchMovies() async {
 

@@ -5,7 +5,7 @@ import 'package:transparent_image/transparent_image.dart';
 
 class TomCruizeScreen extends StatelessWidget{
 
-  final String apiUrl = "http://192.168.0.93/intTomCruize";
+  final String apiUrl = "http://192.168.0.93:8080/intTomCruize";
 
   Future<List<dynamic>> fetchMovies() async {
 

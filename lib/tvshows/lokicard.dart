@@ -4,7 +4,7 @@ import 'dart:convert';
 
 class LokiCard extends StatelessWidget {
 
-  final String apiUrl = "http://192.168.0.93/intLoki?season=01";
+  final String apiUrl = "http://192.168.0.93:8080/intLoki?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

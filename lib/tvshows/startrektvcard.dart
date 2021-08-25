@@ -109,9 +109,9 @@ _sttv(BuildContext context, String season_num) {
 
   Future<List<dynamic>> fetchSTTVSeason1() async {
 
-    final String api1Url = "http://192.168.0.93/intSTTV?season=01";
-    final String api2Url = "http://192.168.0.93/intSTTV?season=02";
-    final String api3Url = "http://192.168.0.93/intSTTV?season=03";
+    final String api1Url = "http://192.168.0.93:8080/intSTTV?season=01";
+    final String api2Url = "http://192.168.0.93:8080/intSTTV?season=02";
+    final String api3Url = "http://192.168.0.93:8080/intSTTV?season=03";
     
     if (season_num == '1') {
       var result = await http.get(Uri.parse(api1Url));

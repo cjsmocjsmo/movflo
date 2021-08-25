@@ -5,7 +5,7 @@ import 'package:transparent_image/transparent_image.dart';
 
 class MiscScreen extends StatelessWidget{
 
-  final String apiUrl = "http://192.168.0.93/intMisc";
+  final String apiUrl = "http://192.168.0.93:8080/intMisc";
 
   Future<List<dynamic>> fetchMovies() async {
 

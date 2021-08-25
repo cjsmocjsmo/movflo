@@ -4,7 +4,7 @@ import 'dart:convert';
 
 class MastersOfTheUniverseCard extends StatelessWidget {
 
-  final String apiUrl = "http://192.168.0.93/intMastersOfTheUniverse?season=01";
+  final String apiUrl = "http://192.168.0.93:8080/intMastersOfTheUniverse?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

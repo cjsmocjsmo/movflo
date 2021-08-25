@@ -91,8 +91,8 @@ _picard(BuildContext context, String season_num) {
 
   Future<List<dynamic>> fetchPicard() async {
 
-    final String api1Url = "http://192.168.0.93/intPicard?season=01";
-    // final String api2Url = "http://192.168.0.93/intPicard?season=02";
+    final String api1Url = "http://192.168.0.93:8080/intPicard?season=01";
+    // final String api2Url = "http://192.168.0.93:8080/intPicard?season=02";
 
     if (season_num == '1') {
       var result = await http.get(Uri.parse(api1Url));

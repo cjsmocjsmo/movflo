@@ -5,7 +5,7 @@ import 'package:transparent_image/transparent_image.dart';
 
 class IndianaJonesScreen extends StatelessWidget{
 
-  final String apiUrl = "http://192.168.0.93/intIndianaJones";
+  final String apiUrl = "http://192.168.0.93:8080/intIndianaJones";
 
   Future<List<dynamic>> fetchMovies() async {
 

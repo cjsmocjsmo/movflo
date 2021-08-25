@@ -5,7 +5,7 @@ import 'package:transparent_image/transparent_image.dart';
 
 class TheRockScreen extends StatelessWidget{
 
-  final String apiUrl = "http://192.168.0.93/intTheRock";
+  final String apiUrl = "http://192.168.0.93:8080/intTheRock";
 
   Future<List<dynamic>> fetchMovies() async {
 

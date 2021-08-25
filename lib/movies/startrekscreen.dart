@@ -5,7 +5,7 @@ import 'package:transparent_image/transparent_image.dart';
 
 class StarTrekScreen extends StatelessWidget{
 
-  final String apiUrl = "http://192.168.0.93/intStarTrek";
+  final String apiUrl = "http://192.168.0.93:8080/intStarTrek";
 
   Future<List<dynamic>> fetchMovies() async {
 

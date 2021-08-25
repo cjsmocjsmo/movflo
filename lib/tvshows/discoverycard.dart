@@ -108,9 +108,9 @@ Future<void> playEpi(playURL) async {
 _discovery(BuildContext context, String season_num) {
 
   Future<List<dynamic>> fetchDiscoverySeason() async {
-    final String api1Url = "http://192.168.0.93/intDiscovery?season=01";
-    final String api2Url = "http://192.168.0.93/intDiscovery?season=02";
-    final String api3Url = "http://192.168.0.93/intDiscovery?season=03";
+    final String api1Url = "http://192.168.0.93:8080/intDiscovery?season=01";
+    final String api2Url = "http://192.168.0.93:8080/intDiscovery?season=02";
+    final String api3Url = "http://192.168.0.93:8080/intDiscovery?season=03";
     if (season_num == "1") {
       var result = await http.get(Uri.parse(api1Url));
       return json.decode(result.body);

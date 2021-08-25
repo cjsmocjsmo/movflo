@@ -5,7 +5,7 @@ import 'package:transparent_image/transparent_image.dart';
 
 class TremorsScreen extends StatelessWidget{
 
-  final String apiUrl = "http://192.168.0.93/intTremors";
+  final String apiUrl = "http://192.168.0.93:8080/intTremors";
 
   Future<List<dynamic>> fetchMovies() async {
 

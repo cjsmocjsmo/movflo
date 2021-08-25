@@ -5,7 +5,7 @@ import 'package:transparent_image/transparent_image.dart';
 
 class XMenScreen extends StatelessWidget{
 
-  final String apiUrl = "http://192.168.0.93/intXMen";
+  final String apiUrl = "http://192.168.0.93:8080/intXMen";
 
   Future<List<dynamic>> fetchMovies() async {
 

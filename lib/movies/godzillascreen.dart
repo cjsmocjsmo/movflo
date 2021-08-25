@@ -5,7 +5,7 @@ import 'package:transparent_image/transparent_image.dart';
 
 class GodzillaScreen extends StatelessWidget{
 
-  final String apiUrl = "http://192.168.0.93/intGodzilla";
+  final String apiUrl = "http://192.168.0.93:8080/intGodzilla";
 
   Future<List<dynamic>> fetchMovies() async {
 
