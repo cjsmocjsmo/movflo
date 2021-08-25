@@ -5,7 +5,7 @@ import 'package:transparent_image/transparent_image.dart';
 
 class StarWarsScreen extends StatelessWidget{
 
-  final String apiUrl = ""http://192.168.0.93:8888/intStarWars";
+  final String apiUrl = "http://192.168.0.93/intStarWars";
 
   Future<List<dynamic>> fetchMovies() async {
 
@@ -62,7 +62,7 @@ class StarWarsScreen extends StatelessWidget{
                       onTap: () {
                         
                         final String ap = _movfspath(snapshot.data[index]);
-                        final String apiPU = ""http://192.168.0.93:8181/OmxplayerPlayMediaReact?medPath=" + ap;
+                        final String apiPU = "http://192.168.0.93:8181/OmxplayerPlayMediaReact?medPath=" + ap;
                         print(apiPU);
                         final String apiPlayUrl = apiPU;
                         

@@ -126,7 +126,7 @@ class MainScreen extends StatelessWidget {
               IconButton(
                 icon: Icon(Icons.skip_previous, color: Colors.white), 
                 onPressed: () {
-                  final String apiPrevious = ""http://192.168.0.93:8181/Previous";
+                  final String apiPrevious = "http://192.168.0.93:8181/Previous";
                   previousMov(apiPrevious);
                 },
               ),
@@ -134,7 +134,7 @@ class MainScreen extends StatelessWidget {
               IconButton(
                 icon: Icon(Icons.skip_next, color: Colors.white), 
                 onPressed: () {
-                  final String apiNext = ""http://192.168.0.93:8181/Next";
+                  final String apiNext = "http://192.168.0.93:8181/Next";
                   nextMov(apiNext);
                 },
               ),
@@ -146,7 +146,7 @@ class MainScreen extends StatelessWidget {
           FloatingActionButton(
           child: Icon(Icons.close_sharp), 
           onPressed: () { 
-            final String apiStop = ""http://192.168.0.93:8181/Stop";
+            final String apiStop = "http://192.168.0.93:8181/Stop";
             stopMov(apiStop); 
           }
         ),
