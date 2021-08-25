@@ -5,7 +5,7 @@ import 'package:transparent_image/transparent_image.dart';
 
 class MenInBlackScreen extends StatelessWidget{
 
-  final String apiUrl = "http://192.168.0.42:8888/intMenInBlack";
+  final String apiUrl = "http://192.168.0.91:8888/intMenInBlack";
 
   Future<List<dynamic>> fetchMovies() async {
 
@@ -62,7 +62,7 @@ class MenInBlackScreen extends StatelessWidget{
                       onTap: () {
                         
                         final String ap = _movfspath(snapshot.data[index]);
-                        final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=" + ap;
+                        final String apiPU = "http://192.168.0.91:8181/OmxplayerPlayMediaReact?medPath=" + ap;
                         print(apiPU);
                         final String apiPlayUrl = apiPU;
                         

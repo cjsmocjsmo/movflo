@@ -195,13 +195,13 @@ _nextGeneration(BuildContext context, String season_num) {
   
   Future<List<dynamic>> fetchTNG() async {
 
-    final String api1Url = "http://192.168.0.42:8888/intTNG?season=01";
-    final String api2Url = "http://192.168.0.42:8888/intTNG?season=02";
-    final String api3Url = "http://192.168.0.42:8888/intTNG?season=03";
-    final String api4Url = "http://192.168.0.42:8888/intTNG?season=04";
-    final String api5Url = "http://192.168.0.42:8888/intTNG?season=05";
-    final String api6Url = "http://192.168.0.42:8888/intTNG?season=06";
-    final String api7Url = "http://192.168.0.42:8888/intTNG?season=07";
+    final String api1Url = "http://192.168.0.91:8888/intTNG?season=01";
+    final String api2Url = "http://192.168.0.91:8888/intTNG?season=02";
+    final String api3Url = "http://192.168.0.91:8888/intTNG?season=03";
+    final String api4Url = "http://192.168.0.91:8888/intTNG?season=04";
+    final String api5Url = "http://192.168.0.91:8888/intTNG?season=05";
+    final String api6Url = "http://192.168.0.91:8888/intTNG?season=06";
+    final String api7Url = "http://192.168.0.91:8888/intTNG?season=07";
 
     if (season_num == '1') {
       var result = await http.get(Uri.parse(api1Url));
@@ -252,7 +252,7 @@ _nextGeneration(BuildContext context, String season_num) {
                         onTap: () {
                           String dirp = "/media/pi/PiTB/media/TVShows";
                           String ap = dirp + snapshot.data[index]["tvfspath"];
-                          final String apiPU = "http://192.168.0.42:8181/OmxplayerPlayMediaReact?medPath=" + ap;
+                          final String apiPU = "http://192.168.0.91:8181/OmxplayerPlayMediaReact?medPath=" + ap;
                           playEpi(apiPU);
                           Navigator.pop(context);
                         },
