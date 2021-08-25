@@ -76,7 +76,7 @@ class ActionScreen extends StatelessWidget{
                         fit: BoxFit.contain,
                           height: 400.0,
                           width: 200.0,
-                      );
+                      ),
                                             
                                             
                       
