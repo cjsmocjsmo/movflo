@@ -155,7 +155,7 @@ _lostInSpace(BuildContext context, String season_num) {
                     itemBuilder: (BuildContext context, int index) {
                       return GestureDetector(
                         onTap: () {
-                          String dirp = "/media/pi/PiTB/media/TVShows";
+                          String dirp = "/media/pi/PiTB/media/TVShows/";
                           String ap = dirp + snapshot.data[index]["tvfspath"];
                           final String apiPU = "http://192.168.0.93:8181/OmxplayerPlayMediaReact?medPath=" + ap;
                           playEpi(apiPU);
