@@ -23,7 +23,7 @@ import 'tvshows/startrektvcard.dart';
 import 'tvshows/wandavisioncard.dart';
 import 'tvshows/lokicard.dart';
 import 'tvshows/mastersoftheuniversecard.dart';
-import 'tvshows/whatif.dart';
+import 'tvshows/whatifcard.dart';
 
 
 final List<String> movies = <String>[
