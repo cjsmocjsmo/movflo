@@ -4,7 +4,7 @@ import 'dart:convert';
 
 class WhatIfCard extends StatelessWidget {
 
-  final String apiUrl = "http://192.168.0.93:8888/intLoki?season=01";
+  final String apiUrl = "http://192.168.0.93:8888/intWhatIf?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;
