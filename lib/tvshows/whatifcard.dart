@@ -152,15 +152,15 @@ class WhatIfCard extends StatelessWidget {
 }
 
 _text_container(AsyncSnapshot snapshot, int index) => Container(
-    height: 75,
-    color: Colors.amber[600],
-    child:Center(
-      child: Text(
-        '${snapshot.data[index]['title']}',
-        style: TextStyle(fontSize: 32, color: Colors.black),
-      ),
+  height: 75,
+  color: Colors.amber[600],
+  child:Center(
+    child: Text(
+      '${snapshot.data[index]['title']}',
+      style: TextStyle(fontSize: 32, color: Colors.black),
     ),
   ),
+);
 
 
 _season_button() => Column(
@@ -176,4 +176,4 @@ _season_button() => Column(
         color: Colors.black),
     ), // text
   ],
-),
+);
