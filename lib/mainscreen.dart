@@ -216,7 +216,7 @@ Widget tvShowsListView(BuildContext context) {
     LokiCard(),
     LowerDecksCard(),
     MandalorianCard(),
-    MastersOfTheUniverseCard()
+    MastersOfTheUniverseCard(),
     NextGenCard(),
     OrvilleCard(),
     PicardCard(),
@@ -224,7 +224,7 @@ Widget tvShowsListView(BuildContext context) {
     StarTrekTVCard(),
     VoyagerCard(),
     WandaVisionCard(),
-    WhatIfCard();
+    WhatIfCard(),
   ]);
 }
 
