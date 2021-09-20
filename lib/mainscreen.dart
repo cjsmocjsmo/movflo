@@ -227,7 +227,7 @@ Widget tvShowsListView(BuildContext context) {
     VoyagerCard(),
     WandaVisionCard(),
     WhatIfCard(),
-    YTheLastMan(),
+    YTheLastManCard(),
   ]);
 }
 
