@@ -25,6 +25,8 @@ import 'tvshows/lokicard.dart';
 import 'tvshows/mastersoftheuniversecard.dart';
 import 'tvshows/whatifcard.dart';
 
+import 'tvshows/ythelastmancard.dart';
+
 
 final List<String> movies = <String>[
   'Action',
@@ -225,6 +227,7 @@ Widget tvShowsListView(BuildContext context) {
     VoyagerCard(),
     WandaVisionCard(),
     WhatIfCard(),
+    YTheLastMan(),
   ]);
 }
 
