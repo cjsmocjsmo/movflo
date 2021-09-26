@@ -24,8 +24,10 @@ import 'tvshows/wandavisioncard.dart';
 import 'tvshows/lokicard.dart';
 import 'tvshows/mastersoftheuniversecard.dart';
 import 'tvshows/whatifcard.dart';
-
 import 'tvshows/ythelastmancard.dart';
+
+import 'tvshows/foundationcard.dart';
+import 'tvshows/visionscard.dart';
 
 
 final List<String> movies = <String>[
@@ -213,6 +215,7 @@ Widget tvShowsListView(BuildContext context) {
     DiscoveryCard(),
     EnterpriseCard(),
     FalconWinterSoldierCard(),
+    Foundation(),
     ForAllManKindCard(),
     LostInSpaceCard(),
     LokiCard(),
@@ -224,10 +227,12 @@ Widget tvShowsListView(BuildContext context) {
     PicardCard(),
     RaisedByWolvesCard(),
     StarTrekTVCard(),
+    Visions(),
     VoyagerCard(),
     WandaVisionCard(),
     WhatIfCard(),
     YTheLastManCard(),
+
   ]);
 }
 
