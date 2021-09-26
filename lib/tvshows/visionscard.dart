@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-class VisionsThumbCard extends StatelessWidget {
+class VisionsCard extends StatelessWidget {
 
-  final String apiUrl = "http://192.168.0.93:8888/intVisionsThumb?season=01";
+  final String apiUrl = "http://192.168.0.93:8888/intVisions?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;
