@@ -29,6 +29,8 @@ import 'tvshows/ythelastmancard.dart';
 import 'tvshows/foundationcard.dart';
 import 'tvshows/visionscard.dart';
 
+import 'tvshows/prodigycard.dart';
+
 
 final List<String> movies = <String>[
   'Action',
@@ -68,6 +70,7 @@ final List<String> tvShows = <String>[
   'Last Ship',
   'Lost In Space',
   'Lower Decks',
+  'Prodigy',
   'Mandalorian',
   'Next Generation',
   'Orville',
@@ -220,6 +223,7 @@ Widget tvShowsListView(BuildContext context) {
     LostInSpaceCard(),
     LokiCard(),
     LowerDecksCard(),
+    ProdigyCard(),
     MandalorianCard(),
     MastersOfTheUniverseCard(),
     NextGenCard(),
