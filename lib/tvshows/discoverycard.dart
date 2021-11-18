@@ -84,6 +84,24 @@ class DiscoveryCard extends StatelessWidget {
                           ),
                         ),
                       ),
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(0.0, 8.0, 0.0, 8.0),
+                        child: SizedBox.fromSize(
+                          size: Size(66, 66), // button width and height
+                          child: ClipOval(
+                            child: Material(
+                              color: Colors.lightGreenAccent.shade400, //amber[400], // button color
+                              child: InkWell(
+                                splashColor: Colors.green, // splash color
+                                onTap: () {
+                                  _discovery(context, '4');
+                                }, // button pressed
+                                child: _discoveryButtonColumn('4')
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
                     ]),
                   ),
                 ),
@@ -111,14 +129,18 @@ _discovery(BuildContext context, String season_num) {
     final String api1Url = "http://192.168.0.93:8888/intDiscovery?season=01";
     final String api2Url = "http://192.168.0.93:8888/intDiscovery?season=02";
     final String api3Url = "http://192.168.0.93:8888/intDiscovery?season=03";
+    final String api3Url = "http://192.168.0.93:8888/intDiscovery?season=04";
     if (season_num == "1") {
       var result = await http.get(Uri.parse(api1Url));
       return json.decode(result.body);
     } else if (season_num == '2'){
       var result = await http.get(Uri.parse(api2Url));
       return json.decode(result.body);
-    } else {
+    } else if (season_num == '3'){
       var result = await http.get(Uri.parse(api3Url));
+      return json.decode(result.body);
+    } else {
+      var result = await http.get(Uri.parse(api4Url));
       return json.decode(result.body);
     }
   }
