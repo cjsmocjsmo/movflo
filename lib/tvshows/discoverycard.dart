@@ -129,7 +129,7 @@ _discovery(BuildContext context, String season_num) {
     final String api1Url = "http://192.168.0.93:8888/intDiscovery?season=01";
     final String api2Url = "http://192.168.0.93:8888/intDiscovery?season=02";
     final String api3Url = "http://192.168.0.93:8888/intDiscovery?season=03";
-    final String api3Url = "http://192.168.0.93:8888/intDiscovery?season=04";
+    final String api4Url = "http://192.168.0.93:8888/intDiscovery?season=04";
     if (season_num == "1") {
       var result = await http.get(Uri.parse(api1Url));
       return json.decode(result.body);
