@@ -33,7 +33,7 @@ class DiscoveryCard extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 10.0),
                       child: SizedBox.fromSize(
-                          size: Size(66, 66), // button width and height
+                          size: Size(60, 60), // button width and height
                           child: ClipOval(
                             child: Material(
                               color: Colors.lightGreenAccent.shade400, //amber[400], // button color
@@ -51,7 +51,7 @@ class DiscoveryCard extends StatelessWidget {
                       Padding(
                       padding: EdgeInsets.fromLTRB(0.0, 8.0, 0.0, 8.0),
                       child: SizedBox.fromSize(
-                          size: Size(66, 66), // button width and height
+                          size: Size(60, 60), // button width and height
                           child: ClipOval(
                             child: Material(
                               color: Colors.lightGreenAccent.shade400, //amber[400], // button color
@@ -69,7 +69,7 @@ class DiscoveryCard extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.fromLTRB(0.0, 8.0, 0.0, 8.0),
                         child: SizedBox.fromSize(
-                          size: Size(66, 66), // button width and height
+                          size: Size(60, 60), // button width and height
                           child: ClipOval(
                             child: Material(
                               color: Colors.lightGreenAccent.shade400, //amber[400], // button color
@@ -87,7 +87,7 @@ class DiscoveryCard extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.fromLTRB(0.0, 8.0, 0.0, 8.0),
                         child: SizedBox.fromSize(
-                          size: Size(66, 66), // button width and height
+                          size: Size(60, 60), // button width and height
                           child: ClipOval(
                             child: Material(
                               color: Colors.lightGreenAccent.shade400, //amber[400], // button color
