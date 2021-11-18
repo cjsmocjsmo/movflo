@@ -49,7 +49,7 @@ class DiscoveryCard extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                      padding: EdgeInsets.fromLTRB(0.0, 8.0, 0.0, 8.0),
+                      padding: EdgeInsets.fromLTRB(4.0, 4.0, 4.0, 4.0),
                       child: SizedBox.fromSize(
                           size: Size(60, 60), // button width and height
                           child: ClipOval(
@@ -67,7 +67,7 @@ class DiscoveryCard extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(0.0, 8.0, 0.0, 8.0),
+                        padding: EdgeInsets.fromLTRB(4.0, 4.0, 4.0, 4.0),
                         child: SizedBox.fromSize(
                           size: Size(60, 60), // button width and height
                           child: ClipOval(
@@ -85,7 +85,7 @@ class DiscoveryCard extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(0.0, 8.0, 0.0, 8.0),
+                        padding: EdgeInsets.fromLTRB(4.0, 4.0, 4.0, 4.0),
                         child: SizedBox.fromSize(
                           size: Size(60, 60), // button width and height
                           child: ClipOval(
