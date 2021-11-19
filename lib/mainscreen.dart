@@ -30,7 +30,7 @@ import 'tvshows/foundationcard.dart';
 import 'tvshows/visionscard.dart';
 
 import 'tvshows/prodigycard.dart';
-import 'tvshows/wheeloftime.dart';
+import 'tvshows/wheeloftimecard.dart';
 
 
 final List<String> movies = <String>[
