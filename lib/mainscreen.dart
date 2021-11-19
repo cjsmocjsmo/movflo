@@ -30,6 +30,7 @@ import 'tvshows/foundationcard.dart';
 import 'tvshows/visionscard.dart';
 
 import 'tvshows/prodigycard.dart';
+import 'tvshows/wheeloftime.dart';
 
 
 final List<String> movies = <String>[
@@ -86,6 +87,7 @@ final List<String> tvShows = <String>[
   'The Bad Batch',
   'Loki'
   'Masters Of The Universe'
+  'WheelOfTime'
 ];
 
 class MainScreen extends StatelessWidget {
@@ -236,6 +238,7 @@ Widget tvShowsListView(BuildContext context) {
     WandaVisionCard(),
     WhatIfCard(),
     YTheLastManCard(),
+    WheelOfTime(),
 
   ]);
 }
