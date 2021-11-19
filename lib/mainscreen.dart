@@ -238,7 +238,7 @@ Widget tvShowsListView(BuildContext context) {
     WandaVisionCard(),
     WhatIfCard(),
     YTheLastManCard(),
-    WheelOfTime(),
+    WheelOfTimeCard(),
 
   ]);
 }
