@@ -33,7 +33,7 @@ class DiscoveryCard extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 10.0),
                       child: SizedBox.fromSize(
-                          size: Size(58, 58), // button width and height
+                          size: Size(55, 55), // button width and height
                           child: ClipOval(
                             child: Material(
                               color: Colors.lightGreenAccent.shade400, //amber[400], // button color
@@ -49,9 +49,9 @@ class DiscoveryCard extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                      padding: EdgeInsets.fromLTRB(4.0, 4.0, 4.0, 4.0),
+                      padding: EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
                       child: SizedBox.fromSize(
-                          size: Size(58, 58), // button width and height
+                          size: Size(55, 55), // button width and height
                           child: ClipOval(
                             child: Material(
                               color: Colors.lightGreenAccent.shade400, //amber[400], // button color
@@ -67,9 +67,9 @@ class DiscoveryCard extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(4.0, 4.0, 4.0, 4.0),
+                        padding: EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
                         child: SizedBox.fromSize(
-                          size: Size(58, 58), // button width and height
+                          size: Size(55, 55), // button width and height
                           child: ClipOval(
                             child: Material(
                               color: Colors.lightGreenAccent.shade400, //amber[400], // button color
@@ -85,9 +85,9 @@ class DiscoveryCard extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(4.0, 4.0, 4.0, 4.0),
+                        padding: EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
                         child: SizedBox.fromSize(
-                          size: Size(58, 58), // button width and height
+                          size: Size(55, 55), // button width and height
                           child: ClipOval(
                             child: Material(
                               color: Colors.lightGreenAccent.shade400, //amber[400], // button color
