@@ -241,7 +241,7 @@ Widget tvShowsListView(BuildContext context) {
     WhatIfCard(),
     YTheLastManCard(),
     WheelOfTimeCard(),
-    CowboyBebop(),
+    CowboyBebopCard(),
 
   ]);
 }
