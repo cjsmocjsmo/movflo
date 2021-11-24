@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-
-
 import 'tvshows/alienworldscard.dart';
 import 'tvshows/alteredcarboncard.dart';
 import 'tvshows/badbatchcard.dart';
@@ -25,13 +23,12 @@ import 'tvshows/lokicard.dart';
 import 'tvshows/mastersoftheuniversecard.dart';
 import 'tvshows/whatifcard.dart';
 import 'tvshows/ythelastmancard.dart';
-
 import 'tvshows/foundationcard.dart';
 import 'tvshows/visionscard.dart';
-
 import 'tvshows/prodigycard.dart';
 import 'tvshows/wheeloftimecard.dart';
 import 'tvshows/cowboybebopcard.dart';
+import 'tvshows/hawkeye.dart';
 
 
 final List<String> movies = <String>[
@@ -90,6 +87,7 @@ final List<String> tvShows = <String>[
   'Masters Of The Universe'
   'WheelOfTime'
   'Cowboy Bebop'
+  'Hawkeye'
 ];
 
 class MainScreen extends StatelessWidget {
@@ -216,16 +214,17 @@ Widget tvShowsListView(BuildContext context) {
   shrinkWrap: true,
   padding: const EdgeInsets.all(10.0),
   children: <Widget>[
-    BadBatchCard(),
     FoundationCard(),
     WheelOfTimeCard(),
     CowboyBebopCard(),
     LostInSpaceCard(),
     LokiCard(),
-    LowerDecksCard(),
-    ProdigyCard(),
+    HawkeyeCard(),
+    BadBatchCard(),
     MandalorianCard(),
     OrvilleCard(),
+    LowerDecksCard(),
+    ProdigyCard(),
     DiscoveryCard(),
     PicardCard(),
     EnterpriseCard(),
