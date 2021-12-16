@@ -28,7 +28,7 @@ import 'tvshows/visionscard.dart';
 import 'tvshows/prodigycard.dart';
 import 'tvshows/wheeloftimecard.dart';
 import 'tvshows/cowboybebopcard.dart';
-import 'tvshows/hawkeye.dart';
+import 'tvshows/hawkeyecard.dart';
 
 
 final List<String> movies = <String>[
