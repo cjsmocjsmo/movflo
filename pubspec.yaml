@@ -52,10 +52,10 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   assets:
-    - images/one.webp
-    - images/two.webp
-    - images/three.webp
-    - images/four.webp
+    # - images/one.webp
+    # - images/two.webp
+    # - images/three.webp
+    # - images/four.webp
     - images/alienworlds.webp
     - images/alteredcarbon.webp
     - images/badbatch.webp
