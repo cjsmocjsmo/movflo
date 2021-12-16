@@ -29,7 +29,7 @@ class AlteredCarbonCard extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 Image.asset(
-                  'images/alteredcarbon.jpg',
+                  'images/alteredcarbon.webp',
                   fit: BoxFit.contain,
                     height: 355.5,
                     width: 200.0,

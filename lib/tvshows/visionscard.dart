@@ -44,7 +44,7 @@ class VisionsCard extends StatelessWidget {
               child: Row(
                 children: <Widget>[
                   Image.asset(
-                    'images/VisionsThumb.jpg',
+                    'images/VisionsThumb.webp',
                     fit: BoxFit.contain,
                     height: 355.5,
                     width: 200.0,

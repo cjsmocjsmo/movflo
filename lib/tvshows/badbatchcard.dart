@@ -43,7 +43,7 @@ class BadBatchCard extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 Image.asset(
-                  'images/badbatch.jpg',
+                  'images/badbatch.webp',
                   fit: BoxFit.contain,
                     height: 355.5,
                     width: 200.0,

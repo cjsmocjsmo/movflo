@@ -43,7 +43,7 @@ class WheelOfTimeCard extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 Image.asset(
-                  'images/wheeloftime.jpg',
+                  'images/wheeloftime.webp',
                   fit: BoxFit.contain,
                     height: 355.5,
                     width: 200.0,

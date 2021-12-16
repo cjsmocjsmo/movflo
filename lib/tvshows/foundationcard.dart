@@ -44,7 +44,7 @@ class FoundationCard extends StatelessWidget {
               child: Row(
                 children: <Widget>[
                   Image.asset(
-                    'images/Foundation_1Thumb.jpg',
+                    'images/Foundation_1Thumb.webp',
                     fit: BoxFit.contain,
                     height: 355.5,
                     width: 200.0,

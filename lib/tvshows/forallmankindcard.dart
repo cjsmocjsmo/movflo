@@ -20,7 +20,7 @@ class ForAllManKindCard extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 Image.asset(
-                  'images/forallmankind.jpg',
+                  'images/forallmankind.webp',
                   fit: BoxFit.contain,
                     height: 355.5,
                     width: 200.0,

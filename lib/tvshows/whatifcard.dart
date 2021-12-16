@@ -43,7 +43,7 @@ class WhatIfCard extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 Image.asset(
-                  'images/whatif.jpg',
+                  'images/whatif.webp',
                   fit: BoxFit.contain,
                     height: 355.5,
                     width: 200.0,

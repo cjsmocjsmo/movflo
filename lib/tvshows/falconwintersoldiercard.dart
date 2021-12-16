@@ -43,7 +43,7 @@ class FalconWinterSoldierCard extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 Image.asset(
-                  'images/falconwintersoldier.jpg',
+                  'images/falconwintersoldier.webp',
                   fit: BoxFit.contain,
                     height: 355.5,
                     width: 200.0,

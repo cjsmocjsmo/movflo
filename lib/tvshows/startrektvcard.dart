@@ -20,7 +20,7 @@ class StarTrekTVCard extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 Image.asset(
-                  'images/sttv.jpg',
+                  'images/sttv.webp',
                   fit: BoxFit.contain,
                     height: 355.5,
                     width: 200.0,

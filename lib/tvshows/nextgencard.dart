@@ -20,7 +20,7 @@ class NextGenCard extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 Image.asset(
-                  'images/nextgen.jpg',
+                  'images/nextgen.webp',
                   fit: BoxFit.contain,
                     height: 355.5,
                     width: 200.0,

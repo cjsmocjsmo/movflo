@@ -43,7 +43,7 @@ class LokiCard extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 Image.asset(
-                  'images/loki.jpg',
+                  'images/loki.webp',
                   fit: BoxFit.contain,
                     height: 355.5,
                     width: 200.0,
