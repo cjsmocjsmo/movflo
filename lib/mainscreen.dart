@@ -30,7 +30,7 @@ import 'tvshows/wheeloftimecard.dart';
 import 'tvshows/cowboybebopcard.dart';
 import 'tvshows/hawkeyecard.dart';
 
-import 'tvshows/bookofbobafettcard.dart'
+import 'tvshows/bookofbobafettcard.dart';
 
 
 final List<String> movies = <String>[
