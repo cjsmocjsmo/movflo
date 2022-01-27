@@ -50,6 +50,7 @@ final List<String> movies = <String>[
   'Kings Men',
   'Men In Black',
   'Misc',
+  "Nicolas Cage",
   'Pirates',
   'Riddick',
   'Star Wars',
@@ -60,7 +61,7 @@ final List<String> movies = <String>[
   'Tremors',
   'The Rock',
   'X-Men',
-  "Nicolas Cage"
+  
 ];
 
 final List<String> tvShows = <String>[
