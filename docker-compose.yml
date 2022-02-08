@@ -2,7 +2,7 @@ version: "3.3"
 
 services:
   movflo:
-    image: movflo:0.3.3
+    image: movflo:0.4.0
     build: .
     networks:
       - movflo
