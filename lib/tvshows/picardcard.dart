@@ -98,7 +98,7 @@ _picard(BuildContext context, String season_num) {
       var result = await http.get(Uri.parse(api1Url));
       return json.decode(result.body);
     } else {
-      var result = await http.get(Uri.parse(api1Url));
+      var result = await http.get(Uri.parse(api2Url));
       return json.decode(result.body);
     }
   }
