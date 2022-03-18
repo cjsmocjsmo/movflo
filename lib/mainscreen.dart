@@ -36,6 +36,7 @@ import 'tvshows/reachercard.dart';
 
 final List<String> movies = <String>[
   'Action',
+  "Arnold",
   'Bruce Willis',
   'Cartoons',
   'Comedy',

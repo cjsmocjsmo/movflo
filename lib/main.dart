@@ -27,6 +27,7 @@ import 'movies/tomcruizescreen.dart';
 import 'movies/tremorsscreen.dart';
 import 'movies/therockscreen.dart';
 import 'movies/xmenscreen.dart';
+import 'movies/arnoldscreen.dart';
 import 'tvshows/startrektvcard.dart';
 import 'tvshows/mastersoftheuniversecard.dart';
 
@@ -41,6 +42,7 @@ class MovFlo extends StatelessWidget {
     return MaterialApp(title: _title, initialRoute: '/', routes: {
       '/': (context) => MainScreen(),
       '/Action': (context) => ActionScreen(),
+      '/Arnold': (context) => ArnoldScreen(),
       '/Bruce Willis': (context) => BruceWillisScreen(),
       '/Cartoons': (context) => CartoonsScreen(),
       '/Comedy': (context) => ComedyScreen(),
