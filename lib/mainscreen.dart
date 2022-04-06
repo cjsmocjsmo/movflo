@@ -33,6 +33,9 @@ import 'tvshows/hawkeyecard.dart';
 import 'tvshows/bookofbobafettcard.dart';
 import 'tvshows/reachercard.dart';
 
+import 'tvshows/halocard.dart';
+import 'tvshows/moonknightcard.dart';
+
 
 final List<String> movies = <String>[
   'Action',
@@ -95,7 +98,9 @@ final List<String> tvShows = <String>[
   'Cowboy Bebop'
   'Hawkeye'
   'BookOfBobaFett',
-  'Reacher'
+  'Reacher',
+  'Halo',
+  'MoonKnight'
 ];
 
 class MainScreen extends StatelessWidget {
@@ -222,6 +227,8 @@ Widget tvShowsListView(BuildContext context) {
   shrinkWrap: true,
   padding: const EdgeInsets.all(10.0),
   children: <Widget>[
+    HaloCard(),
+    MoonKnightCard(),
     BookOfBobaFettCard(),
     FoundationCard(),
     WheelOfTimeCard(),
