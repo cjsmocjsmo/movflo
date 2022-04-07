@@ -4,7 +4,7 @@ import 'dart:convert';
 
 class MoonKnightCard extends StatelessWidget {
 
-  final String apiUrl = "http://192.168.0.94:8888/intMoodKnight?season=01";
+  final String apiUrl = "http://192.168.0.94:8888/intMoonKnight?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;
@@ -65,7 +65,7 @@ class MoonKnightCard extends StatelessWidget {
                                     builder: (BuildContext context) {
                                     return Scaffold(
                                       appBar: AppBar(
-                                        title: Text("MoodKnight"),
+                                        title: Text("MoonKnight"),
                                         backgroundColor: Colors.lightGreen[900],
                                       ),
                                       body: Container(
