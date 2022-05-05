@@ -36,7 +36,7 @@ import 'tvshows/reachercard.dart';
 import 'tvshows/halocard.dart';
 import 'tvshows/moonknightcard.dart';
 
-import 'tvshows/strangenewworldscard.dart'
+import 'tvshows/strangenewworldscard.dart';
 
 
 final List<String> movies = <String>[
