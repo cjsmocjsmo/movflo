@@ -44,7 +44,7 @@ class StrangeNewWorldsCard extends StatelessWidget {
               child: Row(
                 children: <Widget>[
                   Image.asset(
-                    'images/strange_new_worlds.jpg',
+                    'images/star_trek_strange_new_worlds.jpg',
                     fit: BoxFit.contain,
                     height: 355.5,
                     width: 200.0,
