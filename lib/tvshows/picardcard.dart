@@ -87,14 +87,14 @@ Future<void> playEpi(playURL) async {
   }
 }
 
-_picard(BuildContext context, String season_num) {
+_picard(BuildContext context, String seasonNum) {
 
   Future<List<dynamic>> fetchPicard() async {
 
     final String api1Url = "http://192.168.0.94:8888/intPicard?season=01";
     final String api2Url = "http://192.168.0.94:8888/intPicard?season=02";
 
-    if (season_num == '1') {
+    if (seasonNum == '1') {
       var result = await http.get(Uri.parse(api1Url));
       return json.decode(result.body);
     } else {

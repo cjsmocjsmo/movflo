@@ -90,7 +90,7 @@ class WhatIfCard extends StatelessWidget {
                                                           playEpi(apiPU);
                                                           Navigator.pop(context);
                                                         },
-                                                        child: _text_container(snapshot, index)
+                                                        child: _textContainer(snapshot, index)
 
                                                         // Container(
                                                         //   height: 75,
@@ -116,7 +116,7 @@ class WhatIfCard extends StatelessWidget {
                                   }));
                       
                                 }, // button pressed
-                                child: _season_button()
+                                child: _seasonButton()
                                 
                                 // Column(
                                 //   mainAxisAlignment: MainAxisAlignment.center,
@@ -151,7 +151,7 @@ class WhatIfCard extends StatelessWidget {
   }
 }
 
-_text_container(AsyncSnapshot snapshot, int index) => Container(
+_textContainer(AsyncSnapshot snapshot, int index) => Container(
   height: 75,
   color: Colors.amber[600],
   child:Center(
@@ -163,7 +163,7 @@ _text_container(AsyncSnapshot snapshot, int index) => Container(
 );
 
 
-_season_button() => Column(
+_seasonButton() => Column(
   mainAxisAlignment: MainAxisAlignment.center,
   children: <Widget>[
     // Icon(Icons.call), // icon

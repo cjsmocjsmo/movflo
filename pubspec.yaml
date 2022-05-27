@@ -34,7 +34,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  http: any
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -84,5 +84,7 @@ flutter:
     - images/halo.jpg
     - images/moonknight.jpg
     - images/star_trek_strange_new_worlds.jpg
+    - images/prehistoricplanet.jpg
+    - images/obi-wankenobi.jpg
     
  

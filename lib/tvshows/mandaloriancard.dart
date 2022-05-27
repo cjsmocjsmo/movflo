@@ -105,12 +105,12 @@ Future<void> playEpi(playURL) async {
   }
 }
 
-_mandalorian(BuildContext context, String season_num) {
+_mandalorian(BuildContext context, String seasonNum) {
 
   Future<List<dynamic>> fetchMandalorian() async {
     final String api1Url = "http://192.168.0.94:8888/intMandalorian?season=01";
     final String api2Url = "http://192.168.0.94:8888/intMandalorian?season=02";
-    if (season_num == '1') {
+    if (seasonNum == '1') {
       var result = await http.get(Uri.parse(api1Url));
       return json.decode(result.body);
     } else {
@@ -120,10 +120,10 @@ _mandalorian(BuildContext context, String season_num) {
 
     // final String api3Url = "http://192.168.0.94:8888/intMandalorian?season=03";
 
-    // if (season_num == '1') {
+    // if (seasonNum == '1') {
     //   var result = await http.get(Uri.parse(api1Url));
     //   return json.decode(result.body);
-    // } else if (season_num == '2') {
+    // } else if (seasonNum == '2') {
     //   var result = await http.get(Uri.parse(api2Url));
     //   return json.decode(result.body);
     // } else {

@@ -191,7 +191,7 @@ Future<void> playEpi(playURL) async {
   }
 }
 
-_nextGeneration(BuildContext context, String season_num) {
+_nextGeneration(BuildContext context, String seasonNum) {
   
   Future<List<dynamic>> fetchTNG() async {
 
@@ -203,22 +203,22 @@ _nextGeneration(BuildContext context, String season_num) {
     final String api6Url = "http://192.168.0.94:8888/intTNG?season=06";
     final String api7Url = "http://192.168.0.94:8888/intTNG?season=07";
 
-    if (season_num == '1') {
+    if (seasonNum == '1') {
       var result = await http.get(Uri.parse(api1Url));
       return json.decode(result.body);
-    } else if (season_num == '2') {
+    } else if (seasonNum == '2') {
       var result = await http.get(Uri.parse(api2Url));
       return json.decode(result.body);
-    } else if (season_num == '3') {
+    } else if (seasonNum == '3') {
       var result = await http.get(Uri.parse(api3Url));
       return json.decode(result.body);
-    } else if (season_num == '4') {
+    } else if (seasonNum == '4') {
       var result = await http.get(Uri.parse(api4Url));
       return json.decode(result.body);
-    } else if (season_num == '5') {
+    } else if (seasonNum == '5') {
       var result = await http.get(Uri.parse(api5Url));
       return json.decode(result.body);   
-    } else if (season_num == '6') {
+    } else if (seasonNum == '6') {
       var result = await http.get(Uri.parse(api6Url));
       return json.decode(result.body);
     } else {

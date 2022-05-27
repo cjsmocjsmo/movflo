@@ -68,9 +68,9 @@ class RaisedByWolvesCard extends StatelessWidget {
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
-                                  _RaisedByWolves(context, '1');
+                                  _raisedByWolves(context, '1');
                                 }, // button pressed
-                                child: _RaisedByWolvesButtonColumn('1')
+                                child: _raisedByWolvesButtonColumn('1')
                               ),
                             ),
                           ),
@@ -86,9 +86,9 @@ class RaisedByWolvesCard extends StatelessWidget {
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
-                                  _RaisedByWolves(context, '2');
+                                  _raisedByWolves(context, '2');
                                 }, // button pressed
-                                child: _RaisedByWolvesButtonColumn('2')
+                                child: _raisedByWolvesButtonColumn('2')
                               ),
                             ),
                           ),
@@ -115,12 +115,12 @@ Future<void> playEpi(playURL) async {
   }
 }
 
-_RaisedByWolves(BuildContext context, String season_num) {
+_raisedByWolves(BuildContext context, String seasonNum) {
 
   Future<List<dynamic>> fetchRaisedByWolves() async {
     final String api1Url = "http://192.168.0.94:8888/intRaisedByWolves?season=01";
     final String api2Url = "http://192.168.0.94:8888/intRaisedByWolves?season=02";
-    if (season_num == "1") {
+    if (seasonNum == "1") {
       var result = await http.get(Uri.parse(api1Url));
       return json.decode(result.body);
     } else {
@@ -183,7 +183,7 @@ _RaisedByWolves(BuildContext context, String season_num) {
   );
 }
 
-_RaisedByWolvesButtonColumn(String episode) {
+_raisedByWolvesButtonColumn(String episode) {
   return Column(
     mainAxisAlignment: MainAxisAlignment.center,
     children: <Widget>[

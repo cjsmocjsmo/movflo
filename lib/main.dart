@@ -29,7 +29,7 @@ import 'movies/therockscreen.dart';
 import 'movies/xmenscreen.dart';
 import 'movies/arnoldscreen.dart';
 import 'tvshows/startrektvcard.dart';
-import 'tvshows/mastersoftheuniversecard.dart';
+// import 'tvshows/mastersoftheuniversecard.dart';
 
 void main() => runApp(MovFlo());
 

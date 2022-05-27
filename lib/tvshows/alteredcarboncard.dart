@@ -29,7 +29,7 @@ class AlteredCarbonCard extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 Image.asset(
-                  'images/alteredcarbon.webp',
+                  'images/_alteredcarbon.webp',
                   fit: BoxFit.contain,
                     height: 355.5,
                     width: 200.0,
@@ -98,14 +98,14 @@ Future<void> playEpi(playURL) async {
   }
 }
 
-_alteredCarbon(BuildContext context, String season_num) {
+_alteredCarbon(BuildContext context, String seasonNum) {
 
   final String api1Url = "http://192.168.0.94:8888/intAlteredCarbon?season=01";
 
   final String api2Url = "http://192.168.0.94:8888/intAlteredCarbon?season=02";
 
   Future<List<dynamic>> fetchAlteredCarbonSeason() async {
-    if (season_num == "1") {
+    if (seasonNum == "1") {
       var result = await http.get(Uri.parse(api1Url));
       return json.decode(result.body);
     } else {

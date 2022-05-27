@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-class AlienWorldsCard extends StatelessWidget {
+class PrehistoricPlanetCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -19,7 +19,7 @@ class AlienWorldsCard extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 Image.asset(
-                  'images/alienworlds.webp',
+                  'images/prehistoricplanet.jpg',
                   fit: BoxFit.contain,
                   height: 355.5,
                   width: 200.0,
@@ -44,7 +44,7 @@ class AlienWorldsCard extends StatelessWidget {
                                       builder: (BuildContext context) {
                                         return Scaffold(
                                           appBar: AppBar(
-                                            title: Text("Alien Worlds"),
+                                            title: Text("Prehistoric Planet"),
                                             backgroundColor:
                                                 Colors.lightGreen[900],
                                           ),
@@ -54,16 +54,15 @@ class AlienWorldsCard extends StatelessWidget {
                                                   .lightGreenAccent.shade400,
                                             ),
                                             child: Center(
-                                              child:
-                                                  _alienWorldsFutureBuilder(),
+                                              child: mainlistbuilder(),
                                             ),
                                           ),
                                         );
                                       },
                                     ),
                                   );
-                                }, // button pressed
-                                child: seasons(),
+                                },
+                                child: seasons(), // button pressed
                               ),
                             ),
                           ),
@@ -82,8 +81,25 @@ class AlienWorldsCard extends StatelessWidget {
   }
 }
 
-Widget _alienWorldsFutureBuilder() {
-  final String apiUrl = "http://192.168.0.94:8888/intAlienWorlds?season=01";
+Widget seasons() {
+  return Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: <Widget>[
+      Text(
+        "1",
+        style: TextStyle(
+            fontFamily: "Gothic",
+            fontWeight: FontWeight.bold,
+            fontSize: 22,
+            color: Colors.black),
+      ), // text
+    ],
+  );
+}
+
+Widget mainlistbuilder() {
+  final String apiUrl =
+      "http://192.168.0.94:8888/intPrehistoricPlanet?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;
@@ -142,22 +158,5 @@ Widget _alienWorldsFutureBuilder() {
         return CircularProgressIndicator();
       }
     },
-  );
-}
-
-Widget seasons() {
-  return Column(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: <Widget>[
-      // Icon(Icons.call), // icon
-      Text(
-        "1",
-        style: TextStyle(
-            fontFamily: "Gothic",
-            fontWeight: FontWeight.bold,
-            fontSize: 22,
-            color: Colors.black),
-      ), // text
-    ],
   );
 }
