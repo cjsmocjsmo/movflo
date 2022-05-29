@@ -122,62 +122,63 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-        length: 2,
-        child: Scaffold(
-          appBar: AppBar(
-            title: Text("Movies TVShows"),
-            backgroundColor: Colors.lightGreen[900],
-            bottom: TabBar(
-              tabs: [
-                Tab(icon: Icon(Icons.movie_creation_sharp)),
-                Tab(icon: Icon(Icons.tv_sharp)),
-              ],
-            ),
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("Movies TVShows"),
+          backgroundColor: Colors.lightGreen[900],
+          bottom: TabBar(
+            tabs: [
+              Tab(icon: Icon(Icons.movie_creation_sharp)),
+              Tab(icon: Icon(Icons.tv_sharp)),
+            ],
           ),
-          bottomNavigationBar: BottomAppBar(
-            color: Colors.lightGreen[900],
-            child: Row(
-              children: [
-                Spacer(),
-                IconButton(
-                  icon: Icon(Icons.skip_previous, color: Colors.white),
-                  onPressed: () {
-                    final String apiPrevious =
-                        "http://192.168.0.94:8181/Previous";
-                    previousMov(apiPrevious);
-                  },
-                ),
-                Spacer(),
-                IconButton(
-                  icon: Icon(Icons.skip_next, color: Colors.white),
-                  onPressed: () {
-                    final String apiNext = "http://192.168.0.94:8181/Next";
-                    nextMov(apiNext);
-                  },
-                ),
-                Spacer(),
-              ],
-            ),
+        ),
+        bottomNavigationBar: BottomAppBar(
+          color: Colors.lightGreen[900],
+          child: Row(
+            children: [
+              Spacer(),
+              IconButton(
+                icon: Icon(Icons.skip_previous, color: Colors.white),
+                onPressed: () {
+                  final String apiPrevious =
+                      "http://192.168.0.94:8181/Previous";
+                  previousMov(apiPrevious);
+                },
+              ),
+              Spacer(),
+              IconButton(
+                icon: Icon(Icons.skip_next, color: Colors.white),
+                onPressed: () {
+                  final String apiNext = "http://192.168.0.94:8181/Next";
+                  nextMov(apiNext);
+                },
+              ),
+              Spacer(),
+            ],
           ),
-          floatingActionButton: FloatingActionButton(
-              child: Icon(Icons.close_sharp),
-              onPressed: () {
-                final String apiStop = "http://192.168.0.94:8181/Stop";
-                stopMov(apiStop);
-              }),
-          floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-          body: Container(
-            decoration: BoxDecoration(
-              color: Colors.lightGreenAccent.shade400,
-            ),
-            child: TabBarView(
-              children: [
-                moviesListView,
-                tvShowsListView(context),
-              ],
-            ),
+        ),
+        floatingActionButton: FloatingActionButton(
+            child: Icon(Icons.close_sharp),
+            onPressed: () {
+              final String apiStop = "http://192.168.0.94:8181/Stop";
+              stopMov(apiStop);
+            }),
+        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+        body: Container(
+          decoration: BoxDecoration(
+            color: Colors.lightGreenAccent.shade400,
           ),
-        ));
+          child: TabBarView(
+            children: [
+              moviesListView,
+              tvShowsListView(context),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 
   void stop(apath) async {
@@ -187,68 +188,73 @@ class MainScreen extends StatelessWidget {
 }
 
 Widget moviesListView = ListView.builder(
-    padding: const EdgeInsets.all(10.0),
-    itemCount: movies.length,
-    itemBuilder: (BuildContext context, int index) {
-      return InkWell(
-        splashColor: Colors.red,
-        // onTap: () {}, // button pressed
-        child: Container(
-          height: 50,
-          color: Colors.amber[400],
-          child: Center(
-              child: Text('${movies[index]}',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 28.0,
-                  ))),
+  padding: const EdgeInsets.all(10.0),
+  itemCount: movies.length,
+  itemBuilder: (BuildContext context, int index) {
+    return InkWell(
+      splashColor: Colors.red,
+      // onTap: () {}, // button pressed
+      child: Container(
+        height: 50,
+        color: Colors.amber[400],
+        child: Center(
+          child: Text(
+            '${movies[index]}',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 28.0,
+            ),
+          ),
         ),
-        onTap: () {
-          Navigator.pushNamed(context, '/${movies[index]}');
-        },
-      );
-    });
+      ),
+      onTap: () {
+        Navigator.pushNamed(context, '/${movies[index]}');
+      },
+    );
+  },
+);
 
 Widget tvShowsListView(BuildContext context) {
   return ListView(
-      shrinkWrap: true,
-      padding: const EdgeInsets.all(10.0),
-      children: <Widget>[
-        PrehistoricPlanetCard(),
-        StrangeNewWorldsCard(),
-        HaloCard(),
-        MoonKnightCard(),
-        ObiWanKenobiCard(),
-        BookOfBobaFettCard(),
-        FoundationCard(),
-        WheelOfTimeCard(),
-        ReacherCard(),
-        CowboyBebopCard(),
-        LostInSpaceCard(),
-        LokiCard(),
-        HawkeyeCard(),
-        BadBatchCard(),
-        MandalorianCard(),
-        OrvilleCard(),
-        LowerDecksCard(),
-        ProdigyCard(),
-        DiscoveryCard(),
-        PicardCard(),
-        EnterpriseCard(),
-        NextGenCard(),
-        VoyagerCard(),
-        StarTrekTVCard(),
-        VisionsCard(),
-        FalconWinterSoldierCard(),
-        WandaVisionCard(),
-        WhatIfCard(),
-        YTheLastManCard(),
-        ForAllManKindCard(),
-        AlienWorldsCard(),
-        AlteredCarbonCard(),
-        RaisedByWolvesCard(),
-        MastersOfTheUniverseCard(),
-      ]);
+    shrinkWrap: true,
+    padding: const EdgeInsets.all(10.0),
+    children: <Widget>[
+      PrehistoricPlanetCard(),
+      StrangeNewWorldsCard(),
+      HaloCard(),
+      MoonKnightCard(),
+      ObiWanKenobiCard(),
+      BookOfBobaFettCard(),
+      FoundationCard(),
+      WheelOfTimeCard(),
+      ReacherCard(),
+      CowboyBebopCard(),
+      LostInSpaceCard(),
+      LokiCard(),
+      HawkeyeCard(),
+      BadBatchCard(),
+      MandalorianCard(),
+      OrvilleCard(),
+      LowerDecksCard(),
+      ProdigyCard(),
+      DiscoveryCard(),
+      PicardCard(),
+      EnterpriseCard(),
+      NextGenCard(),
+      VoyagerCard(),
+      StarTrekTVCard(),
+      VisionsCard(),
+      FalconWinterSoldierCard(),
+      WandaVisionCard(),
+      WhatIfCard(),
+      YTheLastManCard(),
+      ForAllManKindCard(),
+      AlienWorldsCard(),
+      AlteredCarbonCard(),
+      RaisedByWolvesCard(),
+      MastersOfTheUniverseCard(),
+    ],
+  );
 }
 
 

@@ -18,12 +18,7 @@ class HawkeyeCard extends StatelessWidget {
             height: 290.0,
             child: Row(
               children: <Widget>[
-                Image.asset(
-                  'images/Hawkeye.webp',
-                  fit: BoxFit.contain,
-                  height: 355.5,
-                  width: 200.0,
-                ),
+                hawkeyeImage(),
                 Expanded(
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(0.0, 120.0, 0.0, 0.0),
@@ -38,29 +33,7 @@ class HawkeyeCard extends StatelessWidget {
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute<void>(
-                                      builder: (BuildContext context) {
-                                        return Scaffold(
-                                          appBar: AppBar(
-                                            title: Text("Hawkeye"),
-                                            backgroundColor:
-                                                Colors.lightGreen[900],
-                                          ),
-                                          body: Container(
-                                            decoration: BoxDecoration(
-                                              color: Colors
-                                                  .lightGreenAccent.shade400,
-                                            ),
-                                            child: Center(
-                                              child: _hawkeyeFutureBuilder(),
-                                            ),
-                                          ),
-                                        );
-                                      },
-                                    ),
-                                  );
+                                  _hawkeyeNavigator(context);
                                 },
                                 child: _seasonButton(),
                               ),
@@ -78,6 +51,39 @@ class HawkeyeCard extends StatelessWidget {
       ),
     );
   }
+}
+
+Widget hawkeyeImage() {
+  return Image.asset(
+    'images/Hawkeye.webp',
+    fit: BoxFit.contain,
+    height: 355.5,
+    width: 200.0,
+  );
+}
+
+_hawkeyeNavigator(BuildContext context) {
+  return Navigator.push(
+    context,
+    MaterialPageRoute<void>(
+      builder: (BuildContext context) {
+        return Scaffold(
+          appBar: AppBar(
+            title: Text("Hawkeye"),
+            backgroundColor: Colors.lightGreen[900],
+          ),
+          body: Container(
+            decoration: BoxDecoration(
+              color: Colors.lightGreenAccent.shade400,
+            ),
+            child: Center(
+              child: _hawkeyeFutureBuilder(),
+            ),
+          ),
+        );
+      },
+    ),
+  );
 }
 
 Widget _hawkeyeFutureBuilder() {
@@ -151,10 +157,11 @@ Widget _seasonButton() {
       Text(
         "1",
         style: TextStyle(
-            fontFamily: "Gothic",
-            fontWeight: FontWeight.bold,
-            fontSize: 22,
-            color: Colors.black),
+          fontFamily: "Gothic",
+          fontWeight: FontWeight.bold,
+          fontSize: 22,
+          color: Colors.black,
+        ),
       ), // text
     ],
   );

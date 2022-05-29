@@ -3,28 +3,21 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class RaisedByWolvesCard extends StatelessWidget {
-  
   final String api1Url = "http://192.168.0.94:8888/intRaisedByWolves?season=01";
-  
 
   Future<List<dynamic>> fetchRaisedByWolvesSeason1() async {
-    
-      var result = await http.get(Uri.parse(api1Url));
-      return json.decode(result.body);
-    
+    var result = await http.get(Uri.parse(api1Url));
+    return json.decode(result.body);
   }
 
   final String api2Url = "http://192.168.0.94:8888/intRaisedByWolves?season=02";
 
   Future<List<dynamic>> fetchRaisedByWolvesSeason2() async {
-    
-      var result = await http.get(Uri.parse(api2Url));
-      return json.decode(result.body);
-    
+    var result = await http.get(Uri.parse(api2Url));
+    return json.decode(result.body);
   }
 
   Future<void> playEpi(playURL) async {
-
     try {
       var resultPlay = await http.get(Uri.parse(playURL));
       return json.decode(resultPlay.body);
@@ -32,8 +25,9 @@ class RaisedByWolvesCard extends StatelessWidget {
       print(e);
     }
   }
+
   @override
-    Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     return Center(
       child: Card(
         color: Colors.purple[900],
@@ -47,63 +41,55 @@ class RaisedByWolvesCard extends StatelessWidget {
             height: 290.0,
             child: Row(
               children: <Widget>[
-                Image.asset(
-                  'images/raisedbywolves.webp',
-                  fit: BoxFit.contain,
-                    height: 355.5,
-                    width: 200.0,
-                ),
+                raisedImage(),
                 Expanded(
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(0.0, 50.0, 0.0, 0.0),
-                  child: Column(
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 10.0),
-                      child: SizedBox.fromSize(
-                          size: Size(66, 66), // button width and height
-                          child: ClipOval(
-                            child: Material(
-                              color: Colors.lightGreenAccent.shade400, //amber[400], // button color
-                              child: InkWell(
-                                splashColor: Colors.green, // splash color
-                                onTap: () {
-                                  _raisedByWolves(context, '1');
-                                }, // button pressed
-                                child: _raisedByWolvesButtonColumn('1')
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 00.0),
-                        child: SizedBox.fromSize(
-                          size: Size(66, 66), // button width and height
-                          child: ClipOval(
-                            child: Material(
-                              color: Colors.lightGreenAccent.shade400, //amber[400], // button color
-                              child: InkWell(
-                                splashColor: Colors.green, // splash color
-                                onTap: () {
-                                  _raisedByWolves(context, '2');
-                                }, // button pressed
-                                child: _raisedByWolvesButtonColumn('2')
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ]
-                  )),
+                    child: Column(
+                      children: <Widget>[
+                        _raisedSeasons(context, "1"),
+                        _raisedSeasons(context, "2"),
+                      ],
+                    ),
+                  ),
                 ),
-              ]
+              ],
             ),
-          )
+          ),
         ),
-      )
+      ),
     );
   }
+}
+
+Widget raisedImage() {
+  return Image.asset(
+    'images/raisedbywolves.webp',
+    fit: BoxFit.contain,
+    height: 355.5,
+    width: 200.0,
+  );
+}
+
+_raisedSeasons(BuildContext context, String snum) {
+  return Padding(
+    padding: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 00.0),
+    child: SizedBox.fromSize(
+      size: Size(66, 66), // button width and height
+      child: ClipOval(
+        child: Material(
+          color: Colors.lightGreenAccent.shade400, //amber[400], // button color
+          child: InkWell(
+            splashColor: Colors.green, // splash color
+            onTap: () {
+              _raisedByWolves(context, snum);
+            }, // button pressed
+            child: _raisedByWolvesButtonColumn(snum),
+          ),
+        ),
+      ),
+    ),
+  );
 }
 
 Future<void> playEpi(playURL) async {
@@ -116,10 +102,11 @@ Future<void> playEpi(playURL) async {
 }
 
 _raisedByWolves(BuildContext context, String seasonNum) {
-
   Future<List<dynamic>> fetchRaisedByWolves() async {
-    final String api1Url = "http://192.168.0.94:8888/intRaisedByWolves?season=01";
-    final String api2Url = "http://192.168.0.94:8888/intRaisedByWolves?season=02";
+    final String api1Url =
+        "http://192.168.0.94:8888/intRaisedByWolves?season=01";
+    final String api2Url =
+        "http://192.168.0.94:8888/intRaisedByWolves?season=02";
     if (seasonNum == "1") {
       var result = await http.get(Uri.parse(api1Url));
       return json.decode(result.body);
@@ -129,56 +116,61 @@ _raisedByWolves(BuildContext context, String seasonNum) {
     }
   }
 
-  return Navigator.push(context, MaterialPageRoute<void>(
-    builder: (BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Lower Decks"),
-        backgroundColor: Colors.lightGreen[900],
-      ),
-      body: Container(
-        decoration: BoxDecoration(
-          color: Colors.lightGreenAccent.shade400,
-        ),
-        child: Center(
-          child:
-            FutureBuilder<List<dynamic>>(
-              future: fetchRaisedByWolves(),
-              builder: (BuildContext context,AsyncSnapshot snapshot) {
-                if (snapshot.hasData) {
-                  return ListView.builder(
-                    padding: const EdgeInsets.all(8),
-                    itemCount: snapshot.data.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return GestureDetector(
-                        onTap: () {
-                          String dirp = "/media/pi/PiTB/media/TVShows/";
-                          String ap = dirp + snapshot.data[index]["tvfspath"];
-                          final String apiPU = "http://192.168.0.94:8181/OmxplayerPlayMediaReact?medPath=" + ap;
-                          playEpi(apiPU);
-                          Navigator.pop(context);
-                        },
-                        child: 
-                        Container(
-                          height: 75,
-                          color: Colors.amber[600],
-                          child:Center(
-                            child: Text(
-                              '${snapshot.data[index]['title']}',
-                              style: TextStyle(fontSize: 32, color: Colors.black),
+  return Navigator.push(
+    context,
+    MaterialPageRoute<void>(
+      builder: (BuildContext context) {
+        return Scaffold(
+          appBar: AppBar(
+            title: Text("Lower Decks"),
+            backgroundColor: Colors.lightGreen[900],
+          ),
+          body: Container(
+            decoration: BoxDecoration(
+              color: Colors.lightGreenAccent.shade400,
+            ),
+            child: Center(
+              child: FutureBuilder<List<dynamic>>(
+                future: fetchRaisedByWolves(),
+                builder: (BuildContext context, AsyncSnapshot snapshot) {
+                  if (snapshot.hasData) {
+                    return ListView.builder(
+                      padding: const EdgeInsets.all(8),
+                      itemCount: snapshot.data.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return GestureDetector(
+                          onTap: () {
+                            String dirp = "/media/pi/PiTB/media/TVShows/";
+                            String ap = dirp + snapshot.data[index]["tvfspath"];
+                            final String apiPU =
+                                "http://192.168.0.94:8181/OmxplayerPlayMediaReact?medPath=" +
+                                    ap;
+                            playEpi(apiPU);
+                            Navigator.pop(context);
+                          },
+                          child: Container(
+                            height: 75,
+                            color: Colors.amber[600],
+                            child: Center(
+                              child: Text(
+                                '${snapshot.data[index]['title']}',
+                                style: TextStyle(
+                                    fontSize: 32, color: Colors.black),
+                              ),
                             ),
                           ),
-                        ),
-                      );
-                    });
-                } else {
-                  return CircularProgressIndicator();
-                }}
+                        );
+                      },
+                    );
+                  } else {
+                    return CircularProgressIndicator();
+                  }
+                },
               ),
             ),
           ),
         );
-      }
+      },
     ),
   );
 }
@@ -192,8 +184,9 @@ _raisedByWolvesButtonColumn(String episode) {
         style: TextStyle(
           fontFamily: "Gothic",
           fontWeight: FontWeight.bold,
-          fontSize: 22, 
-          color: Colors.black),
+          fontSize: 22,
+          color: Colors.black,
+        ),
       ), // text
     ],
   );

@@ -18,56 +18,27 @@ class PrehistoricPlanetCard extends StatelessWidget {
             height: 290.0,
             child: Row(
               children: <Widget>[
-                Image.asset(
-                  'images/prehistoricplanet.jpg',
-                  fit: BoxFit.contain,
-                  height: 355.5,
-                  width: 200.0,
-                ),
+                prehistoricImage(),
                 Expanded(
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(0.0, 120.0, 0.0, 0.0),
                     child: Column(
                       children: <Widget>[
                         SizedBox.fromSize(
-                          size: Size(66, 66), // button width and height
+                          size: Size(66, 66),
                           child: ClipOval(
                             child: Material(
-                              color: Colors.lightGreenAccent
-                                  .shade400, //amber[400], // button color
+                              color: Colors.lightGreenAccent.shade400,
                               child: InkWell(
-                                splashColor: Colors.green, // splash color
+                                splashColor: Colors.green,
                                 onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute<void>(
-                                      builder: (BuildContext context) {
-                                        return Scaffold(
-                                          appBar: AppBar(
-                                            title: Text("Prehistoric Planet"),
-                                            backgroundColor:
-                                                Colors.lightGreen[900],
-                                          ),
-                                          body: Container(
-                                            decoration: BoxDecoration(
-                                              color: Colors
-                                                  .lightGreenAccent.shade400,
-                                            ),
-                                            child: Center(
-                                              child: mainlistbuilder(),
-                                            ),
-                                          ),
-                                        );
-                                      },
-                                    ),
-                                  );
+                                  _prehistoricNavigator(context);
                                 },
-                                child: seasons(), // button pressed
+                                child: prehistoricButtonColumn(),
                               ),
                             ),
                           ),
                         ),
-                        // const SizedBox(width: 12),
                       ],
                     ),
                   ),
@@ -81,19 +52,36 @@ class PrehistoricPlanetCard extends StatelessWidget {
   }
 }
 
-Widget seasons() {
-  return Column(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: <Widget>[
-      Text(
-        "1",
-        style: TextStyle(
-            fontFamily: "Gothic",
-            fontWeight: FontWeight.bold,
-            fontSize: 22,
-            color: Colors.black),
-      ), // text
-    ],
+Widget prehistoricImage() {
+  return Image.asset(
+    'images/prehistoricplanet.jpg',
+    fit: BoxFit.contain,
+    height: 355.5,
+    width: 200.0,
+  );
+}
+
+_prehistoricNavigator(BuildContext context) {
+  return Navigator.push(
+    context,
+    MaterialPageRoute<void>(
+      builder: (BuildContext context) {
+        return Scaffold(
+          appBar: AppBar(
+            title: Text("Prehistoric Planet"),
+            backgroundColor: Colors.lightGreen[900],
+          ),
+          body: Container(
+            decoration: BoxDecoration(
+              color: Colors.lightGreenAccent.shade400,
+            ),
+            child: Center(
+              child: mainlistbuilder(),
+            ),
+          ),
+        );
+      },
+    ),
   );
 }
 
@@ -147,7 +135,10 @@ Widget mainlistbuilder() {
                 child: Center(
                   child: Text(
                     '${snapshot.data[index]['title']}',
-                    style: TextStyle(fontSize: 32, color: Colors.black),
+                    style: TextStyle(
+                      fontSize: 32,
+                      color: Colors.black,
+                    ),
                   ),
                 ),
               ),
@@ -158,5 +149,22 @@ Widget mainlistbuilder() {
         return CircularProgressIndicator();
       }
     },
+  );
+}
+
+Widget prehistoricButtonColumn() {
+  return Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: <Widget>[
+      Text(
+        "1",
+        style: TextStyle(
+          fontFamily: "Gothic",
+          fontWeight: FontWeight.bold,
+          fontSize: 22,
+          color: Colors.black,
+        ),
+      ), // text
+    ],
   );
 }

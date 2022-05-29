@@ -18,12 +18,7 @@ class AlienWorldsCard extends StatelessWidget {
             height: 290.0,
             child: Row(
               children: <Widget>[
-                Image.asset(
-                  'images/alienworlds.webp',
-                  fit: BoxFit.contain,
-                  height: 355.5,
-                  width: 200.0,
-                ),
+                alienWorldsImage(),
                 Expanded(
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(0.0, 120.0, 0.0, 0.0),
@@ -38,37 +33,13 @@ class AlienWorldsCard extends StatelessWidget {
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute<void>(
-                                      builder: (BuildContext context) {
-                                        return Scaffold(
-                                          appBar: AppBar(
-                                            title: Text("Alien Worlds"),
-                                            backgroundColor:
-                                                Colors.lightGreen[900],
-                                          ),
-                                          body: Container(
-                                            decoration: BoxDecoration(
-                                              color: Colors
-                                                  .lightGreenAccent.shade400,
-                                            ),
-                                            child: Center(
-                                              child:
-                                                  _alienWorldsFutureBuilder(),
-                                            ),
-                                          ),
-                                        );
-                                      },
-                                    ),
-                                  );
-                                }, // button pressed
+                                  alienWorldsNavigator(context);
+                                },
                                 child: seasons(),
                               ),
                             ),
                           ),
                         ),
-                        // const SizedBox(width: 12),
                       ],
                     ),
                   ),
@@ -80,6 +51,39 @@ class AlienWorldsCard extends StatelessWidget {
       ),
     );
   }
+}
+
+Widget alienWorldsImage() {
+  return Image.asset(
+    'images/alienworlds.webp',
+    fit: BoxFit.contain,
+    height: 355.5,
+    width: 200.0,
+  );
+}
+
+alienWorldsNavigator(BuildContext context) {
+  return Navigator.push(
+    context,
+    MaterialPageRoute<void>(
+      builder: (BuildContext context) {
+        return Scaffold(
+          appBar: AppBar(
+            title: Text("Alien Worlds"),
+            backgroundColor: Colors.lightGreen[900],
+          ),
+          body: Container(
+            decoration: BoxDecoration(
+              color: Colors.lightGreenAccent.shade400,
+            ),
+            child: Center(
+              child: _alienWorldsFutureBuilder(),
+            ),
+          ),
+        );
+      },
+    ),
+  );
 }
 
 Widget _alienWorldsFutureBuilder() {

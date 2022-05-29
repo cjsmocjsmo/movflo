@@ -3,7 +3,6 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class VoyagerCard extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -19,166 +18,73 @@ class VoyagerCard extends StatelessWidget {
             height: 290.0,
             child: Row(
               children: <Widget>[
-                Image.asset(
-                  'images/voyager.webp',
-                  fit: BoxFit.contain,
-                    height: 355.5,
-                    width: 200.0,
-                ),
+                voyagerImage(),
                 Expanded(
                   child: Padding(
-                      padding: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
-                      child: Column(
-                        children: <Widget>[
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Column(
-                                children: <Widget>[
-                                  Padding(
-                                    padding: EdgeInsets.fromLTRB(4.0, 4.0, 4.0, 4.0),
-                                    child: SizedBox.fromSize(
-                                      size: Size(60, 60), // button width and height
-                                      child: ClipOval(
-                                        child: Material(
-                                          color: Colors.lightGreenAccent.shade400, //amber[400], // button color
-                                          child: InkWell(
-                                            splashColor: Colors.green, // splash color
-                                            onTap: () {
-                                               _voyager(context, '1');
-                                              }, // button pressed
-                                              child: _voyagerButtonColumn('1')
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                      Padding(
-                                      padding: EdgeInsets.fromLTRB(4.0, 4.0, 4.0, 4.0),
-                                      child: SizedBox.fromSize(
-                                          size: Size(60, 60), // button width and height
-                                          child: ClipOval(
-                                            child: Material(
-                                              color: Colors.lightGreenAccent.shade400, //amber[400], // button color
-                                              child: InkWell(
-                                                splashColor: Colors.green, // splash color
-                                                onTap: () {
-                                                  _voyager(context, '2');
-                                                }, // button pressed
-                                                child: _voyagerButtonColumn('2')
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsets.fromLTRB(4.0, 4.0, 4.0, 4.0),
-                                        child: SizedBox.fromSize(
-                                          size: Size(60, 60), // button width and height
-                                          child: ClipOval(
-                                            child: Material(
-                                              color: Colors.lightGreenAccent.shade400, //amber[400], // button color
-                                              child: InkWell(
-                                                splashColor: Colors.green, // splash color
-                                                onTap: () {
-                                                  _voyager(context, '3');
-                                                }, // button pressed
-                                                child: _voyagerButtonColumn('3')
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                      padding: EdgeInsets.fromLTRB(4.0, 4.0, 4.0, 4.0),
-                                      child: SizedBox.fromSize(
-                                          size: Size(60, 60), // button width and height
-                                          child: ClipOval(
-                                            child: Material(
-                                              color: Colors.lightGreenAccent.shade400, //amber[400], // button color
-                                              child: InkWell(
-                                                splashColor: Colors.green, // splash color
-                                                onTap: () {
-                                                  _voyager(context, '4');
-                                                }, // button pressed
-                                                child: _voyagerButtonColumn('4')
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ]),
-                                    Column(
-                                      children: <Widget>[
-                                      Padding(
-                                      padding: EdgeInsets.fromLTRB(4.0, 4.0, 4.0, 4.0),
-                                      child: SizedBox.fromSize(
-                                          size: Size(60, 60), // button width and height
-                                          child: ClipOval(
-                                            child: Material(
-                                              color: Colors.lightGreenAccent.shade400, //amber[400], // button color
-                                              child: InkWell(
-                                                splashColor: Colors.green, // splash color
-                                                onTap: () {
-                                                  _voyager(context, '5');
-                                                }, // button pressed
-                                                child: _voyagerButtonColumn('5')
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsets.fromLTRB(4.0, 4.0, 4.0, 4.0),
-                                        child: SizedBox.fromSize(
-                                          size: Size(60, 60), // button width and height
-                                          child: ClipOval(
-                                            child: Material(
-                                              color: Colors.lightGreenAccent.shade400, //amber[400], // button color
-                                              child: InkWell(
-                                                splashColor: Colors.green, // splash color
-                                                onTap: () {
-                                                  _voyager(context, '6');
-                                                }, // button pressed
-                                                child: _voyagerButtonColumn('6')
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                      padding: EdgeInsets.fromLTRB(4.0, 4.0, 4.0, 4.0),
-                                      child: SizedBox.fromSize(
-                                          size: Size(60, 60), // button width and height
-                                          child: ClipOval(
-                                            child: Material(
-                                              color: Colors.lightGreenAccent.shade400, //amber[400], // button color
-                                              child: InkWell(
-                                                splashColor: Colors.green, // splash color
-                                                onTap: () {
-                                                  _voyager(context, '7');
-                                                }, // button pressed
-                                                child: _voyagerButtonColumn('7')
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
+                    padding: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+                    child: Column(
+                      children: <Widget>[
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Column(
+                              children: <Widget>[
+                                _voyagerSeasons(context, "1"),
+                                _voyagerSeasons(context, "2"),
+                                _voyagerSeasons(context, "3"),
+                                _voyagerSeasons(context, "4"),
+                              ],
+                            ),
+                            Column(
+                              children: <Widget>[
+                                _voyagerSeasons(context, "5"),
+                                _voyagerSeasons(context, "6"),
+                                _voyagerSeasons(context, "7"),
                               ],
                             ),
                           ],
                         ),
-                      ],   
+                      ],
                     ),
                   ),
                 ),
-              ]
+              ],
             ),
           ),
         ),
       ),
     );
   }
+}
+
+Widget voyagerImage() {
+  return Image.asset(
+    'images/voyager.webp',
+    fit: BoxFit.contain,
+    height: 355.5,
+    width: 200.0,
+  );
+}
+
+_voyagerSeasons(BuildContext context, String snum) {
+  return Padding(
+    padding: EdgeInsets.fromLTRB(4.0, 4.0, 4.0, 4.0),
+    child: SizedBox.fromSize(
+      size: Size(60, 60),
+      child: ClipOval(
+        child: Material(
+          color: Colors.lightGreenAccent.shade400,
+          child: InkWell(
+            splashColor: Colors.green,
+            onTap: () {
+              _voyager(context, snum);
+            },
+            child: _voyagerButtonColumn(snum),
+          ),
+        ),
+      ),
+    ),
+  );
 }
 
 Future<void> playEpi(playURL) async {
@@ -191,9 +97,7 @@ Future<void> playEpi(playURL) async {
 }
 
 _voyager(BuildContext context, String seasonNum) {
-  
   Future<List<dynamic>> fetchVoyagerSeason1() async {
-
     final String api1Url = "http://192.168.0.94:8888/intVoyager?season=01";
     final String api2Url = "http://192.168.0.94:8888/intVoyager?season=02";
     final String api3Url = "http://192.168.0.94:8888/intVoyager?season=03";
@@ -226,56 +130,61 @@ _voyager(BuildContext context, String seasonNum) {
     }
   }
 
-  return Navigator.push(context, MaterialPageRoute<void>(
-    builder: (BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Voyager"),
-        backgroundColor: Colors.lightGreen[900],
-      ),
-      body: Container(
-        decoration: BoxDecoration(
-          color: Colors.lightGreenAccent.shade400,
-        ),
-        child: Center(
-          child:
-            FutureBuilder<List<dynamic>>(
-              future: fetchVoyagerSeason1(),
-              builder: (BuildContext context,AsyncSnapshot snapshot) {
-                if (snapshot.hasData) {
-                  return ListView.builder(
-                    padding: const EdgeInsets.all(8),
-                    itemCount: snapshot.data.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return GestureDetector(
-                        onTap: () {
-                          String dirp = "/media/pi/PiTB/media/TVShows/";
-                          String ap = dirp + snapshot.data[index]["tvfspath"];
-                          final String apiPU = "http://192.168.0.94:8181/OmxplayerPlayMediaReact?medPath=" + ap;
-                          playEpi(apiPU);
-                          Navigator.pop(context);
-                        },
-                        child: 
-                        Container(
-                          height: 75,
-                          color: Colors.amber[600],
-                          child:Center(
-                            child: Text(
-                              '${snapshot.data[index]['title']}',
-                              style: TextStyle(fontSize: 32, color: Colors.black),
+  return Navigator.push(
+    context,
+    MaterialPageRoute<void>(
+      builder: (BuildContext context) {
+        return Scaffold(
+          appBar: AppBar(
+            title: Text("Voyager"),
+            backgroundColor: Colors.lightGreen[900],
+          ),
+          body: Container(
+            decoration: BoxDecoration(
+              color: Colors.lightGreenAccent.shade400,
+            ),
+            child: Center(
+              child: FutureBuilder<List<dynamic>>(
+                future: fetchVoyagerSeason1(),
+                builder: (BuildContext context, AsyncSnapshot snapshot) {
+                  if (snapshot.hasData) {
+                    return ListView.builder(
+                      padding: const EdgeInsets.all(8),
+                      itemCount: snapshot.data.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return GestureDetector(
+                          onTap: () {
+                            String dirp = "/media/pi/PiTB/media/TVShows/";
+                            String ap = dirp + snapshot.data[index]["tvfspath"];
+                            final String apiPU =
+                                "http://192.168.0.94:8181/OmxplayerPlayMediaReact?medPath=" +
+                                    ap;
+                            playEpi(apiPU);
+                            Navigator.pop(context);
+                          },
+                          child: Container(
+                            height: 75,
+                            color: Colors.amber[600],
+                            child: Center(
+                              child: Text(
+                                '${snapshot.data[index]['title']}',
+                                style: TextStyle(
+                                    fontSize: 32, color: Colors.black),
+                              ),
                             ),
                           ),
-                        ),
-                      );
-                    });
-                } else {
-                  return CircularProgressIndicator();
-                }}
+                        );
+                      },
+                    );
+                  } else {
+                    return CircularProgressIndicator();
+                  }
+                },
               ),
             ),
           ),
         );
-      }
+      },
     ),
   );
 }
@@ -289,8 +198,9 @@ _voyagerButtonColumn(String episode) {
         style: TextStyle(
           fontFamily: "Gothic",
           fontWeight: FontWeight.bold,
-          fontSize: 22, 
-          color: Colors.black),
+          fontSize: 22,
+          color: Colors.black,
+        ),
       ), // text
     ],
   );
