@@ -36,6 +36,7 @@ import 'tvshows/moonknightcard.dart';
 import 'tvshows/strangenewworldscard.dart';
 import 'tvshows/prehistoricplanetcard.dart';
 import 'tvshows/obiwankenobicard.dart';
+import 'tvshows/msmarvelcard.dart';
 
 final List<String> movies = <String>[
   'Action',
@@ -225,6 +226,7 @@ Widget tvShowsListView(BuildContext context) {
       MoonKnightCard(),
       ObiWanKenobiCard(),
       BookOfBobaFettCard(),
+      MsMarvelCard(),
       FoundationCard(),
       WheelOfTimeCard(),
       ReacherCard(),
