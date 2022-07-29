@@ -50,6 +50,7 @@ final List<String> movies = <String>[
   'Godzilla',
   'Harry Potter',
   'Indiana Jones',
+  'James Bond',
   'Jurassic Park',
   'John Wick',
   'John Wayne',
@@ -258,35 +259,6 @@ Widget tvShowsListView(BuildContext context) {
     ],
   );
 }
-
-
-// This works DONT DELETE
-// Widget tvShowsListView = ListView.builder(
-//   padding: const EdgeInsets.all(10.0),
-//   itemCount: tvShows.length,
-//   itemBuilder: (BuildContext context, int index) {
-//     return InkWell(
-//       child: Container(
-//         height: 50,
-//         color: Colors.amber[400],
-//         child: Center(
-//             child: Text('${tvShows[index]}',
-//             style: TextStyle(
-//               fontWeight: FontWeight.bold,
-//               fontSize: 22.0,
-//             )
-//           )
-//         ),
-//       ),
-//       onTap: () {
-//         Navigator.pushNamed(
-//           context,
-//           '/${tvShows[index]}',
-//         );
-//       },
-//     );
-//   }
-// );
 
 
 

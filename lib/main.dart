@@ -29,7 +29,7 @@ import 'movies/therockscreen.dart';
 import 'movies/xmenscreen.dart';
 import 'movies/arnoldscreen.dart';
 import 'tvshows/startrektvcard.dart';
-// import 'tvshows/mastersoftheuniversecard.dart';
+import 'movies/jamesbondscreen.dart';
 
 void main() => runApp(MovFlo());
 
@@ -52,23 +52,24 @@ class MovFlo extends StatelessWidget {
       '/Godzilla': (context) => GodzillaScreen(),
       '/Harry Potter': (context) => HarryPotterScreen(),
       '/Indiana Jones': (context) => IndianaJonesScreen(),
-      '/Jurassic Park': (context) => JurassicParkScreen(),
-      '/John Wick': (context) => JohnWickScreen(),
+      '/James Bond': (context) => JamesBondScreen(),
       '/John Wayne': (context) => JohnWayneScreen(),
+      '/John Wick': (context) => JohnWickScreen(),
+      '/Jurassic Park': (context) => JurassicParkScreen(),
       '/Kings Men': (context) => KingsmenScreen(),
       '/Men In Black': (context) => MenInBlackScreen(),
       '/Misc': (context) => MiscScreen(),
       '/Nicolas Cage': (context) => NicolasCageScreen(),
       '/Pirates': (context) => PiratesScreen(),
       '/Riddick': (context) => RiddickScreen(),
-      '/Star Wars': (context) => StarWarsScreen(),
+      '/SciFi': (context) => SciFiScreen(),
       '/Star Trek': (context) => StarTrekScreen(),
       '/Star Trek TV': (context) => StarTrekTVCard(),
+      '/Star Wars': (context) => StarWarsScreen(),
       '/Super Heros': (context) => SuperHerosScreen(),
-      '/SciFi': (context) => SciFiScreen(),
+      '/The Rock': (context) => TheRockScreen(),
       '/Tom Cruize': (context) => TomCruizeScreen(),
       '/Tremors': (context) => TremorsScreen(),
-      '/The Rock': (context) => TheRockScreen(),
       '/X-Men': (context) => XMenScreen(),
     });
   }

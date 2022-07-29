@@ -3,8 +3,8 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:transparent_image/transparent_image.dart';
 
-class CartoonsScreen extends StatelessWidget {
-  final String apiUrl = "http://192.168.0.94:8888/intCartoons";
+class JamesBondScreen extends StatelessWidget {
+  final String apiUrl = "http://192.168.0.94:8888/intJamesBond";
 
   Future<List<dynamic>> fetchMovies() async {
     var result = await http.get(Uri.parse(apiUrl));
@@ -30,7 +30,7 @@ class CartoonsScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.lightGreen[900],
         title: Text(
-          "Cartoons",
+          "JamesBond",
           style: TextStyle(color: Colors.white),
         ),
       ),
@@ -42,6 +42,7 @@ class CartoonsScreen extends StatelessWidget {
           future: fetchMovies(),
           builder: (BuildContext context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
+              print(snapshot.data);
               return GridView.builder(
                   gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                     maxCrossAxisExtent: 200,
@@ -52,27 +53,34 @@ class CartoonsScreen extends StatelessWidget {
                   itemCount: snapshot.data.length,
                   itemBuilder: (BuildContext context, index) {
                     return Container(
-                        padding: const EdgeInsets.all(8),
-                        child: GestureDetector(
-                          onTap: () {
-                            final String ap = _movfspath(snapshot.data[index]);
-                            final String apiPU =
-                                "http://192.168.0.94:8181/OmxplayerPlayMediaReact?medPath=" +
-                                    ap;
-                            print(apiPU);
-                            final String apiPlayUrl = apiPU;
+                      padding: const EdgeInsets.all(8),
+                      child: GestureDetector(
+                        onTap: () {
+                          final String ap = _movfspath(snapshot.data[index]);
+                          final String apiPU =
+                              "http://192.168.0.94:8181/OmxplayerPlayMediaReact?medPath=" +
+                                  ap;
+                          print(apiPU);
+                          final String apiPlayUrl = apiPU;
 
-                            foo(apiPlayUrl);
-                            Navigator.pop(context);
-                          },
-                          child: FadeInImage.memoryNetwork(
-                            placeholder: kTransparentImage,
-                            image: _thumb(snapshot.data[index]),
-                            fit: BoxFit.contain,
-                            height: 400.0,
-                            width: 200.0,
-                          ),
-                        ));
+                          foo(apiPlayUrl);
+                          Navigator.pop(context);
+                        },
+                        child: FadeInImage.memoryNetwork(
+                          placeholder: kTransparentImage,
+                          image: _thumb(snapshot.data[index]),
+                          fit: BoxFit.contain,
+                          height: 400.0,
+                          width: 200.0,
+                        ),
+
+                        //  Image.network(_thumb(snapshot.data[index]),
+                        //   fit: BoxFit.contain,
+                        //     height: 400.0,
+                        //     width: 200.0,
+                        // )
+                      ),
+                    );
                   });
             } else {
               return Center(child: CircularProgressIndicator());
