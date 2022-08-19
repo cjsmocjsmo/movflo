@@ -69,7 +69,7 @@ sheHulkNavigator(BuildContext context) {
       builder: (BuildContext context) {
         return Scaffold(
           appBar: AppBar(
-            title: Text("Alien Worlds"),
+            title: Text("She Hulk"),
             backgroundColor: Colors.lightGreen[900],
           ),
           body: Container(
