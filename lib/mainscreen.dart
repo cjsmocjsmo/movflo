@@ -37,6 +37,8 @@ import 'tvshows/strangenewworldscard.dart';
 import 'tvshows/prehistoricplanetcard.dart';
 import 'tvshows/obiwankenobicard.dart';
 import 'tvshows/msmarvelcard.dart';
+import 'tvshows/iamgrootcard.dart';
+import 'tvshows/shehulkcard.dart';
 
 final List<String> movies = <String>[
   'Action',
@@ -222,22 +224,15 @@ Widget tvShowsListView(BuildContext context) {
     padding: const EdgeInsets.all(10.0),
     children: <Widget>[
       PrehistoricPlanetCard(),
-      StrangeNewWorldsCard(),
       HaloCard(),
-      MoonKnightCard(),
-      ObiWanKenobiCard(),
-      BookOfBobaFettCard(),
-      MsMarvelCard(),
       FoundationCard(),
       WheelOfTimeCard(),
-      ReacherCard(),
-      CowboyBebopCard(),
-      LostInSpaceCard(),
-      LokiCard(),
-      HawkeyeCard(),
+      OrvilleCard(),
+      ObiWanKenobiCard(),
+      BookOfBobaFettCard(),
       BadBatchCard(),
       MandalorianCard(),
-      OrvilleCard(),
+      StrangeNewWorldsCard(),
       LowerDecksCard(),
       ProdigyCard(),
       DiscoveryCard(),
@@ -246,12 +241,21 @@ Widget tvShowsListView(BuildContext context) {
       NextGenCard(),
       VoyagerCard(),
       StarTrekTVCard(),
+      IAmGrootCard(),
+      SheHulkCard(),
+      MsMarvelCard(),
+      LokiCard(),
+      HawkeyeCard(),
       VisionsCard(),
       FalconWinterSoldierCard(),
       WandaVisionCard(),
+      MoonKnightCard(),
+      LostInSpaceCard(),
+      ReacherCard(),
       WhatIfCard(),
       YTheLastManCard(),
       ForAllManKindCard(),
+      CowboyBebopCard(),
       AlienWorldsCard(),
       AlteredCarbonCard(),
       RaisedByWolvesCard(),
@@ -259,7 +263,3 @@ Widget tvShowsListView(BuildContext context) {
     ],
   );
 }
-
-
-
-
