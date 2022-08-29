@@ -54,7 +54,7 @@ class ReacherCard extends StatelessWidget {
 
 Widget reacherImage() {
   return Image.asset(
-    'images/reacher.jpg',
+    'images/reacher.webp',
     fit: BoxFit.contain,
     height: 355.5,
     width: 200.0,

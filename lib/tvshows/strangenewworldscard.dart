@@ -54,7 +54,7 @@ class StrangeNewWorldsCard extends StatelessWidget {
 
 Widget strangeNewWorldsImage() {
   return Image.asset(
-    'images/star_trek_strange_new_worlds.jpg',
+    'images/star_trek_strange_new_worlds.webp',
     fit: BoxFit.contain,
     height: 355.5,
     width: 200.0,

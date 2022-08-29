@@ -55,7 +55,7 @@ class MsMarvelCard extends StatelessWidget {
 
 Widget msMarvelImage() {
   return Image.asset(
-    'images/ms_marvel.jpg',
+    'images/ms_marvel.webp',
     fit: BoxFit.contain,
     height: 355.5,
     width: 200.0,

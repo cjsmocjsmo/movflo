@@ -55,7 +55,7 @@ class SheHulkCard extends StatelessWidget {
 
 Widget sheHulkImage() {
   return Image.asset(
-    'images/shehulk.jpg',
+    'images/shehulk.webp',
     fit: BoxFit.contain,
     height: 355.5,
     width: 200.0,

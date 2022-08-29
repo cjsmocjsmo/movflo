@@ -3,7 +3,6 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class HaloCard extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -55,7 +54,7 @@ class HaloCard extends StatelessWidget {
 
 Widget haloImage() {
   return Image.asset(
-    'images/halo.jpg',
+    'images/halo.webp',
     fit: BoxFit.contain,
     height: 355.5,
     width: 200.0,

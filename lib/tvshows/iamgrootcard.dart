@@ -55,7 +55,7 @@ class IAmGrootCard extends StatelessWidget {
 
 Widget iAmGrootImage() {
   return Image.asset(
-    'images/iamgroot.jpg',
+    'images/iamgroot.webp',
     fit: BoxFit.contain,
     height: 355.5,
     width: 200.0,

@@ -54,7 +54,7 @@ class ObiWanKenobiCard extends StatelessWidget {
 
 Widget obiWanImage() {
   return Image.asset(
-    'images/obi-wankenobi.jpg',
+    'images/obi-wankenobi.webp',
     fit: BoxFit.contain,
     height: 355.5,
     width: 200.0,

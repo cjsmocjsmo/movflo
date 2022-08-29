@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-class PrehistoricPlanetCard extends StatelessWidget {
+class HouseOfTheDragonCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -18,23 +18,24 @@ class PrehistoricPlanetCard extends StatelessWidget {
             height: 290.0,
             child: Row(
               children: <Widget>[
-                prehistoricImage(),
+                houseOfTheDragonImage(),
                 Expanded(
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(0.0, 120.0, 0.0, 0.0),
                     child: Column(
                       children: <Widget>[
                         SizedBox.fromSize(
-                          size: Size(66, 66),
+                          size: Size(66, 66), // button width and height
                           child: ClipOval(
                             child: Material(
-                              color: Colors.lightGreenAccent.shade400,
+                              color: Colors.lightGreenAccent
+                                  .shade400, //amber[400], // button color
                               child: InkWell(
-                                splashColor: Colors.green,
+                                splashColor: Colors.green, // splash color
                                 onTap: () {
-                                  _prehistoricNavigator(context);
+                                  houseOfTheDragonNavigator(context);
                                 },
-                                child: prehistoricButtonColumn(),
+                                child: seasons(),
                               ),
                             ),
                           ),
@@ -52,23 +53,23 @@ class PrehistoricPlanetCard extends StatelessWidget {
   }
 }
 
-Widget prehistoricImage() {
+Widget houseOfTheDragonImage() {
   return Image.asset(
-    'images/prehistoricplanet.webp',
+    'images/houseofthedragon.webp',
     fit: BoxFit.contain,
     height: 355.5,
     width: 200.0,
   );
 }
 
-_prehistoricNavigator(BuildContext context) {
+houseOfTheDragonNavigator(BuildContext context) {
   return Navigator.push(
     context,
     MaterialPageRoute<void>(
       builder: (BuildContext context) {
         return Scaffold(
           appBar: AppBar(
-            title: Text("Prehistoric Planet"),
+            title: Text("Alien Worlds"),
             backgroundColor: Colors.lightGreen[900],
           ),
           body: Container(
@@ -76,7 +77,7 @@ _prehistoricNavigator(BuildContext context) {
               color: Colors.lightGreenAccent.shade400,
             ),
             child: Center(
-              child: mainlistbuilder(),
+              child: _houseOfTheDragonFutureBuilder(),
             ),
           ),
         );
@@ -85,9 +86,9 @@ _prehistoricNavigator(BuildContext context) {
   );
 }
 
-Widget mainlistbuilder() {
+Widget _houseOfTheDragonFutureBuilder() {
   final String apiUrl =
-      "http://192.168.0.94:8888/intPrehistoricPlanet?season=01";
+      "http://192.168.0.94:8888/intHouseOfTheDragon?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;
@@ -135,10 +136,7 @@ Widget mainlistbuilder() {
                 child: Center(
                   child: Text(
                     '${snapshot.data[index]['title']}',
-                    style: TextStyle(
-                      fontSize: 32,
-                      color: Colors.black,
-                    ),
+                    style: TextStyle(fontSize: 32, color: Colors.black),
                   ),
                 ),
               ),
@@ -152,18 +150,18 @@ Widget mainlistbuilder() {
   );
 }
 
-Widget prehistoricButtonColumn() {
+Widget seasons() {
   return Column(
     mainAxisAlignment: MainAxisAlignment.center,
     children: <Widget>[
+      // Icon(Icons.call), // icon
       Text(
         "1",
         style: TextStyle(
-          fontFamily: "Gothic",
-          fontWeight: FontWeight.bold,
-          fontSize: 22,
-          color: Colors.black,
-        ),
+            fontFamily: "Gothic",
+            fontWeight: FontWeight.bold,
+            fontSize: 22,
+            color: Colors.black),
       ), // text
     ],
   );

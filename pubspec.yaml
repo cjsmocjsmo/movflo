@@ -52,43 +52,8 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   assets:
-    - images/alienworlds.webp
-    - images/alteredcarbon.webp
-    - images/badbatch.webp
-    - images/discovery.webp
-    - images/enterprise.webp
-    - images/falconwintersoldier.webp
-    - images/forallmankind.webp
-    - images/lostinspace.webp
-    - images/lowerdecks.webp
-    - images/mandalorian.webp
-    - images/nextgen.webp
-    - images/orville.webp
-    - images/picard.webp
-    - images/raisedbywolves.webp
-    - images/sttv.webp
-    - images/voyager.webp
-    - images/wandavision.webp
-    - images/loki.webp
-    - images/mastersoftheuniverse.webp
-    - images/whatif.webp
-    - images/YTheLastMan.webp
-    - images/VisionsThumb.webp
-    - images/Foundation_1Thumb.webp
-    - images/prodigyposter.webp
-    - images/wheeloftime.webp
-    - images/cowboy_bebop.webp
-    - images/Hawkeye.webp
-    - images/bobafett.webp
-    - images/reacher.jpg
-    - images/halo.jpg
-    - images/moonknight.jpg
-    - images/star_trek_strange_new_worlds.jpg
-    - images/prehistoricplanet.jpg
-    - images/obi-wankenobi.jpg
-    - images/ms_marvel.jpg
-    - images/iamgroot.jpg
-    - images/shehulk.jpg
+    - images/
+    
     
     
  

@@ -131,7 +131,7 @@ class MainScreen extends StatelessWidget {
         appBar: AppBar(
           title: Text("Movies TVShows"),
           backgroundColor: Colors.lightGreen[900],
-          bottom: TabBar(
+          bottom: const TabBar(
             tabs: [
               Tab(icon: Icon(Icons.movie_creation_sharp)),
               Tab(icon: Icon(Icons.tv_sharp)),
