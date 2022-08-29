@@ -80,7 +80,7 @@ class BookOfBobaFettCard extends StatelessWidget {
 
 Widget bookOfBobaFettImage() {
   return Image.asset(
-    'images/bobafett.webp',
+    'images/book_of_boba_fett.webp',
     fit: BoxFit.contain,
     height: 355.5,
     width: 200.0,
