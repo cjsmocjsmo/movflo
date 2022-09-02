@@ -39,6 +39,8 @@ import 'tvshows/obiwankenobicard.dart';
 import 'tvshows/msmarvelcard.dart';
 import 'tvshows/iamgrootcard.dart';
 import 'tvshows/shehulkcard.dart';
+import 'tvshows/houseofthedragoncard.dart';
+import 'tvshows/thelordoftheringstheringsofpowercard.dart';
 
 final List<String> movies = <String>[
   'Action',
@@ -71,41 +73,6 @@ final List<String> movies = <String>[
   'Tremors',
   'The Rock',
   'X-Men',
-];
-
-final List<String> tvShows = <String>[
-  'Altered Carbon',
-  'Alien Worlds',
-  'Discovery',
-  'Enterprise',
-  'For All Man Kind',
-  'Last Ship',
-  'Lost In Space',
-  'Lower Decks',
-  'Prodigy',
-  'Mandalorian',
-  'Next Generation',
-  'Orville',
-  'Picard',
-  'Raised By Wolves',
-  'Sean Carroll',
-  'SpaceTime',
-  'Star Trek TV',
-  'Falcon Winter Soldier',
-  'Voyager',
-  'WandaVision',
-  'Invincible',
-  'The Bad Batch',
-  'Loki',
-  'Masters Of The Universe',
-  'WheelOfTime',
-  'Cowboy Bebop',
-  'Hawkeye',
-  'BookOfBobaFett',
-  'Reacher',
-  'Halo',
-  'MoonKnight'
-      'StrangeNewWorlds',
 ];
 
 class MainScreen extends StatelessWidget {
@@ -224,7 +191,10 @@ Widget tvShowsListView(BuildContext context) {
     shrinkWrap: true,
     padding: const EdgeInsets.all(10.0),
     children: <Widget>[
-      PrehistoricPlanetCard(),
+      LowerDecksCard(),
+      SheHulkCard(),
+      HouseOfTheDragonCard(),
+      TheLordOfTheRingsTheRingsOfPowerCard(),
       HaloCard(),
       FoundationCard(),
       WheelOfTimeCard(),
@@ -234,7 +204,6 @@ Widget tvShowsListView(BuildContext context) {
       BadBatchCard(),
       MandalorianCard(),
       StrangeNewWorldsCard(),
-      LowerDecksCard(),
       ProdigyCard(),
       DiscoveryCard(),
       PicardCard(),
@@ -243,7 +212,6 @@ Widget tvShowsListView(BuildContext context) {
       VoyagerCard(),
       StarTrekTVCard(),
       IAmGrootCard(),
-      SheHulkCard(),
       MsMarvelCard(),
       LokiCard(),
       HawkeyeCard(),
@@ -257,6 +225,7 @@ Widget tvShowsListView(BuildContext context) {
       YTheLastManCard(),
       ForAllManKindCard(),
       CowboyBebopCard(),
+      PrehistoricPlanetCard(),
       AlienWorldsCard(),
       AlteredCarbonCard(),
       RaisedByWolvesCard(),

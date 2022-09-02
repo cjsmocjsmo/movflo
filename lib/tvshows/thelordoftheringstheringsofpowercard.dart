@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-class HouseOfTheDragonCard extends StatelessWidget {
+class TheLordOfTheRingsTheRingsOfPowerCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -18,7 +18,7 @@ class HouseOfTheDragonCard extends StatelessWidget {
             height: 290.0,
             child: Row(
               children: <Widget>[
-                houseOfTheDragonImage(),
+                theLordOfTheRingsTheRingsOfPowerImage(),
                 Expanded(
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(0.0, 120.0, 0.0, 0.0),
@@ -33,7 +33,7 @@ class HouseOfTheDragonCard extends StatelessWidget {
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
-                                  houseOfTheDragonNavigator(context);
+                                  theLordOfTheRingsTheRingsOfPowerNavigator(context);
                                 },
                                 child: seasons(),
                               ),
@@ -53,16 +53,16 @@ class HouseOfTheDragonCard extends StatelessWidget {
   }
 }
 
-Widget houseOfTheDragonImage() {
+Widget theLordOfTheRingsTheRingsOfPowerImage() {
   return Image.asset(
-    'images/houseofthedragon.webp',
+    'images/thelordoftheringsringsofpower.webp',
     fit: BoxFit.contain,
     height: 355.5,
     width: 200.0,
   );
 }
 
-houseOfTheDragonNavigator(BuildContext context) {
+theLordOfTheRingsTheRingsOfPowerNavigator(BuildContext context) {
   return Navigator.push(
     context,
     MaterialPageRoute<void>(
@@ -77,7 +77,7 @@ houseOfTheDragonNavigator(BuildContext context) {
               color: Colors.lightGreenAccent.shade400,
             ),
             child: Center(
-              child: _houseOfTheDragonFutureBuilder(),
+              child: _theLordOfTheRingsTheRingsOfPowerFutureBuilder(),
             ),
           ),
         );
@@ -86,9 +86,9 @@ houseOfTheDragonNavigator(BuildContext context) {
   );
 }
 
-Widget _houseOfTheDragonFutureBuilder() {
+Widget _theLordOfTheRingsTheRingsOfPowerFutureBuilder() {
   final String apiUrl =
-      "http://192.168.0.94:8888/intHouseOfTheDragon?season=01";
+      "http://192.168.0.94:8888/intTheLordOfTheRingsTheRingsOfPower?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;
