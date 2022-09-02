@@ -69,7 +69,7 @@ theLordOfTheRingsTheRingsOfPowerNavigator(BuildContext context) {
       builder: (BuildContext context) {
         return Scaffold(
           appBar: AppBar(
-            title: Text("House Of The Dragon"),
+            title: Text("The Lord Of The Rings The Rings Of Power"),
             backgroundColor: Colors.lightGreen[900],
           ),
           body: Container(
