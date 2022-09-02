@@ -30,6 +30,7 @@ import 'movies/xmenscreen.dart';
 import 'movies/arnoldscreen.dart';
 import 'tvshows/startrektvcard.dart';
 import 'movies/jamesbondscreen.dart';
+import 'movies/transformersscreen.dart';
 
 void main() => runApp(MovFlo());
 
@@ -69,6 +70,7 @@ class MovFlo extends StatelessWidget {
       '/Super Heros': (context) => SuperHerosScreen(),
       '/The Rock': (context) => TheRockScreen(),
       '/Tom Cruize': (context) => TomCruizeScreen(),
+      '/Transformers': (context) => TransformersScreen(),
       '/Tremors': (context) => TremorsScreen(),
       '/X-Men': (context) => XMenScreen(),
     });

@@ -67,6 +67,7 @@ final List<String> movies = <String>[
   'Super Heros',
   'SciFi',
   'Tom Cruize',
+  'Transformers',
   'Tremors',
   'The Rock',
   'X-Men',
