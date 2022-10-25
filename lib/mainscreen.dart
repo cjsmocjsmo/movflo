@@ -42,6 +42,7 @@ import 'tvshows/shehulkcard.dart';
 import 'tvshows/houseofthedragoncard.dart';
 import 'tvshows/thelordoftheringstheringsofpowercard.dart';
 import 'tvshows/andorcard.dart';
+import 'tvshows/nightskycard.dart';
 
 final List<String> movies = <String>[
   'Action',
@@ -194,6 +195,7 @@ Widget tvShowsListView(BuildContext context) {
     children: <Widget>[
       AndorCard(),
       LowerDecksCard(),
+      NightSkyCard(),
       SheHulkCard(),
       HouseOfTheDragonCard(),
       TheLordOfTheRingsTheRingsOfPowerCard(),
