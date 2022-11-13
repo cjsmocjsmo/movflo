@@ -97,7 +97,7 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2,
+      length: 3,
       child: Scaffold(
         appBar: AppBar(
           title: Text("Movies TVShows"),
@@ -105,6 +105,7 @@ class MainScreen extends StatelessWidget {
           bottom: const TabBar(
             tabs: [
               Tab(icon: Icon(Icons.movie_creation_sharp)),
+              Tab(icon: Icon(Icons.tv_sharp)),
               Tab(icon: Icon(Icons.tv_sharp)),
             ],
           ),
@@ -149,6 +150,7 @@ class MainScreen extends StatelessWidget {
             children: [
               moviesListView,
               tvShowsListView(context),
+              tvShowsListView2(context),
             ],
           ),
         ),
@@ -217,6 +219,57 @@ Widget tvShowsListView(BuildContext context) {
       NextGenCard(),
       VoyagerCard(),
       StarTrekTVCard(),
+      // IAmGrootCard(),
+      // MsMarvelCard(),
+      // LokiCard(),
+      // HawkeyeCard(),
+      // VisionsCard(),
+      // FalconWinterSoldierCard(),
+      // WandaVisionCard(),
+      // MoonKnightCard(),
+      // LostInSpaceCard(),
+      // ReacherCard(),
+      // WhatIfCard(),
+      // YTheLastManCard(),
+      // ForAllManKindCard(),
+      // CowboyBebopCard(),
+      // PrehistoricPlanetCard(),
+      // AlienWorldsCard(),
+      // AlteredCarbonCard(),
+      // RaisedByWolvesCard(),
+      // MastersOfTheUniverseCard(),
+    ],
+  );
+}
+
+Widget tvShowsListView2(BuildContext context) {
+  return ListView(
+    shrinkWrap: true,
+    padding: const EdgeInsets.all(10.0),
+    children: <Widget>[
+      // AndorCard(),
+      // LowerDecksCard(),
+      // NightSkyCard(),
+      // SheHulkCard(),
+      // HouseOfTheDragonCard(),
+      // TheLordOfTheRingsTheRingsOfPowerCard(),
+      // HaloCard(),
+      // FoundationCard(),
+      // WheelOfTimeCard(),
+      // OrvilleCard(),
+      // TalesOfTheJediCard(),
+      // ObiWanKenobiCard(),
+      // BookOfBobaFettCard(),
+      // BadBatchCard(),
+      // MandalorianCard(),
+      // StrangeNewWorldsCard(),
+      // ProdigyCard(),
+      // DiscoveryCard(),
+      // PicardCard(),
+      // EnterpriseCard(),
+      // NextGenCard(),
+      // VoyagerCard(),
+      // StarTrekTVCard(),
       IAmGrootCard(),
       MsMarvelCard(),
       LokiCard(),

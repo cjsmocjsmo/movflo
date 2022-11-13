@@ -65,13 +65,12 @@ class JurassicParkScreen extends StatelessWidget {
                             foo(apiPlayUrl);
                             Navigator.pop(context);
                           },
-                          child: FadeInImage.memoryNetwork(
-                            placeholder: kTransparentImage,
-                            image: _thumb(snapshot.data[index]),
-                            fit: BoxFit.contain,
-                            height: 400.0,
-                            width: 200.0,
-                          ),
+                          child: Image.network(
+                              _thumb(snapshot.data[index]),
+                              fit: BoxFit.contain,
+                              height: 400.0,
+                              width: 200.0,
+                            )
                         ));
                   });
             } else {

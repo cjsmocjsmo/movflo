@@ -66,19 +66,20 @@ class JamesBondScreen extends StatelessWidget {
                           foo(apiPlayUrl);
                           Navigator.pop(context);
                         },
-                        child: FadeInImage.memoryNetwork(
-                          placeholder: kTransparentImage,
-                          image: _thumb(snapshot.data[index]),
-                          fit: BoxFit.contain,
-                          height: 400.0,
-                          width: 200.0,
-                        ),
-
-                        //  Image.network(_thumb(snapshot.data[index]),
+                        child: 
+                        // FadeInImage.memoryNetwork(
+                        //   placeholder: kTransparentImage,
+                        //   image: _thumb(snapshot.data[index]),
                         //   fit: BoxFit.contain,
-                        //     height: 400.0,
-                        //     width: 200.0,
-                        // )
+                        //   height: 400.0,
+                        //   width: 200.0,
+                        // ),
+
+                         Image.network(_thumb(snapshot.data[index]),
+                          fit: BoxFit.contain,
+                            height: 400.0,
+                            width: 200.0,
+                        )
                       ),
                     );
                   });
