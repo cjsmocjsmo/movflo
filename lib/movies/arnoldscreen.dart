@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'package:transparent_image/transparent_image.dart';
+//import 'package:transparent_image/transparent_image.dart';
 
 class ArnoldScreen extends StatelessWidget {
   final String apiUrl = "http://192.168.0.94:8888/intArnold";

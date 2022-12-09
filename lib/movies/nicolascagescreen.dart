@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'package:transparent_image/transparent_image.dart';
+//import 'package:transparent_image/transparent_image.dart';
 
 class NicolasCageScreen extends StatelessWidget {
   final String apiUrl = "http://192.168.0.94:8888/intNicolasCage";
@@ -54,24 +54,24 @@ class NicolasCageScreen extends StatelessWidget {
                     return Container(
                         padding: const EdgeInsets.all(8),
                         child: GestureDetector(
-                          onTap: () {
-                            final String ap = _movfspath(snapshot.data[index]);
-                            final String apiPU =
-                                "http://192.168.0.94:8181/OmxplayerPlayMediaReact?medPath=" +
-                                    ap;
-                            print(apiPU);
-                            final String apiPlayUrl = apiPU;
+                            onTap: () {
+                              final String ap =
+                                  _movfspath(snapshot.data[index]);
+                              final String apiPU =
+                                  "http://192.168.0.94:8181/OmxplayerPlayMediaReact?medPath=" +
+                                      ap;
+                              print(apiPU);
+                              final String apiPlayUrl = apiPU;
 
-                            foo(apiPlayUrl);
-                            Navigator.pop(context);
-                          },
-                          child: Image.network(
+                              foo(apiPlayUrl);
+                              Navigator.pop(context);
+                            },
+                            child: Image.network(
                               _thumb(snapshot.data[index]),
                               fit: BoxFit.contain,
                               height: 400.0,
                               width: 200.0,
-                            )
-                        ));
+                            )));
                   });
             } else {
               return Center(child: CircularProgressIndicator());
