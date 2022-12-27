@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class BookOfBobaFettCard extends StatelessWidget {
-  // final String apiUrl = "http://192.168.0.94:8888/intBookOfBobaFett?season=01";
+  // final String apiUrl = "http://192.168.0.94:8888/BookOfBobaFett?season=01";
 
   // Future<List<dynamic>> fetchEpisodes() async {
   //   var result;
@@ -105,7 +105,7 @@ _bookOfBobaFettNavigator(BuildContext context) {
 }
 
 Widget bookOfBobaFettBody() {
-  final String apiUrl = "http://192.168.0.94:8888/intBookOfBobaFett?season=01";
+  final String apiUrl = "http://192.168.0.94:8888/BookOfBobaFett?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

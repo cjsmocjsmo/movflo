@@ -59,7 +59,7 @@ class FalconWinterSoldierCard extends StatelessWidget {
 
 _falsonNavigator(BuildContext context) {
   final String apiUrl =
-      "http://192.168.0.94:8888/intFalconWinterSoldier?season=01";
+      "http://192.168.0.94:8888/FalconWinterSoldier?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

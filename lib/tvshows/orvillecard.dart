@@ -77,9 +77,9 @@ Future<void> playEpi(playURL) async {
 
 _orville(BuildContext context, String seasonNum) {
   Future<List<dynamic>> fetchOrvilleSeason1() async {
-    final String api1Url = "http://192.168.0.94:8888/intOrville?season=01";
-    final String api2Url = "http://192.168.0.94:8888/intOrville?season=02";
-    final String api3Url = "http://192.168.0.94:8888/intOrville?season=03";
+    final String api1Url = "http://192.168.0.94:8888/Orville?season=01";
+    final String api2Url = "http://192.168.0.94:8888/Orville?season=02";
+    final String api3Url = "http://192.168.0.94:8888/Orville?season=03";
 
     if (seasonNum == '1') {
       var result = await http.get(Uri.parse(api1Url));

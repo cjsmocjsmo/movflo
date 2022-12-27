@@ -62,7 +62,7 @@ Widget visionImage() {
 }
 
 _visionNavigator(BuildContext context) {
-  final String apiUrl = "http://192.168.0.94:8888/intVisions?season=01";
+  final String apiUrl = "http://192.168.0.94:8888/Visions?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

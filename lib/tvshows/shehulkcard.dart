@@ -87,7 +87,7 @@ sheHulkNavigator(BuildContext context) {
 }
 
 Widget _sheHulkFutureBuilder() {
-  final String apiUrl = "http://192.168.0.94:8888/intSheHulk?season=01";
+  final String apiUrl = "http://192.168.0.94:8888/SheHulk?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

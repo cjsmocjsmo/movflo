@@ -3,14 +3,14 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class RaisedByWolvesCard extends StatelessWidget {
-  final String api1Url = "http://192.168.0.94:8888/intRaisedByWolves?season=01";
+  final String api1Url = "http://192.168.0.94:8888/RaisedByWolves?season=01";
 
   Future<List<dynamic>> fetchRaisedByWolvesSeason1() async {
     var result = await http.get(Uri.parse(api1Url));
     return json.decode(result.body);
   }
 
-  final String api2Url = "http://192.168.0.94:8888/intRaisedByWolves?season=02";
+  final String api2Url = "http://192.168.0.94:8888/RaisedByWolves?season=02";
 
   Future<List<dynamic>> fetchRaisedByWolvesSeason2() async {
     var result = await http.get(Uri.parse(api2Url));
@@ -103,10 +103,8 @@ Future<void> playEpi(playURL) async {
 
 _raisedByWolves(BuildContext context, String seasonNum) {
   Future<List<dynamic>> fetchRaisedByWolves() async {
-    final String api1Url =
-        "http://192.168.0.94:8888/intRaisedByWolves?season=01";
-    final String api2Url =
-        "http://192.168.0.94:8888/intRaisedByWolves?season=02";
+    final String api1Url = "http://192.168.0.94:8888/RaisedByWolves?season=01";
+    final String api2Url = "http://192.168.0.94:8888/RaisedByWolves?season=02";
     if (seasonNum == "1") {
       var result = await http.get(Uri.parse(api1Url));
       return json.decode(result.body);

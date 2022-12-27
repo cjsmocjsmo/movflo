@@ -62,7 +62,7 @@ Widget ythelastImage() {
 }
 
 _ythelastNavigator(BuildContext context) {
-  final String apiUrl = "http://192.168.0.94:8888/intYTheLastMan?season=01";
+  final String apiUrl = "http://192.168.0.94:8888/YTheLastMan?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

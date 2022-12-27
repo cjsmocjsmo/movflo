@@ -79,7 +79,7 @@ _badBatchNavigator(BuildContext context) {
 }
 
 Widget badBatchBody() {
-  final String apiUrl = "http://192.168.0.94:8888/intTheBadBatch?season=01";
+  final String apiUrl = "http://192.168.0.94:8888/TheBadBatch?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

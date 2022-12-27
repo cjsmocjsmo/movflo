@@ -81,9 +81,9 @@ Future<void> playEpi(playURL) async {
 
 _lostInSpace(BuildContext context, String seasonNum) {
   Future<List<dynamic>> fetchLostInSpace() async {
-    final String api1Url = "http://192.168.0.94:8888/intLostInSpace?season=01";
-    final String api2Url = "http://192.168.0.94:8888/intLostInSpace?season=02";
-    final String api3Url = "http://192.168.0.94:8888/intLostInSpace?season=03";
+    final String api1Url = "http://192.168.0.94:8888/LostInSpace?season=01";
+    final String api2Url = "http://192.168.0.94:8888/LostInSpace?season=02";
+    final String api3Url = "http://192.168.0.94:8888/LostInSpace?season=03";
 
     if (seasonNum == '1') {
       var result = await http.get(Uri.parse(api1Url));

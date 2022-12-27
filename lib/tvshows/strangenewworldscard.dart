@@ -62,8 +62,7 @@ Widget strangeNewWorldsImage() {
 }
 
 _strangeNewWorldsNavigator(BuildContext context) {
-  final String apiUrl =
-      "http://192.168.0.94:8888/intStrangeNewWorlds?season=01";
+  final String apiUrl = "http://192.168.0.94:8888/StrangeNewWorlds?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

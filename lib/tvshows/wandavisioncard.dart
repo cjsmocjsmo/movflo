@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class WandaVisionCard extends StatelessWidget {
-  // final String apiUrl = "http://192.168.0.94:8888/intWandaVision?season=01";
+  // final String apiUrl = "http://192.168.0.94:8888/WandaVision?season=01";
 
   // Future<List<dynamic>> fetchEpisodes() async {
   //   var result;
@@ -86,7 +86,7 @@ Widget wandaImage() {
 }
 
 _wandaNavigator(BuildContext context) {
-  final String apiUrl = "http://192.168.0.94:8888/intWandaVision?season=01";
+  final String apiUrl = "http://192.168.0.94:8888/WandaVision?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

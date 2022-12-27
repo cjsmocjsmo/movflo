@@ -87,7 +87,7 @@ andorNavigator(BuildContext context) {
 }
 
 Widget _andorFutureBuilder() {
-  final String apiUrl = "http://192.168.0.94:8888/intAndor?season=01";
+  final String apiUrl = "http://192.168.0.94:8888/Andor?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

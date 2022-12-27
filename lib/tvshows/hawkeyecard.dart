@@ -87,7 +87,7 @@ _hawkeyeNavigator(BuildContext context) {
 }
 
 Widget _hawkeyeFutureBuilder() {
-  final String apiUrl = "http://192.168.0.94:8888/intHawkeye?season=01";
+  final String apiUrl = "http://192.168.0.94:8888/Hawkeye?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

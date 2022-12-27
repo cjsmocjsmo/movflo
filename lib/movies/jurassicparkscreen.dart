@@ -4,7 +4,7 @@ import 'dart:convert';
 //import 'package:transparent_image/transparent_image.dart';
 
 class JurassicParkScreen extends StatelessWidget {
-  final String apiUrl = "http://192.168.0.94:8888/intJurassicPark";
+  final String apiUrl = "http://192.168.0.94:8888/JurassicPark";
 
   Future<List<dynamic>> fetchMovies() async {
     var result = await http.get(Uri.parse(apiUrl));

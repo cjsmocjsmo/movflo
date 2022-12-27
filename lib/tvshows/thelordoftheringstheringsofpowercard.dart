@@ -33,7 +33,8 @@ class TheLordOfTheRingsTheRingsOfPowerCard extends StatelessWidget {
                               child: InkWell(
                                 splashColor: Colors.green, // splash color
                                 onTap: () {
-                                  theLordOfTheRingsTheRingsOfPowerNavigator(context);
+                                  theLordOfTheRingsTheRingsOfPowerNavigator(
+                                      context);
                                 },
                                 child: seasons(),
                               ),
@@ -88,7 +89,7 @@ theLordOfTheRingsTheRingsOfPowerNavigator(BuildContext context) {
 
 Widget _theLordOfTheRingsTheRingsOfPowerFutureBuilder() {
   final String apiUrl =
-      "http://192.168.0.94:8888/intTheLordOfTheRingsTheRingsOfPower?season=01";
+      "http://192.168.0.94:8888/TheLordOfTheRingsTheRingsOfPower?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

@@ -79,7 +79,7 @@ _cowboysNavigator(BuildContext context) {
 }
 
 Widget cowboyBody() {
-  final String apiUrl = "http://192.168.0.94:8888/intCowboyBebop?season=01";
+  final String apiUrl = "http://192.168.0.94:8888/CowboyBebop?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

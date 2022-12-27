@@ -103,7 +103,7 @@ Widget seasons() {
 }
 
 Widget mainlistbuilder() {
-  final String apiUrl = "http://192.168.0.94:8888/intObiWanKenobi?season=01";
+  final String apiUrl = "http://192.168.0.94:8888/ObiWanKenobi?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

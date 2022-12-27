@@ -81,9 +81,9 @@ Future<void> playEpi(playURL) async {
 
 _lowerDecks(BuildContext context, String seasonNum) {
   Future<List<dynamic>> fetchLowerDecks() async {
-    final String api1Url = "http://192.168.0.94:8888/intLowerDecks?season=01";
-    final String api2Url = "http://192.168.0.94:8888/intLowerDecks?season=02";
-    final String api3Url = "http://192.168.0.94:8888/intLowerDecks?season=03";
+    final String api1Url = "http://192.168.0.94:8888/LowerDecks?season=01";
+    final String api2Url = "http://192.168.0.94:8888/LowerDecks?season=02";
+    final String api3Url = "http://192.168.0.94:8888/LowerDecks?season=03";
     if (seasonNum == "1") {
       var result = await http.get(Uri.parse(api1Url));
       return json.decode(result.body);

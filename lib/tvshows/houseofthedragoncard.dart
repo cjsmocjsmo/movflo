@@ -87,8 +87,7 @@ houseOfTheDragonNavigator(BuildContext context) {
 }
 
 Widget _houseOfTheDragonFutureBuilder() {
-  final String apiUrl =
-      "http://192.168.0.94:8888/intHouseOfTheDragon?season=01";
+  final String apiUrl = "http://192.168.0.94:8888/HouseOfTheDragon?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

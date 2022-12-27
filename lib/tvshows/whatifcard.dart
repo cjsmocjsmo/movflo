@@ -61,7 +61,7 @@ Widget whatifImage() {
 }
 
 _whatIfNavigator(BuildContext context) {
-  final String apiUrl = "http://192.168.0.94:8888/intWhatIf?season=01";
+  final String apiUrl = "http://192.168.0.94:8888/WhatIf?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

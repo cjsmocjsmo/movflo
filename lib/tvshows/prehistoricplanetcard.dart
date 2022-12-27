@@ -86,8 +86,7 @@ _prehistoricNavigator(BuildContext context) {
 }
 
 Widget mainlistbuilder() {
-  final String apiUrl =
-      "http://192.168.0.94:8888/intPrehistoricPlanet?season=01";
+  final String apiUrl = "http://192.168.0.94:8888/PrehistoricPlanet?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

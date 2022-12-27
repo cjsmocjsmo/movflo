@@ -77,8 +77,8 @@ Future<void> playEpi(playURL) async {
 
 _mandalorian(BuildContext context, String seasonNum) {
   Future<List<dynamic>> fetchMandalorian() async {
-    final String api1Url = "http://192.168.0.94:8888/intMandalorian?season=01";
-    final String api2Url = "http://192.168.0.94:8888/intMandalorian?season=02";
+    final String api1Url = "http://192.168.0.94:8888/Mandalorian?season=01";
+    final String api2Url = "http://192.168.0.94:8888/Mandalorian?season=02";
     if (seasonNum == '1') {
       var result = await http.get(Uri.parse(api1Url));
       return json.decode(result.body);
@@ -87,7 +87,7 @@ _mandalorian(BuildContext context, String seasonNum) {
       return json.decode(result.body);
     }
 
-    // final String api3Url = "http://192.168.0.94:8888/intMandalorian?season=03";
+    // final String api3Url = "http://192.168.0.94:8888/Mandalorian?season=03";
 
     // if (seasonNum == '1') {
     //   var result = await http.get(Uri.parse(api1Url));

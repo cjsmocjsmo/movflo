@@ -87,7 +87,7 @@ nightSkyNavigator(BuildContext context) {
 }
 
 Widget _nightSkyFutureBuilder() {
-  final String apiUrl = "http://192.168.0.94:8888/intNightSky?season=01";
+  final String apiUrl = "http://192.168.0.94:8888/NightSky?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

@@ -61,7 +61,7 @@ Widget wheelImage() {
 }
 
 _wheelNavigator(BuildContext context) {
-  final String apiUrl = "http://192.168.0.94:8888/intWheelOfTime?season=01";
+  final String apiUrl = "http://192.168.0.94:8888/WheelOfTime?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

@@ -87,7 +87,7 @@ iAmGrootNavigator(BuildContext context) {
 }
 
 Widget _iAmGrootFutureBuilder() {
-  final String apiUrl = "http://192.168.0.94:8888/intIAmGroot?season=01";
+  final String apiUrl = "http://192.168.0.94:8888/IAmGroot?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

@@ -62,7 +62,7 @@ Widget haloImage() {
 }
 
 _haloNavigator(BuildContext context) {
-  final String apiUrl = "http://192.168.0.94:8888/intHalo?season=01";
+  final String apiUrl = "http://192.168.0.94:8888/Halo?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

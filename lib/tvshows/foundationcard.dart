@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class FoundationCard extends StatelessWidget {
-  final String apiUrl = "http://192.168.0.94:8888/intFoundation?season=01";
+  final String apiUrl = "http://192.168.0.94:8888/Foundation?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;
@@ -88,7 +88,7 @@ Widget foundationImage() {
 }
 
 _foundationNavigator(BuildContext context) {
-  final String apiUrl = "http://192.168.0.94:8888/intFoundation?season=01";
+  final String apiUrl = "http://192.168.0.94:8888/Foundation?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

@@ -87,7 +87,7 @@ alienWorldsNavigator(BuildContext context) {
 }
 
 Widget _alienWorldsFutureBuilder() {
-  final String apiUrl = "http://192.168.0.94:8888/intAlienWorlds?season=01";
+  final String apiUrl = "http://192.168.0.94:8888/AlienWorlds?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

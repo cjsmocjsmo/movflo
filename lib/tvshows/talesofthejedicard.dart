@@ -87,7 +87,7 @@ talesOfTheJediNavigator(BuildContext context) {
 }
 
 Widget _talesOfTheJediFutureBuilder() {
-  final String apiUrl = "http://192.168.0.94:8888/intTalesOfTheJedi?season=01";
+  final String apiUrl = "http://192.168.0.94:8888/TalesOfTheJedi?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

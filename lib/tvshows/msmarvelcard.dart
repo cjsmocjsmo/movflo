@@ -87,7 +87,7 @@ msMarvelNavigator(BuildContext context) {
 }
 
 Widget msMarvelFutureBuilder() {
-  final String apiUrl = "http://192.168.0.94:8888/intMSMarvel?season=01";
+  final String apiUrl = "http://192.168.0.94:8888/MSMarvel?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;

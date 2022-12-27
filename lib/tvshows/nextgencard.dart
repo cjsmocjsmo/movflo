@@ -96,13 +96,13 @@ Future<void> playEpi(playURL) async {
 
 _nextGeneration(BuildContext context, String seasonNum) {
   Future<List<dynamic>> fetchTNG() async {
-    final String api1Url = "http://192.168.0.94:8888/intTNG?season=01";
-    final String api2Url = "http://192.168.0.94:8888/intTNG?season=02";
-    final String api3Url = "http://192.168.0.94:8888/intTNG?season=03";
-    final String api4Url = "http://192.168.0.94:8888/intTNG?season=04";
-    final String api5Url = "http://192.168.0.94:8888/intTNG?season=05";
-    final String api6Url = "http://192.168.0.94:8888/intTNG?season=06";
-    final String api7Url = "http://192.168.0.94:8888/intTNG?season=07";
+    final String api1Url = "http://192.168.0.94:8888/TNG?season=01";
+    final String api2Url = "http://192.168.0.94:8888/TNG?season=02";
+    final String api3Url = "http://192.168.0.94:8888/TNG?season=03";
+    final String api4Url = "http://192.168.0.94:8888/TNG?season=04";
+    final String api5Url = "http://192.168.0.94:8888/TNG?season=05";
+    final String api6Url = "http://192.168.0.94:8888/TNG?season=06";
+    final String api7Url = "http://192.168.0.94:8888/TNG?season=07";
 
     if (seasonNum == '1') {
       var result = await http.get(Uri.parse(api1Url));

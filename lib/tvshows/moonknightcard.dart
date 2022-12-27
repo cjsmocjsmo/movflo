@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class MoonKnightCard extends StatelessWidget {
-  // final String apiUrl = "http://192.168.0.94:8888/intMoonKnight?season=01";
+  // final String apiUrl = "http://192.168.0.94:8888/MoonKnight?season=01";
 
   // Future<List<dynamic>> fetchEpisodes() async {
   //   var result;
@@ -83,7 +83,7 @@ class MoonKnightCard extends StatelessWidget {
 }
 
 _moonKnightNavigator(BuildContext context) {
-  final String apiUrl = "http://192.168.0.94:8888/intMoonKnight?season=01";
+  final String apiUrl = "http://192.168.0.94:8888/MoonKnight?season=01";
 
   Future<List<dynamic>> fetchEpisodes() async {
     var result;
