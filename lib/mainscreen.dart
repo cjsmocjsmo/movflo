@@ -97,7 +97,7 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 4,
+      length: 5,
       child: Scaffold(
         appBar: AppBar(
           title: Text("Movies TVShows"),
@@ -105,6 +105,7 @@ class MainScreen extends StatelessWidget {
           bottom: const TabBar(
             tabs: [
               Tab(icon: Icon(Icons.movie_creation_sharp)),
+              Tab(icon: Icon(Icons.tv_sharp)),
               Tab(icon: Icon(Icons.tv_sharp)),
               Tab(icon: Icon(Icons.tv_sharp)),
               Tab(icon: Icon(Icons.tv_sharp)),
@@ -150,9 +151,10 @@ class MainScreen extends StatelessWidget {
           child: TabBarView(
             children: [
               moviesListView,
-              tvShowsListView(context),
-              tvShowsListView2(context),
-              tvShowsListView3(context),
+              tvShowsStarTrekListView(context),
+              tvShowsStarWarsListView(context,),
+              tvShowsMCUListView(context),
+              tvShowsSciFiListView(context),
             ],
           ),
         ),
@@ -193,7 +195,7 @@ Widget moviesListView = ListView.builder(
   },
 );
 
-Widget tvShowsListView(BuildContext context) {
+Widget tvShowsStarTrekListView(BuildContext context) {
   return ListView(
     shrinkWrap: true,
     padding: const EdgeInsets.all(10.0),
@@ -211,7 +213,7 @@ Widget tvShowsListView(BuildContext context) {
   );
 }
 
-Widget tvShowsListView2(BuildContext context) {
+Widget tvShowsMCUListView(BuildContext context) {
   return ListView(
     shrinkWrap: true,
     padding: const EdgeInsets.all(10.0),
@@ -231,7 +233,7 @@ Widget tvShowsListView2(BuildContext context) {
   );
 }
 
-Widget tvShowsListView3(BuildContext context) {
+Widget tvShowsSciFiListView(BuildContext context) {
   return ListView(
     shrinkWrap: true,
     padding: const EdgeInsets.all(10.0),
@@ -253,6 +255,21 @@ Widget tvShowsListView3(BuildContext context) {
       AlteredCarbonCard(),
       RaisedByWolvesCard(),
       MastersOfTheUniverseCard(),
+    ],
+  );
+}
+
+Widget tvShowsStarWarsListView(BuildContext context) {
+  return ListView(
+    shrinkWrap: true,
+    padding: const EdgeInsets.all(10.0),
+    children: <Widget>[
+      BadBatchCard(),
+      MandalorianCard(),
+      BookOfBobaFettCard(),
+      ObiWanKenobiCard(),
+      AndorCard(),
+      TalesOfTheJediCard(),
     ],
   );
 }
