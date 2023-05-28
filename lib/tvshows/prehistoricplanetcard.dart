@@ -18,31 +18,18 @@ class PrehistoricPlanetCard extends StatelessWidget {
             height: 290.0,
             child: Row(
               children: <Widget>[
-                prehistoricImage(),
+                prehistoricplanetImage(),
                 Expanded(
                   child: Padding(
-                    padding: EdgeInsets.fromLTRB(0.0, 120.0, 0.0, 0.0),
+                    padding: EdgeInsets.fromLTRB(0.0, 80.0, 0.0, 0.0),
                     child: Column(
                       children: <Widget>[
-                        SizedBox.fromSize(
-                          size: Size(66, 66),
-                          child: ClipOval(
-                            child: Material(
-                              color: Colors.lightGreenAccent.shade400,
-                              child: InkWell(
-                                splashColor: Colors.green,
-                                onTap: () {
-                                  _prehistoricNavigator(context);
-                                },
-                                child: prehistoricButtonColumn(),
-                              ),
-                            ),
-                          ),
-                        ),
+                        _prehistoricplanetSeasons(context, "1"),
+                        _prehistoricplanetSeasons(context, "2"),
                       ],
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -52,7 +39,7 @@ class PrehistoricPlanetCard extends StatelessWidget {
   }
 }
 
-Widget prehistoricImage() {
+Widget prehistoricplanetImage() {
   return Image.asset(
     'images/prehistoricplanet.webp',
     fit: BoxFit.contain,
@@ -61,14 +48,57 @@ Widget prehistoricImage() {
   );
 }
 
-_prehistoricNavigator(BuildContext context) {
+_prehistoricplanetSeasons(BuildContext context, String snum) {
+  return Padding(
+    padding: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 00.0),
+    child: SizedBox.fromSize(
+      size: Size(66, 66),
+      child: ClipOval(
+        child: Material(
+          color: Colors.lightGreenAccent.shade400,
+          child: InkWell(
+            splashColor: Colors.green,
+            onTap: () {
+              _prehistoricplanet(context, snum);
+            }, // button pressed
+            child: _prehistoricplanetButtonColumn(snum),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
+Future<void> playEpi(playURL) async {
+  try {
+    var resultPlay = await http.get(Uri.parse(playURL));
+    return json.decode(resultPlay.body);
+  } catch (e) {
+    print(e);
+  }
+}
+
+_prehistoricplanet(BuildContext context, String seasonNum) {
+  Future<List<dynamic>> fetchprehistoricplanet() async {
+    final String api1Url = "http://192.168.0.94:8888/PrehistoricPlanet?season=01";
+    final String api2Url = "http://192.168.0.94:8888/PrehistoricPlanet?season=02";
+
+    if (seasonNum == '2') {
+      var result = await http.get(Uri.parse(api2Url));
+      return json.decode(result.body);
+    } else {
+      var result = await http.get(Uri.parse(api1Url));
+      return json.decode(result.body);
+    }
+  }
+
   return Navigator.push(
     context,
     MaterialPageRoute<void>(
       builder: (BuildContext context) {
         return Scaffold(
           appBar: AppBar(
-            title: Text("Prehistoric Planet"),
+            title: Text("prehistoricplanet"),
             backgroundColor: Colors.lightGreen[900],
           ),
           body: Container(
@@ -76,7 +106,43 @@ _prehistoricNavigator(BuildContext context) {
               color: Colors.lightGreenAccent.shade400,
             ),
             child: Center(
-              child: mainlistbuilder(),
+              child: FutureBuilder<List<dynamic>>(
+                future: fetchprehistoricplanet(),
+                builder: (BuildContext context, AsyncSnapshot snapshot) {
+                  if (snapshot.hasData) {
+                    return ListView.builder(
+                      padding: const EdgeInsets.all(8),
+                      itemCount: snapshot.data.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return GestureDetector(
+                          onTap: () {
+                            String dirp = "/media/pi/PiTB/media/TVShows/";
+                            String ap = dirp + snapshot.data[index]["tvfspath"];
+                            final String apiPU =
+                                "http://192.168.0.94:8181/OmxplayerPlayMediaReact?medPath=" +
+                                    ap;
+                            playEpi(apiPU);
+                            Navigator.pop(context);
+                          },
+                          child: Container(
+                            height: 75,
+                            color: Colors.amber[600],
+                            child: Center(
+                              child: Text(
+                                '${snapshot.data[index]['title']}',
+                                style: TextStyle(
+                                    fontSize: 32, color: Colors.black),
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                    );
+                  } else {
+                    return CircularProgressIndicator();
+                  }
+                },
+              ),
             ),
           ),
         );
@@ -85,78 +151,12 @@ _prehistoricNavigator(BuildContext context) {
   );
 }
 
-Widget mainlistbuilder() {
-  final String apiUrl = "http://192.168.0.94:8888/PrehistoricPlanet?season=01";
-
-  Future<List<dynamic>> fetchEpisodes() async {
-    var result;
-    try {
-      var result = await http.get(Uri.parse(apiUrl));
-      return json.decode(result.body);
-    } catch (e) {
-      print("OOOOOh Fuck");
-    }
-    return result;
-  }
-
-  Future<void> playEpi(playURL) async {
-    var resultPlay;
-    try {
-      var resultPlay = await http.get(Uri.parse(playURL));
-      return json.decode(resultPlay.body);
-    } catch (e) {
-      print("OOOOOH FUUUUCK 2");
-    }
-    return resultPlay;
-  }
-
-  return FutureBuilder<List<dynamic>>(
-    future: fetchEpisodes(),
-    builder: (BuildContext context, AsyncSnapshot snapshot) {
-      if (snapshot.hasData) {
-        return ListView.builder(
-          padding: const EdgeInsets.all(8),
-          itemCount: snapshot.data.length,
-          itemBuilder: (BuildContext context, int index) {
-            return GestureDetector(
-              onTap: () {
-                String dirp = "/media/pi/PiTB/media/TVShows/";
-                String ap = dirp + snapshot.data[index]["tvfspath"];
-                final String apiPU =
-                    "http://192.168.0.94:8181/OmxplayerPlayMediaReact?medPath=" +
-                        ap;
-                playEpi(apiPU);
-                Navigator.pop(context);
-              },
-              child: Container(
-                height: 75,
-                color: Colors.amber[600],
-                child: Center(
-                  child: Text(
-                    '${snapshot.data[index]['title']}',
-                    style: TextStyle(
-                      fontSize: 32,
-                      color: Colors.black,
-                    ),
-                  ),
-                ),
-              ),
-            );
-          },
-        );
-      } else {
-        return CircularProgressIndicator();
-      }
-    },
-  );
-}
-
-Widget prehistoricButtonColumn() {
+_prehistoricplanetButtonColumn(String episode) {
   return Column(
     mainAxisAlignment: MainAxisAlignment.center,
     children: <Widget>[
       Text(
-        "1",
+        episode,
         style: TextStyle(
           fontFamily: "Gothic",
           fontWeight: FontWeight.bold,
