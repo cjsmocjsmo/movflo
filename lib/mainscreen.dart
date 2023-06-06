@@ -44,6 +44,7 @@ import 'tvshows/thelordoftheringstheringsofpowercard.dart';
 import 'tvshows/andorcard.dart';
 import 'tvshows/nightskycard.dart';
 import 'tvshows/talesofthejedicard.dart';
+import 'tvshows/foobarcard.dart';
 
 final List<String> movies = <String>[
   'Action',
@@ -238,6 +239,7 @@ Widget tvShowsSciFiListView(BuildContext context) {
     shrinkWrap: true,
     padding: const EdgeInsets.all(10.0),
     children: <Widget>[
+      FooBarCard(),
       OrvilleCard(),
       NightSkyCard(),
       HouseOfTheDragonCard(),
